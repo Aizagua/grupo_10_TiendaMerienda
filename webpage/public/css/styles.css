@@ -1,0 +1,37 @@
+.centralizer {
+    width: 23%;
+}
+
+.logo {
+    width: 50%;
+}
+
+.logo img{
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+header {
+    background-color: #9c8a65;
+}
+
+header div {
+    width: 100vw;
+    display: flex;
+}
+
+header div ul li{
+    list-style-type: none;
+    display: block;
+    justify-content: space-between;
+}
+
+header div ul {
+    display: flex;
+}
+.barra-inferior{
+    justify-content: center;
+    width: 100%;
+}
+
