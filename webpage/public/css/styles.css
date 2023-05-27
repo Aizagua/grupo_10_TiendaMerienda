@@ -130,3 +130,28 @@ main {
     margin-top: 10px;
     margin-bottom: 30px;
 }
+main ul li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+main form p {
+    display: flex;
+    align-items: center;
+}
+main form p button {
+    margin-top: 30 px;
+    background-color: orange;
+    color: #fff;;
+    border-radius: 10%;
+    width: 8vw;
+    height: 5vh;
+    border: none;
+    box-shadow: 1px 1px 10px rgb ( 100 , 100 , 100 );
+
+}
