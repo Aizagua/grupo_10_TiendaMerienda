@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: calc(100vw- 20px);
+}
+
+.centralizer {
+    width: 23%;
+}
+
+.logo {
+    width: 50%;
+}
+
+.logo img{
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+header {
+    background-color: #9c8a65;
+}
+
+header div {
+    width: 100%;
+    display: flex;
+}
+
+header div ul li{
+    list-style-type: none;
+    display: block;
+    justify-content: space-between;
+}
+
+header div ul {
+    display: flex;
+}
+.barra-inferior{
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+}
+
+.barras {
+    background-color: #9c8a65
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner img{
+    width: 100%;
+    padding: 20px 0 20px 0;
+}
+
+.productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+}
+
+.productos div {
+    border: solid 2px black;
+    background-color: #ebebeb;
+    padding: 10px;
+    margin: 10px;
+    width: 25%;
+    height: 25%;
+}
+
+.productos div img{
+    width: 100%;
+}
+
+.lore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.lore p {
+    margin-top: 5px;
+    width: 70%;
+}
+
+
+.opiniones div {
+    border: solid 2px black;
+    background-color: #ebebeb;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.opiniones div img {
+    padding: 10px;
+    width: 35%;
+}
+
+.opiniones div section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barras {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.no-se {
+    width: 40%;
+    background-color: gray;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+main ul li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+main form p {
+    display: flex;
+    align-items: center;
+}
+main form p button {
+    margin-top: 30 px;
+    background-color: orange;
+    color: #fff;;
+    border-radius: 10%;
+    width: 8vw;
+    height: 5vh;
+    border: none;
+    box-shadow: 1px 1px 10px rgb ( 100 , 100 , 100 );
+
+}
