@@ -686,3 +686,419 @@ transform: translateY(2px);
 }
 
 /* termina detalle del producto*/
+
+
+
+/* empieza Carrito*/
+.main-carrito{
+    background-color:#f6f4ea;
+    width: 100vw;
+    height: 100%;
+    padding-top:20px ;}
+    
+    .section .rectangulo{
+    background-color:#FAFAE0;
+    height: 120px;
+    border: solid 0.5px rgb(170, 163, 163);
+    margin-top: 10px;
+    width: 100vw;
+    display:flex;
+    justify-content: center;
+    
+    transition: all 0.6s;
+    }
+    .section .rectangulo-1{
+        background-color:#FAFAE0;
+        height: 120px;
+        border: solid 0.5px rgb(170, 163, 163);
+        margin-top: 10px;
+        width: 100vw;
+        display:flex;
+        justify-content: center;
+        transition: all 0.6s;
+        }
+    
+    .producto{
+    width: 30% ;
+    font-size: 16px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7%;
+    margin-left: -6%;
+    }
+        
+    .estrellas{
+    display: flex;
+    width:5%;
+    font-size: 13px;
+    color: #895d39;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5%;
+    height: 14%;
+            }
+    .estrellas i{
+    margin-left: 1%;
+    height: 10px;
+        
+    }
+    .estrellas1{
+    display: flex;
+    width:5%;
+    font-size: 13px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5%;
+    height: 14%;
+    color: rgb(41, 27, 2), }
+        
+    .contador{
+    text-align: center;
+    margin-top: 6%;
+    display: flex;
+    margin-left: -5%;
+    width: 20%;
+    margin-right: 5%;
+        }
+    #x{
+    width: 100%;
+    margin-top: 2%;
+    text-align: end;
+        }
+    .contador p{
+    margin-top: 17px;
+    background-color: #f6f4ea;
+    border: solid rgb(201, 192, 192) 1px;
+    height: 20px;
+    width: 50px;
+    padding-top: 5px;
+    margin-right: 3px;
+    margin-left: 3px;}
+        
+    
+    
+    .precio{
+    margin-top: 3%;
+    width: 20%;    
+    margin-left: -20px;
+    }
+    .precio p{
+    width: 100%;
+    margin-top: 10%;
+    }
+    
+    
+    
+    .logo{
+    text-align: center;
+    width: 50%;
+        }
+    .lista{
+    display: flex;
+    justify-content: space-between;
+    background-color: #895d39;
+    height: 100px;
+    margin-bottom: 0px;}
+    .lista li{
+    margin-top: 50px;
+    margin-bottom: 25px;
+    border: black solid 1px;
+    padding: 0px;
+    text-align: center;
+    color: #ffff;
+        }
+    .carrito{margin-bottom: 10px;}
+    .codigo{
+        display: none;
+    }
+    
+    
+    .contenido-rectangulo{
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    }
+    .contenido-rectangulo img{
+    width: 15%;
+    height: 60%;
+    margin-top: 4.5%;
+    margin-left: 0.5%;
+    }
+    .codigo-2{
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: #757674 solid 1px;
+    width: 100vw;
+    height: 16vw;
+    margin-top: 30px;
+        }
+    .total-2{
+    padding: 10px;
+    font-size: 19px;
+        }
+        .total-2 p{
+    margin-top: 4px;
+        }
+    .descuento-2{
+    text-align: center;
+        }
+    .descuento-2 div input{
+    width: 50%;
+    padding: 2px;
+    margin-top: 5px;
+        }
+    .descuento-2 div button{
+    padding: 2px;
+        }
+    .descuento-2 div p{
+    margin-top: 10px;
+    font-size: 12px;
+        }
+    .finalizar-2 button{
+    background-color: #ebebeb;
+    margin-top: 3%;
+            }
+    .finalizar-2{
+    text-align: center;
+            }
+    
+    .contador button{
+    background-color: #f6f4ea;
+    border: solid rgb(201, 192, 192) 1px;
+    height: 30px;
+    width: 50px;  
+    border-radius: 100%;
+    margin-top: 15px;
+    justify-content: center;
+    }
+    #mas{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 7px;
+    margin-left: 0px;
+       
+    }
+    #menos{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 7px;
+    margin-left: 0px;
+    }
+    .agregar-compra button{
+        height: 40px;
+        width: 20%;
+        border-radius: 12px;
+        color: #f3e28d;
+        background-color: #de7a22;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: Arial, Helvetica, sans-serif;
+        display: inline-block;
+        padding: 5px 5px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        box-shadow: 0 2px #f0c290;
+        text-align: center;
+    
+    }
+    .agregar-compra{
+        justify-content: center;
+        margin-top: 15px;
+        text-align: center;
+        }
+ @media(min-width:768px){
+       
+        
+        .codigo-2{
+            display: none;
+        }
+        .carrito p{
+            margin-bottom: 40px;}
+        
+      .section .rectangulo{
+            background-color:#FAFAE0;
+            height: 100px;
+            border: solid 0.5px rgb(170, 163, 163);
+            margin-top: 30px;
+            border-radius: 20px 0px 0px 20px;
+            width: 70vw;
+            
+        }
+        .section .rectangulo-1{
+            background-color:#FAFAE0;
+            height: 100px;
+            border: solid 0.5px rgb(170, 163, 163);
+            margin-top: 30px;
+            border-radius: 20px 0px 0px 20px;
+            width: 70vw;
+            
+        }
+        .color{
+            background-color: #895d39;
+            border-radius:20px 0 0 20px;
+            margin-left: 0px;
+            width: 25px;
+        }
+        .color1{
+            background-color: rgb(41, 27, 2);
+            border-radius:20px 0 0 20px;
+            margin-left: 0px;
+            width: 25px;
+        }
+     
+        .contador p{ background-color: #f6f4ea;
+            border: solid rgb(201, 192, 192) 1px;
+            padding: 10px;
+            padding-top: 12px;
+            padding-bottom:6px ;
+            border-radius: 0%;
+            
+            }
+            .producto img{
+                border: solid 1px red;
+            }
+        .codigo{
+            background-color: #ebebeb;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+           border: #757674 solid 1px;
+            margin-left: 20px;
+            width: 30vw;
+            height: 400px;
+            margin-top: 30px;
+            }
+    .cajas{
+                display: flex;
+            }
+    .total{
+            margin-top: 45px;
+            padding: 10px;
+            font-size: 30px;
+        }
+    .descuento{
+            text-align: center;
+        }
+        .descuento div input{
+            margin-top: 50px;
+            padding: 8px;
+        }
+        .descuento div button{
+            padding: 8px;
+        }
+        .descuento div p{
+            margin-top: 10px;
+            font-size: 30px;
+        }
+    .finalizar button{
+        background-color: #ebebeb;
+        padding: 12px;
+        cursor: pointer;
+            }
+    .finalizar{
+        text-align: center;
+            }
+    .rectangulo:hover{
+    padding:10px;
+    background-color: #895d39;
+            }
+    .rectangulo-1:hover{
+    padding:10px;
+    background-color: rgb(41, 27, 2);
+            }
+      .producto{
+        margin-top: 3%;
+      }
+      .producto i{
+        font-size: 20px;
+      }     
+    .contador{
+        margin-top: 2%;
+    }
+    .contenido-rectangulo img{
+        margin-top: 1%;
+        height: 85%;
+        width: 10%;
+        border: #ebebeb solid 1px;
+        transition: all 0.7s;
+    }
+    .precio{
+        margin-top: 0%;
+        transition: all 0.7s;
+        width: 25%;
+    }
+    .precio p{
+        font-size: 20px;
+        margin-left: -20px;
+    }
+    #x{transition: all 0.7s;}
+    .contador p{
+        width: 20px;
+    }
+     .rectangulo:hover .producto{
+        color: #f6f4ea;
+     }  
+     .rectangulo:hover .estrellas{
+        color: #f6f4ea;
+     }        
+     .rectangulo:hover .precio p{
+        color: #f6f4ea;
+     }   
+     #x:hover{
+        color: #f6f4ea;
+        font-size: 24px;
+        margin-right:-2px;
+        margin-top:-2px;
+        cursor: pointer;
+     }
+     .rectangulo-1:hover .producto{
+        color: #f6f4ea;
+     }  
+     .rectangulo-1:hover .estrellas{
+        color: #f6f4ea;
+     }        
+     .rectangulo-1:hover .precio p{
+        color: #f6f4ea;
+     } 
+     .contador button{
+        border-radius: 0;
+        padding: 10px;
+        padding-top: 12px;
+        padding-bottom:6px ;
+        height: 40px;
+        margin-top: 17px;
+        width: 40px;
+     }
+     #mas{
+    margin-top: 2px;
+    font-size: 16px;
+     }
+     #menos{
+        margin-top: 2px;
+    }
+    .boton-mas{
+        margin-left: -3px;
+        cursor: pointer;
+    } 
+    .boton-menos{
+        margin-right: -3px;
+        cursor: pointer;
+    } 
+    
+    .contador button:hover{
+        background-color: #e4e4e4;
+    }
+    .input1 input:focus{
+        border: 1px solid yellow;
+    }
+    }
+    /*Termina Carrito*/

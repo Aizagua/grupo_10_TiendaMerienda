@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <head>
+    <link href="/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito De Compras</title>
+</head>
+<body>
+    <header>
+        
+            <div class="con-header">
+              <div class="buscador">
+                <form>
+                  <div class="colocar-texto">
+                    <input type="text" placeholder="Buscar productos">
+                  </div>
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+              <div class="logo">
+                <a href="/">
+                  <img src="/images/logosinfondo4.jpg" alt="tienda-Merienda">
+                </a>
+              </div>
+              <div class="botones">
+                <div class="dropdown">
+                  <button class="boton-login"><i class="fas fa-sign-in-alt" style="color: #de7627;"></i></button>
+                    <div class="dropdown-content">
+                      <a href="/Login">Ingresá</a>
+                      <a href="/Registro">Regístrate</a>
+                    </div>
+                </div>
+                <a href="/cart.html" class="boton-carrito"><i class="fas fa-shopping-cart" style="color: #de7627;"></i></a>
+              </div>
+            </div>
+            <div class="menu">
+              <nav>
+                <ul>
+                  <li><a href="/">Inicio</a></li>
+                  <li><a href="/Products">Productos</a></li>
+                  <li><a href="/Contact">Contacto</a></li>
+                  <li><a href="/History">Historia</a></li>
+                </ul>
+              </nav>
+            </div>
+        
+    
+    </header>
+    <main class="main-carrito">
+                        <div class="carrito">
+                            <p>Tus Compras:</p>
+                        </div>
+            <section class="cajas">
+            <section class="section">
+            <article class="rectangulo">
+                                    <div class="color">
+                                      <p></p>
+                                    </div>  
+                            <div class="contenido-rectangulo">
+                                <img src="img/alfajor-negro-relleno-de-dulce-de-leche.jpg" alt="">
+                                    
+                                    <div class="producto"><p>Alfajor de dulce de leche</p>
+                                        <div class="estrellas">    
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half"></i>
+                                        </div></div>
+                        <div class="contador">
+                                <button class="boton-menos"><i id="menos" class="fa-solid fa-minus"></i></button>
+                                <p>1</p>
+                            <button class="boton-mas"><i id="mas" class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="precio">
+                            <i id="x" class="fa-sharp fa-regular fa-circle-xmark"></i>
+                            <p>Subtotal: 500$</p></div>
+                        </div>
+        </article>
+        <article class="rectangulo-1" class="section">
+                        <div class="color1">
+                            <p></p>
+                          </div> 
+                       <div class="contenido-rectangulo"> <img src="img/torta-de-chocolate-porcion.jpg" alt="">
+                             
+                        <div class="producto"><p>Torta de chocolate</p>
+                                    <div class="estrellas1">    
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                             </div>
+                            <div class="contador">
+                            <button class="boton-menos"><i id="menos" class="fa-solid fa-minus"></i></button>
+                            <p>1</p>
+                        <button class="boton-mas"><i id="mas" class="fa-solid fa-plus"></i></button>
+                            </div>
+                        <div class="precio">
+                        <i id="x" class="fa-sharp fa-regular fa-circle-xmark"></i><p>Subtotal: 300$</p></div>
+                    </div>
+        </article>
+        <div class="agregar-compra">
+            <button type="submit">Agregar Compra +</button>
+        </div>
+        <div class="codigo-2"> 
+        <div class="descuento-2">
+            <div><p>Codigo de descuento</p></div>
+            <div><input type="text" nombre="codigo" placeholder="Codigo"><button type="submit">Aplicar</button></div>
+        </div>
+        
+            <div class="total-2">
+                <button type="submit">Finalizar Compra</button>
+                <p>Total: 800$</p></div>
+        
+    </div>
+        
+                </section>
+                    
+                    <article class="codigo">
+                    <div class="descuento">
+                        <div><p>Codigo de descuento</p></div>
+                        <div class="input1"><input type="text" nombre="codigo" placeholder="Codigo"><button type="submit">Aplicar</button></div>
+                        
+                    </div>
+                    <div class="total">
+                        <div class="total"><p>Total: 800$</p></div>
+                    </div>
+                    <div class="finalizar"><button type="submit">Finalizar Compra</button></div>
+                    </article>
+            </section>
+            
+        </main>
+    <footer>
+        <section>
+            <div class="redes-sociales">
+              <p>Seguinos en nuestras redes!!</p>          
+              <a href="#"><i class="fab fa-facebook" style="color: #de7627;"></i></a>
+              <a href="#"><i class="fab fa-instagram" style="color: #de7627;"></i></a>
+            </div>
+          </section>
+    </footer>
+    
+</body>
+
+</html>
