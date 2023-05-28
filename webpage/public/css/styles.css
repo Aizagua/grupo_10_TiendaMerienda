@@ -302,3 +302,78 @@ main form p button {
     box-shadow: 1px 1px 10px rgb ( 100 , 100 , 100 );
 
 }
+
+/*Login*/
+
+
+.iniciartextologin {
+    color: #ebebeb;
+}
+
+#formulario-inicio {
+    align-items: center;
+}
+
+.formularios-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #232020;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.textorecordar {
+    color: #ebebeb;
+    font-size: 12px;
+}
+
+.textodelogin{
+    border-radius: 5px;
+    border-color: #de7627;
+    border-width: 2px;
+    display: flex;
+    align-items: center;
+}
+.textodelogin[type="submit"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+
+.bloquesdellogin {
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5%;
+    text-align: center;
+}
+
+.botonform{
+    width: 40%;
+}
+
+.botonforma{
+    width: 20px;
+}
+
+.botonsend{
+    background-color: #de7627;
+    color: #ebebeb;
+    transition-duration: 100ms;
+    border-radius: 5px; 
+    border: none;
+}
+
+.iniciartextologin:hover {
+    color: #de7627;
+        transition-duration: 200ms;
+}
+
+.botonsend:hover{
+        background-color: #895d39;
+        color: #FFF;
+        cursor: pointer;
+}
+
