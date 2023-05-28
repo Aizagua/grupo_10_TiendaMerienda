@@ -275,7 +275,7 @@ footer i {
 
 /*fin footer*/
 
-form {
+main form {
     display: flex;
     flex-direction: column;
 }
