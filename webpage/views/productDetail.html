@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300;1,400;1,700&family=Questrial&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Document</title>
+    </head>
+<body>
+    <main>
+        <div class="detalle-producto">   
+       
+            <!-- imagen de producto-->
+            <div class="sproducto">
+                <img src="/images/alfajores01p1.jpg"  width="100%">
+            </div>
+            
+            <div class="sproducto">
+                 <!-- Nombre del producto-->
+                <div>
+                    <h1>Caja de Alfajores x 6 unidades</h1>
+                </div>
+                 <!-- precio del producto, moneda-->
+                <div>
+                    <p class="precio">$ 11,43</p>
+                </div>
+                
+                <!-- descripcion del producto-->
+                <p class="text-des-producto">Cualquiera que haya comido alguna vez Alfajores puede confirmar
+                que estas irresistibles galletas están demasiado buenas para dejarlas.
+                Los amantes de la comida dulce descubrirán el paraíso con estas galletas
+                rellenas de dulce de leche cubiertas de chocolate con leche o merengue.
+                <strong>Pídalas hoy mismo.</strong></p>     
+                
+                <div class="product_meta">
+                     <div class="product_meta_text_bold">
+                        <!-- codigo del producto-->
+                        NCP: 
+                    </div>
+                    <div class="product_meta_text">
+                        alfajores_6_ua
+                    </div>
+                </div>
+                <div class="product_meta">
+                    <div class="product_meta_text_bold">
+                        <!-- categoria del producto-->
+                        Categorias: 
+                    </div>
+                    <div class="product_meta_text">
+                        Alfajores, Delicatessen 
+                    </div>                
+                </div>
+
+                <div class="pedido-producto">
+                    <div class="product_meta">
+                        <form class="cart" action="/alfajores6u/" method="post" >
+                        <!-- pedido de producto x cantidad-->
+                            <div class="cantidad">
+                                <label class="text-ctd-pedido" for="cantidad-pc6a">Caja Alfajores x 6 unid. </label>      
+                                <div>           
+                                <input type="button" value="-" class="minus">                
+                                <input type="number" id="cantidad" class="input-text ctd text" value="1" title="Cantidad" min="1" max="" name="cantidad" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                <input type="button" value="+" class="plus">  
+                            </div>                     
+                            </div>
+                            
+                            <button type="submit" name="add-carrito" value="palfajores" class="button-adicionar-carrito">
+                                AÑADIR A LA CESTA
+                            </button>
+                            
+                            <button id="button-add-to-cart" type="submit" name="wd-add-to-cart" value="palfajores" class="button-adicionar-carrito">
+                                COMPRAR AHORA			
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+
+
+            </div>
+           
+            
+            
+            <div class="iproducto">
+                <div>
+                    <h2> Más informacion</h2>
+                    
+                    </div>
+                 ¿Obtendras los mejores alfajores? ¡Nosotros decimos que sí!
+                 Alfajores, <b>¡sabrosos de producción capitalina!</b> Un alfajor es una <b>galleta de mantequilla con una capa de caramelo cubierta de chocolate fino o merengue.</b> Estos deliciosos dulces existen en muchas versiones y son <b>consumidos con pasión por los argentinos</b>, casi siempre con yerba mate.
+
+                <p>Hoy compras tus alfajores acompañada con yerba mate, café o té podras disfrutar de la "merienda ideal" .</p>
+
+                <h3>Los Alfajores son un regalo perfecto</h3>
+                <p>¡Regálalos y espera hacer muy feliz a alguien! Los alfajores son una maravillosa y original idea de regalo cuando no sabes qué regalar a un amigo o familiar.
+                </p>
+                <p>La caja de alfajores mixtos vienen en una bonita presentación: una caja con 6 alfajores envueltos
+                    individualmente en papel de regalo dorado y plateado de la mejor calidad. Tenga la seguridad de que
+                    cuando el homenajeado los pruebe ¡superará cualquiera de sus expectativas!
+                </p>
+             
+                <b>Ingredientes:</b>
+                <p>
+                    <b>Chocolate:</b> Azúcar, leche, harina de trigo, licor de cacao, margarina, glucosa, manteca de cacao, huevos en polvo, almidón de maíz, miel, cacao en polvo, sorbitol, bicarbonato sódico, lecitina de soja, sal, bicarbonato amónico, vainillina, aroma natural de limón y almendra.
+                </p>
+                <p>
+                    <b>Merengue:</b>  Azúcar, leche, harina de trigo, huevos, margarina, glucosa, almidón de maíz, miel, cacao en polvo, sorbitol, bicarbonato sódico, sal, aroma de vainilla, bicarbonato amónico, proteína vegetal hidrolizada, aroma natural de limón, aroma artificial de almendra, vainillina, aroma natural de naranja.
+                </p>
+                <p>
+                    Encuentre muchos más Alfajores <a href="/"> aquí</a>.
+                </p>
+            </div>
+        </div>
+
+    </main>
+    <!-- una barra fija con seguir en el shop - ir al carrito- hacer login-->
+
+</body>
+</html>
