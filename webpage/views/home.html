@@ -4,30 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="css/styles.css" rel="stylesheet">
     <title>Tienda Merienda</title>
-    <link rel="stylesheet" href="/css/styles.css">
 </head>
-
 
 <body>
     <header>
-        <div class="barra-superior">
-            <div class="centralizer"></div>
-            <div class="logo"><img src="/images/logo.png" alt="Logo"></div>
-            <div class="centralizer">
-
+        <div class="con-header">
+          <div class="buscador">
+            <form>
+              <div class="colocar-texto">
+                <input type="text" placeholder="Buscar productos">
+              </div>
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+          <div class="logo">
+            <a href="/">
+              <img src="/images/logosinfondo4.jpg" alt="tienda-Merienda">
+            </a>
+          </div>
+          <div class="botones">
+            <div class="dropdown">
+              <button class="boton-login"><i class="fas fa-sign-in-alt" style="color: #de7627;"></i></button>
+                <div class="dropdown-content">
+                  <a href="/Login">Ingresá</a>
+                  <a href="/Registro">Regístrate</a>
+                </div>
             </div>
+            <a href="/cart.html" class="boton-carrito"><i class="fas fa-shopping-cart" style="color: #de7627;"></i></a>
+          </div>
         </div>
-        <div class="barra-inferior">
+        <div class="menu">
+          <nav>
             <ul>
-                <li>Inicio</li>
-                <li>Producto</li>
-                <li>Contacto</li>
-                <li>Historia</li>
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/Products">Productos</a></li>
+              <li><a href="/Contact">Contacto</a></li>
+              <li><a href="/History">Historia</a></li>
             </ul>
+          </nav>
         </div>
     </header>
-
 
     <main>
         <div class="banner">
@@ -96,10 +118,13 @@
 
 
     <footer>
-        <div class="barras">
-            <h3>Follow</h3>
-            <div class="no-se"></div>
-        </div>
+        <section>
+            <div class="redes-sociales">
+              <p>Seguinos en nuestras redes!!</p>          
+              <a href="#"><i class="fab fa-facebook" style="color: #de7627;"></i></a>
+              <a href="#"><i class="fab fa-instagram" style="color: #de7627;"></i></a>
+            </div>
+          </section>
     </footer>
 </body>
 </html>
