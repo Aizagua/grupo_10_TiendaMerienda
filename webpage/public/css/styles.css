@@ -151,6 +151,7 @@ button[type="submit"]:hover .fa-search {
     background-color: #895d39;
     align-items: center;
     justify-content: center;
+    margin-left: 25px;
 }
 
 .menu nav ul li {
