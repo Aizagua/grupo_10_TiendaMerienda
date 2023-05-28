@@ -253,6 +253,13 @@ footer {
     align-items: center;
 }
 
+#footer-register {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
 footer p {
     color: #fafae0;
     padding: 10px;
