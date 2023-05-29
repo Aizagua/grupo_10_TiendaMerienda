@@ -796,10 +796,6 @@ flex-direction: column;}
     
     
     
-    .logo{
-    text-align: center;
-    width: 50%;
-        }
     .lista{
     display: flex;
     justify-content: space-between;
@@ -1060,7 +1056,7 @@ flex-direction: column;}
      .rectangulo:hover .estrellas{
         color: #f6f4ea;
      }        
-     .rectangulo:hover .precio p{
+     .rectangulo:hover .precio-carrito p{
         color: #f6f4ea;
      }   
      #x:hover{
