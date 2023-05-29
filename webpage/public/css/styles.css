@@ -314,6 +314,13 @@ main form button {
 
 /*Detalle del Producto */
 
+.iproducto {
+    font-size: 16px;
+    text-align: left;
+    border: 1px solid #000000;
+    padding: 25px;
+    width: 100%;
+  }
 .detalle-producto{    
 font-family: 'Lato', sans-serif;
 font-size: 16px;
@@ -751,14 +758,16 @@ flex-direction: column;}
         
     
     
-    .precio-carrito{
-    margin-top: 3%;
+    .precio-rectangulo{
+    margin-top: 1%;
     width: 20%;    
     margin-left: -20px;
-    }
-    .precio-carrito p{
+    color: #000000;
+}
+    .precio-rectangulo p{
     width: 100%;
-    margin-top: 3%;
+    margin-top: 15%;
+    color: #000000;
     }
     
     
@@ -808,7 +817,7 @@ flex-direction: column;}
     padding: 10px;
     font-size: 19px;
         }
-        .total-2 p{
+    .total-2 p{
     margin-top: 4px;
         }
     .descuento-2{
@@ -936,7 +945,7 @@ flex-direction: column;}
             border-radius: 0%;
             
             }
-            .producto img{
+    .producto img{
                 border: solid 1px red;
             }
         .codigo{
@@ -955,7 +964,7 @@ flex-direction: column;}
                 display: flex;
                 
             }
-            .carrito-txt{
+        .carrito-txt{
                 text-align: start;
             }
     .total{
@@ -1030,9 +1039,7 @@ flex-direction: column;}
      .rectangulo-carrito:hover .estrellas{
         color: #f6f4ea;
      }        
-     .rectangulo-carrito:hover .precio-carrito p{
-        color: #f6f4ea;
-     }   
+    
      #x:hover{
         color: #f6f4ea;
         font-size: 24px;
@@ -1046,9 +1053,21 @@ flex-direction: column;}
      .rectangulo-1-carrito:hover .estrellas{
         color: #f6f4ea;
      }        
-     .rectangulo-1-carrito .precio p{
+     .precio-rectangulo{
+        color: black;} 
+    
+     .rectangulo-carrito:hover .precio-rectangulo{
         color: #f6f4ea;
-     } 
+     }   
+     .rectangulo-1-carrito:hover .precio-rectangulo p{
+        color: #f6f4ea;
+     }   
+     .rectangulo-1-carrito:hover .precio-rectangulo{
+        color: #f6f4ea;
+     }   
+     .rectangulo-carrito:hover .precio-rectangulo p{
+        color: #f6f4ea;
+     }   
      .contador button{
         border-radius: 0;
         padding: 10px;
