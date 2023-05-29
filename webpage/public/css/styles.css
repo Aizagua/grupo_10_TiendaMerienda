@@ -79,7 +79,7 @@ header div a {
     border-radius: 10px;
 }
 
-button[type="submit"]:hover {
+header button[type="submit"]:hover {
     background-color: #de7627;
 }
 
@@ -489,7 +489,6 @@ main form p button {
 .botonsend{
     background-color: #de7627;
     color: #ebebeb;
-    transition-duration: 100ms;
     border-radius: 5px; 
     border: none;
 }
@@ -503,6 +502,7 @@ main form p button {
         background-color: #895d39;
         color: #FFF;
         cursor: pointer;
+        transition-duration: 300ms;
 }
 
 
