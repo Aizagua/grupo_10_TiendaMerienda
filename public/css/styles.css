@@ -289,25 +289,6 @@ main form p {
     align-items: center;
     text-align: center;
 }
-main form button {
-    height: 40px;
-    margin: 5px 5px;
-    width: 45%;
-    border-radius: 12px;
-    color: #f3e28d;
-    background-color: #de7a22;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-family: Arial, Helvetica, sans-serif;
-    display: inline-block;
-    padding: 5px 5px;
-    cursor: pointer;
-    text-decoration: none;
-    outline: none;
-    border: none;
-
-}
-
    
 @media (min-width: 1200px){}
     
@@ -443,6 +424,7 @@ main form p button {
 
 .iniciartextologin {
     color: #ebebeb;
+    padding-bottom: 10px;
 }
 
 #formulario-inicio {
@@ -486,6 +468,14 @@ main form p button {
     text-align: center;
 }
 
+.bloquesdellogin-send{
+    padding-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5%;
+    text-align: center;
+}
+
 .botonform{
     width: 40%;
 }
@@ -499,6 +489,7 @@ main form p button {
     color: #ebebeb;
     border-radius: 5px; 
     border: none;
+    height: 27px;
 }
 
 .iniciartextologin:hover {
