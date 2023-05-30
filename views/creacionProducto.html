@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link href="css/styles.css" rel="stylesheet">
+        <title>Crear Producto</title>
+    </head>
+<body>
+    <header>
+        <div class="con-header">
+          <div class="buscador">
+            <form>
+              <div class="colocar-texto">
+                <input type="text" placeholder="Buscar productos">
+              </div>
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+          <div class="logo">
+            <a href="/">
+              <img src="/images/logoTM.png" alt="tienda-Merienda">
+            </a>
+          </div>
+          <div class="botones">
+            <div class="dropdown">
+              <button class="boton-login"><i class="fas fa-sign-in-alt" style="color: #de7627;"></i></button>
+                <div class="dropdown-content">
+                  <a href="/Login">Ingresá</a>
+                  <a href="/Registro">Regístrate</a>
+                </div>
+            </div>
+            <a href="/Carrito" class="boton-carrito"><i class="fas fa-shopping-cart" style="color: #de7627;"></i></a>
+          </div>
+        </div>
+        <div class="menu">
+          <nav>
+            <ul>
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/productDetail">Productos</a></li>
+              <li><a href="/Contact">Contacto</a></li>
+              <li><a href="/History">Historia</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+    <main id="formulario-inicio" >
+        <form class="formularios-login creation-form" action="/" method="GET">
+            <h3 class="iniciartextologin">Agregar Producto</h3>
+
+            <div class="bloquesdellogin">
+                <input class="textodelogin" type="user" name="Usuario" placeholder="Nombre de Producto">
+            </div>
+            <div class="bloquesdellogin">
+                <input class="textodelogin" type="number" name="Precio" placeholder="Precio">
+            </div>
+            <div class="bloquesdellogin">
+                <input class="textodelogin" type="file" name="Imagen" placeholder="Imagen">
+            </div>
+            <div class="bloquesdellogin">
+                <input class="textodelogin" type="text" name="Categoria" placeholder="Categoria">
+            </div>
+            
+            <div class="bloquesdellogin">
+                <select class="textodelogin">
+                    <option value="Categoria">Categoria</option>
+                    <option value="Alfajores">Alfajores</option>
+                    <option value="Cafe">Cafe</option>
+                </select>
+            </div>
+            <div class="bloquesdellogin">
+                <input class="textodelogin" type="text" name="Descripcion" placeholder="Descripcion">
+            </div>
+            <div class="bloquesdellogin">
+                <textarea class="bloquesdellogin">Descripcion</textarea>
+            </div>
+
+            <div class="bloquesdellogin-send">
+                <a href="/"><button class="botonform botonsend" type="submit">Enviar</button></a>
+            </div>
+        </form>
+    </main>
+    <footer class="product-creation">
+        <section>
+            <div class="redes-sociales">
+              <p>Seguinos en nuestras redes!!</p>          
+              <a href="#"><i class="fab fa-facebook" style="color: #de7627;"></i></a>
+              <a href="#"><i class="fab fa-instagram" style="color: #de7627;"></i></a>
+            </div>
+          </section>
+    </footer>
+</body>
+</html>

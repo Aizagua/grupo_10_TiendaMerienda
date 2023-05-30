@@ -187,7 +187,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 75%;
+    width: 80%;
 }
 
 .productos div {
@@ -197,6 +197,8 @@ main {
     margin: 10px;
     width: 25%;
     height: 25%;
+    min-width: 100px;
+    min-height: 100px;
 }
 
 .productos div img{
@@ -661,9 +663,21 @@ transform: translateY(2px);
     background-color:#f6f4ea;
     width: 100vw;
     height: 100%;
-    padding-top:20px ;}
+    padding-top:20px ;
+}
     
-    .section .rectangulo-carrito{
+.section .rectangulo-carrito{
+    background-color:#FAFAE0;
+    height: 120px;
+    border: solid 0.5px rgb(170, 163, 163);
+    margin-top: 10px;
+    width: 100vw;
+    display:flex;
+    justify-content: center; 
+    transition: all 0.6s;
+}
+
+.section .rectangulo-1-carrito{
     background-color:#FAFAE0;
     height: 120px;
     border: solid 0.5px rgb(170, 163, 163);
@@ -671,21 +685,10 @@ transform: translateY(2px);
     width: 100vw;
     display:flex;
     justify-content: center;
-    
     transition: all 0.6s;
-    }
-    .section .rectangulo-1-carrito{
-        background-color:#FAFAE0;
-        height: 120px;
-        border: solid 0.5px rgb(170, 163, 163);
-        margin-top: 10px;
-        width: 100vw;
-        display:flex;
-        justify-content: center;
-        transition: all 0.6s;
-        }
+}
     
-    .producto{
+.producto{
     width: 30% ;
     font-size: 16px;
     text-align: center;
@@ -694,9 +697,9 @@ transform: translateY(2px);
     flex-direction: column;
     margin-top: 7%;
     margin-left: -6%;
-    }
+}
         
-    .estrellas{
+.estrellas{
     display: flex;
     width:5%;
     font-size: 13px;
@@ -705,13 +708,14 @@ transform: translateY(2px);
     justify-content: center;
     margin-top: 5%;
     height: 14%;
-            }
-    .estrellas i{
+}
+
+.estrellas i{
     margin-left: 1%;
-    height: 10px;
-        
-    }
-    .estrellas1{
+    height: 10px;    
+}
+
+.estrellas1{
     display: flex;
     width:5%;
     font-size: 13px;
@@ -719,83 +723,91 @@ transform: translateY(2px);
     justify-content: center;
     margin-top: 5%;
     height: 14%;
-    color: rgb(41, 27, 2), }
+    color: rgb(41, 27, 2), 
+}
         
-    .contador{
+.contador{
     text-align: center;
     margin-top: 6%;
     display: flex;
     margin-left: -5%;
     width: 20%;
     margin-right: 5%;
-        }
-    #x{
+}
+
+#x{
     width: 100%;
     margin-top: 2%;
     text-align: end;
-        }
-    .contador .p-carrito{
-margin-top: 15px;
-background-color: #f6f4ea;
-border: solid rgb(201, 192, 192) 1px;
-width: 50px;
-height: 30px;
-margin-right: 3px;
-margin-left: 3px;
-justify-content: center;
-border-radius: 60%;
-text-align: center;
-display: flex;
-flex-direction: column;}
-        
+}
+
+.contador .p-carrito{
+    margin-top: 15px;
+    background-color: #f6f4ea;
+    border: solid rgb(201, 192, 192) 1px;
+    width: 50px;
+    height: 30px;
+    margin-right: 3px;
+    margin-left: 3px;
+    justify-content: center;
+    border-radius: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}  
     
-    
-    .precio-rectangulo{
+.precio-rectangulo{
     margin-top: 1%;
     width: 20%;    
     margin-left: -20px;
     color: #000000;
 }
-    .precio-rectangulo p{
+
+.precio-rectangulo p{
     width: 100%;
     margin-top: 15%;
     color: #000000;
-    }
+}   
     
-    
-    
-    .lista{
+.lista{
     display: flex;
     justify-content: space-between;
     background-color: #895d39;
     height: 100px;
-    margin-bottom: 0px;}
-    .lista li{
+    margin-bottom: 0px;
+}
+
+.lista li{
     margin-top: 50px;
     margin-bottom: 25px;
     border: black solid 1px;
     padding: 0px;
     text-align: center;
     color: #ffff;
-        }
-    .carrito{margin-bottom: 10px;}
-    .codigo{
+}
+
+.carrito{
+    margin-bottom: 10px;
+}
+
+.codigo{
         display: none;
-    }
-    
-    
-    .contenido-rectangulo{
+}
+      
+.contenido-rectangulo{
     display: flex;
     width: 100vw;
     justify-content: space-around;
-    }
-    .contenido-rectangulo img{
+}
+
+.contenido-rectangulo img{
     width: 15%;
     height: 60%;
     margin-top: 4.5%;
     margin-left: 0.5%;
-    }
-    .codigo-2{
+}
+
+.codigo-2{
     background-color: #ebebeb;
     display: flex;
     flex-direction: row;
@@ -804,38 +816,46 @@ flex-direction: column;}
     width: 100vw;
     height: 16vw;
     margin-top: 30px;
-        }
-    .total-2{
+}
+
+.total-2{
     padding: 10px;
     font-size: 19px;
-        }
-    .total-2 p{
+}
+
+.total-2 p{
     margin-top: 4px;
-        }
-    .descuento-2{
+}
+
+.descuento-2{
     text-align: center;
-        }
-    .descuento-2 div input{
+}
+
+.descuento-2 div input{
     width: 50%;
     padding: 2px;
     margin-top: 5px;
-        }
-    .descuento-2 div button{
+}
+
+.descuento-2 div button{
     padding: 2px;
-        }
-    .descuento-2 div p{
+}
+
+.descuento-2 div p{
     margin-top: 10px;
     font-size: 12px;
-        }
-    .finalizar-2 button{
+}
+
+.finalizar-2 button{
     background-color: #ebebeb;
     margin-top: 3%;
-            }
-    .finalizar-2{
+}
+
+.finalizar-2{
     text-align: center;
-            }
+}
     
-    .contador button{
+.contador button{
     background-color: #f6f4ea;
     border: solid rgb(201, 192, 192) 1px;
     height: 30px;
@@ -843,48 +863,52 @@ flex-direction: column;}
     border-radius: 100%;
     margin-top: 15px;
     justify-content: center;
-    }
-    #mas{
+}
+
+#mas{
     text-align: center;
     height: 100%;
     width: 100%;
     margin-top: 7px;
     margin-left: 0px;
-       
-    }
-    #menos{
+      
+}
+
+#menos{
     text-align: center;
     height: 100%;
     width: 100%;
     margin-top: 7px;
     margin-left: 0px;
-    }
-    .agregar-compra button{
-        height: 40px;
-        width: 20%;
-        border-radius: 12px;
-        color: #f3e28d;
-        background-color: #de7a22;
-        text-transform: uppercase;
-        font-weight: 400;
-        font-family: Arial, Helvetica, sans-serif;
-        display: inline-block;
-        padding: 5px 5px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        border: none;
-        box-shadow: 0 2px #f0c290;
-        text-align: center;
-    
-    }
-    .agregar-compra{
+}
+
+.agregar-compra button{
+    height: 40px;
+    width: 20%;
+    border-radius: 12px;
+    color: #f3e28d;
+    background-color: #de7a22;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    padding: 5px 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-shadow: 0 2px #f0c290;
+    text-align: center;
+}
+
+.agregar-compra{
         justify-content: center;
         margin-top: 15px;
         text-align: center;
         }
- @media(min-width:768px){
+
+@media(min-width:768px){
        
         .contador .p-carrito{
             border-radius: 0%;
@@ -1096,4 +1120,17 @@ flex-direction: column;}
         
     }
     }
-    /*Termina Carrito*/
+/*Termina Carrito*/
+
+/*Creacion*/
+
+.product-creation{
+    position: relative;
+    margin-top: 20px;
+}
+
+.creation-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
