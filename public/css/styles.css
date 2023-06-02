@@ -406,20 +406,6 @@ font-family: Arial, Helvetica, sans-serif;
 font-size: 14px;
 text-align: left;
 }
-main form p button {
-    margin-top: 30 px;
-    background-color: orange;
-    color: #fff;;
-    border-radius: 10%;
-    width: 8vw;
-    height: 5vh;
-    border: none;
-    box-shadow: 0 2px #f0c290;
-}
-
-   
-
-
 
 /*Login*/
 
@@ -1134,3 +1120,54 @@ transform: translateY(2px);
     flex-direction: column;
     align-items: center;
 }
+
+  /* Formulario de Registro */
+
+  .bloques-registro {
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5%;
+    text-align: center;
+}
+.bloquestext-registro{
+    text-align: center;
+}
+
+form h3 {
+    text-align: center;
+    color: #ebebeb;
+    padding-bottom: 10px;
+}
+
+.formregistro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(23, 20, 23, 0.75);
+    border-radius: 15px;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.boton-registro {
+    background-color: #de7627;
+    color: #ebebeb;
+    border-radius: 5px; 
+    border: none;
+    height: 27px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.botontexto-registro {
+    background-color: #de7627;
+    color: #ebebeb;
+    border: none;
+    text-align: center;
+}
+/* Fin Formulario de Registro*/ 
