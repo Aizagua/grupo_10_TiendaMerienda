@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<%- include("./partials/head") %>
+
+<body>
+    
+<%- include("./partials/header") %>
+
+    <main class="main-carrito">
+                        <div class="carrito">
+                            <p class="carrito-txt">Tus Compras:</p>
+                        </div>
+            <section class="cajas">
+            <section class="section">
+            <article class="rectangulo-carrito">
+                                    <div class="color">
+                                      <p></p>
+                                    </div>  
+                            <div class="contenido-rectangulo"img>
+                                <img src="images/alfajor-negro-relleno-de-dulce-de-leche.jpg" alt="">
+                                    
+                                    <div class="producto"><p>Alfajor de dulce de leche</p>
+                                        <div class="estrellas">    
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half"></i>
+                                        </div></div>
+                        <div class="contador">
+                                <button class="boton-menos"><i id="menos" class="fa-solid fa-minus"></i></button>
+                                <p class="p-carrito">1</p>
+                                <button class="boton-mas"><i id="mas" class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="precio-rectangulo">
+                            <i id="x" class="fa-sharp fa-regular fa-circle-xmark"></i>
+                            <p>Subtotal: 500$</p></div>
+                        </div>
+        </article>
+        <article class="rectangulo-1-carrito" class="section">
+                        <div class="color1">
+                            <p></p>
+                          </div> 
+                       <div class="contenido-rectangulo"> <img src="images/torta-de-chocolate-porcion.jpg" alt="">
+                             
+                        <div class="producto"><p>Torta de chocolate</p>
+                                    <div class="estrellas1">    
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                             </div>
+                            <div class="contador">
+                            <button class="boton-menos"><i id="menos" class="fa-solid fa-minus"></i></button>
+                            <p class="p-carrito">1</p>
+                        <button class="boton-mas"><i id="mas" class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="precio-rectangulo">
+                              <i id="x" class="fa-sharp fa-regular fa-circle-xmark"></i>
+                              <p>Subtotal: 300$</p></div>
+                          </div>
+        </article>
+        <div class="agregar-compra">
+            <button type="submit">Agregar Compra +</button>
+        </div>
+        <div class="codigo-2"> 
+        <div class="descuento-2">
+            <div><p>Codigo de descuento</p></div>
+            <div><input type="text" nombre="codigo" placeholder="Codigo"><button type="submit">Aplicar</button></div>
+        </div>
+        
+            <div class="precio-rectangulo">
+                <button type="submit">Finalizar Compra</button>
+                <p>Total: 800$</p></div>
+        
+    </div>
+        
+                </section>
+                    
+                    <article class="codigo">
+                    <div class="descuento">
+                        <div><p>Codigo de descuento</p></div>
+                        <div class="input1"><input type="text" nombre="codigo" placeholder="Codigo"><button type="submit">Aplicar</button></div>
+                        
+                    </div>
+                    <div class="total">
+                        <div class="total"><p>Total: 800$</p></div>
+                    </div>
+                    <div class="finalizar"><button type="submit">Finalizar Compra</button></div>
+                    </article>
+            </section>
+            
+        </main>
+        <%- include("./partials/footer") %>
+      </body>
+      
+      </html>

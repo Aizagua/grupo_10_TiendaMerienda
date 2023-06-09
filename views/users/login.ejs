@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<%- include("../partials/head") %>
+
+<body>
+    
+<%- include("../partials/header") %>
+
+    <main id="formulario-inicio">
+        <form class="formularios-login" action="/" method="GET">
+            <h3 class="iniciartextologin">Iniciar Sesión</h3>
+            <div class="bloquesdellogin">
+                <input class="textodelogin" type="user" name="Usuario" placeholder="Nombre De Usuario">
+            </div>
+            <div class="bloquesdellogin">
+                <input class="textodelogin" type="Password" name="Contraseña" placeholder="Contraseña">
+            </div>
+            <div>
+                <label class="textorecordar"for="remember">Recordar contraseña:</label>
+                <input type="checkbox" id="remember" name="remember">
+            </div>
+            <div class="bloquesdellogin-send">
+                <a href="/"><button class="botonform botonsend" type="submit">Enviar</button></a>
+            </div>
+        </form>
+    </main>
+    <%- include("../partials/footer") %>
+</body>
+
+</html>

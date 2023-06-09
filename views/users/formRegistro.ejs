@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<%- include("../partials/head") %>
+
+<body>
+    
+<%- include("../partials/header") %>
+
+    <main>
+        
+        <form class = formregistro type = "/registro" method = "Post">
+          <h3> Registrarte: </h3>
+            <p class = bloques-registro>
+              <input class = bloquestext-registro type = "text" name = "nombre" placeholder ="Nombre">
+            </p>
+            <p class = bloques-registro>
+              <input class = bloquestext-registro type = "text" name = "Apellido" placeholder ="Apellido">
+            </p class = bloques-registro>
+            <p class = bloques-registro>
+              <input class = bloquestext-registro type = "tel" name = "celular" placeholder="Celular">
+            </p>
+            <p class = bloques-registro>
+            <input class = bloquestext-registro type = "email" name = "email" placeholder="Correo">
+            </p>         
+            <p  class = bloques-registro>
+            <input class = bloquestext-registro class = bloquestext-registro type = "password" name = "clave" placeholder="Clave">
+            </p>
+            <p class = boton-registro>
+            <button class = botontexto-registro type = "submit"> Enviar </button>
+            </p>
+        </form> 
+    </main>
+    <%- include("../partials/footer") %>
+</body>
+
+</html>
