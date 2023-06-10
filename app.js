@@ -32,5 +32,5 @@ app.get('/carrito',(req,res)=>{
 })
 
 app.get('/creation',(req,res)=>{
-    res.render("creacionProducto")
+    res.render("productos/creacionProducto")
 })
