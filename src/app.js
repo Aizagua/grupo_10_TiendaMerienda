@@ -4,6 +4,7 @@ const path = require("path");
 const publicPath = path.resolve(__dirname, "../public")
 let rutaregistro = require ("./routes/registro");
 let rutaHome = require ("./routes/home");
+let rutaProductos = require ("./routes/products")
 app.use(express.static(publicPath))
 
 app.set ("view engine", "ejs")
@@ -16,6 +17,8 @@ app.listen(3010, ()=> {
 app.use (rutaHome);
 
 app.use (rutaregistro);
+
+app.use (rutaProductos);
 
 app.get("/login", (req, res)=>{
     res.render("users/login")
