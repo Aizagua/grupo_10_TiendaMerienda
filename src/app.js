@@ -1,8 +1,9 @@
-const express = require("express")
-const app = express()
-const path = require("path")
-
-const publicPath = path.resolve(__dirname, "./public")
+const express = require("express");
+const app = express();
+const path = require("path");
+const publicPath = path.resolve(__dirname, "../public")
+let rutaregistro = require ("./routes/registro");
+let rutaHome = require ("./routes/home");
 app.use(express.static(publicPath))
 
 app.set ("view engine", "ejs")
@@ -12,13 +13,9 @@ app.listen(3010, ()=> {
     console.log("Jarvis Iniciado en puerto 3010")
 })
 
-app.get("/", (req, res)=>{
-    res.render("home")
-})
+app.use (rutaHome);
 
-app.get("/Registro", (req, res)=>{
-    res.render("users/formRegistro")
-})
+app.use (rutaregistro);
 
 app.get("/login", (req, res)=>{
     res.render("users/login")
