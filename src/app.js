@@ -2,8 +2,9 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const publicPath = path.resolve(__dirname, "../public")
-let rutaregistro = require ("./routes/registro");
+let rutaUser = require ("./routes/users");
 let rutaHome = require ("./routes/home");
+let rutaCarrito = require ("./routes/carrito"); 
 let rutaProductos = require ("./routes/products")
 app.use(express.static(publicPath))
 
@@ -16,13 +17,11 @@ app.listen(3010, ()=> {
 
 app.use (rutaHome);
 
-app.use (rutaregistro);
+app.use (rutaUser);
 
 app.use (rutaProductos);
 
-app.get("/login", (req, res)=>{
-    res.render("users/login")
-})
+app.use (rutaCarrito);
 
 app.get("/productDetail", (req, res)=>{
     res.render("productos/productDetail")
