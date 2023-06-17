@@ -8,50 +8,45 @@
 <%- include("../partials/header") %>
 
 
-    <main>
-        <div class="detalle-producto">   
-       
-            <!-- imagen de producto-->
-            <div class="sproducto">
-                <img src="/images/alfajores01p1.jpg"  width="100%">
+<main>
+    <div class="detalle-producto">   
+   
+        <!-- imagen de producto--> 
+        <div class="sproducto">
+            <img src="/images/<%=producto.imagen%>"  width="60%">
+        </div>
+          
+        <div class="sproducto" id="borde">
+             <!-- Nombre del producto-->
+            <div>
+                <h1><%=producto.titulo%></h1>
+            </div>
+             <!-- precio del producto, moneda-->
+            <div>
+                <p class="precio"><%=producto.precio%>$</p>
             </div>
             
-            <div class="sproducto">
-                 <!-- Nombre del producto-->
-                <div>
-                    <h1>Caja de Alfajores x 6 unidades</h1>
+            <!-- descripcion del producto-->
+            <p class="text-des-producto"><%=producto.descripcion%></p>     
+            
+            <div class="product_meta">
+                 <div class="product_meta_text_bold">
+                    <!-- codigo del producto-->
+                    NCP: 
                 </div>
-                 <!-- precio del producto, moneda-->
-                <div>
-                    <p class="precio">$ 11,43</p>
+                <div class="product_meta_text">
+                    <%=producto.cantidad%>
                 </div>
-                
-                <!-- descripcion del producto-->
-                <p class="text-des-producto">Cualquiera que haya comido alguna vez Alfajores puede confirmar
-                que estas irresistibles galletas están demasiado buenas para dejarlas.
-                Los amantes de la comida dulce descubrirán el paraíso con estas galletas
-                rellenas de dulce de leche cubiertas de chocolate con leche o merengue.
-                <strong>Pídalas hoy mismo.</strong></p>     
-                
-                <div class="product_meta">
-                     <div class="product_meta_text_bold">
-                        <!-- codigo del producto-->
-                        NCP: 
-                    </div>
-                    <div class="product_meta_text">
-                        alfajores_6_ua
-                    </div>
+            </div>
+            <div class="product_meta">
+                <div class="product_meta_text_bold">
+                    <!-- categoria del producto-->
+                    Categorias: 
                 </div>
-                <div class="product_meta">
-                    <div class="product_meta_text_bold">
-                        <!-- categoria del producto-->
-                        Categorias: 
-                    </div>
-                    <div class="product_meta_text">
-                        Alfajores, Delicatessen 
-                    </div>                
-                </div>
-
+                <div class="product_meta_text">
+                    <%=producto.titulo%>
+                </div>                
+            </div>
                 <div class="pedido-producto">
                     <div class="product_meta">
                         <form class="cart" action="/carrito" method="get" >

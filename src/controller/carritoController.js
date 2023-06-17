@@ -1,6 +1,6 @@
 let carritoController = {
     send: function (req, res) {
-      res.render("../../views/carrito")
+      res.render("../views/carrito")
     },
 };
 

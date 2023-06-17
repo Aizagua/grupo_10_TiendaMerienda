@@ -13,40 +13,15 @@
         </div>
 
         <div class="productos">
-            <div>
-                <img src="/images/Capuchino.jpg" alt="">
-                <h4>Cafe</h4>
-                <p>800$</p>
-            </div>
-            <div>
-                <img src="/images/Cheesecake.jpg" alt="">
-                <h4>Torta</h4>
-                <p>1500$</p>
-            </div>
-            <div>
-                <img src="/images/Scones.jpg" alt="">
-                <h4>Scons</h4>
-                <p>600$</p>
-            </div>
-            <div>
-                <img src="/images/TeMatcha.jpg" alt="">
-                <h4>Te de Matcha</h4>
-                <p>400$</p>
-            </div>
-            <div>
-              <a href="/productDetail">
-                <img src="/images/alfajores01p1.jpg" alt="">
-              </a>
-                <h4>Alfajores</h4>
-                <p>200$</p>
-              
-            </div>
-            <div>
-              <img src="/images/Te.jpg" alt="">
-              <h4>Te</h4>
-              <p>350$</p>
-          </div>
-        </div>
+            <% menu.forEach(homeProductos => { %>
+                <div>
+                    <a href="/detalle/<%=homeProductos.id%>"> 
+                    <img src="/images/<%=homeProductos.imagen%>"></a>
+                    <h4><%=homeProductos.nombre%></h4>
+                    <p><%=homeProductos.precio%>$</p>
+                </div>
+                    <% }) %>
+             </div>
 
         <article class="lore">
             <h3>Cosas Interesantes</h3>

@@ -1,9 +1,9 @@
 let registrocontroller = {
     registroUser: function (req, res) {
-      res.render("../../views/users/formRegistro")
+      res.render("../views/users/formRegistro")
     },
     loginUser:function (req,res) {
-      res.render("../../views/users/login")
+      res.render("../views/users/login")
     }
 };
 

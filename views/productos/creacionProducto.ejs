@@ -8,34 +8,27 @@
 <%- include("../partials/header") %>
     
     <main id="formulario-inicio" >
-        <form class="formularios-login creation-form" action="/" method="GET">
+        <form class="formularios-login" method="POST" action="/products">
             <h3 class="iniciartextologin">Agregar Producto</h3>
 
             <div class="bloquesdellogin">
-                <input class="textodelogin" type="user" name="Usuario" placeholder="Nombre de Producto">
+                <input class="textodelogin" type="text" name="nombre" placeholder="nombre">
             </div>
             <div class="bloquesdellogin">
-                <input class="textodelogin" type="number" name="Precio" placeholder="Precio">
+                <input class="textodelogin" type="text" name="precio" placeholder="precio">
             </div>
             <div class="bloquesdellogin">
-                <input class="textodelogin" type="file" name="Imagen" placeholder="Imagen">
+                <input class="textodelogin" type="file" name="imagen" placeholder="img">
             </div>
             <div class="bloquesdellogin">
-                <input class="textodelogin" type="text" name="Categoria" placeholder="Categoria">
+                <input class="textodelogin" type="text" name="titulo" placeholder="titulo">
             </div>
-            
-            <div class="bloquesdellogin">
-                <select class="textodelogin">
-                    <option value="Categoria">Categoria</option>
-                    <option value="Alfajores">Alfajores</option>
-                    <option value="Cafe">Cafe</option>
-                </select>
             </div>
             <div class="bloquesdellogin">
-                <input class="textodelogin" type="text" name="Descripcion" placeholder="Descripcion">
+                <input class="textodelogin" type="text" name="descripcion" placeholder="descripcion">
             </div>
             <div class="bloquesdellogin">
-                <textarea class="bloquesdellogin">Descripcion</textarea>
+                <textarea class="bloquesdellogin" name="descripcion2" placeholder="desc2">Descripcion</textarea>
             </div>
 
             <div class="bloquesdellogin-send">
