@@ -1,6 +1,17 @@
 let express = require ("express");
 const products = require("../controller/productsController");
+const multer = require("multer")
 let router = express.Router();
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, path.join(__dirname, '../../public/images'))
+    },
+    filename: function (req, file, cb) {
+      let imageName = Date.now() + path.extname(file.originalname)
+      cb(null, imageName)
+    }
+  })
 
 //Detalle
 router.get('/detalle/:id', products.detalle);

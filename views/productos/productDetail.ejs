@@ -35,7 +35,7 @@
                     NCP: 
                 </div>
                 <div class="product_meta_text">
-                    <%=producto.cantidad%>
+                    <%=producto.codigo%>
                 </div>
             </div>
             <div class="product_meta">
@@ -52,7 +52,7 @@
                         <form class="cart" action="/carrito" method="get" >
                         <!-- pedido de producto x cantidad-->
                             <div class="cantidad">
-                                <label class="text-ctd-pedido" for="cantidad-pc6a">Caja Alfajores x 6 unid. </label>      
+                                <label class="text-ctd-pedido" for="cantidad-pc6a"><%=producto.cantidad%></label>      
                                 <div>           
                                 <input type="button" value="-" class="minus">                
                                 <input type="number" id="cantidad" class="input-text ctd text" value="1" title="Cantidad" min="1" max="" name="cantidad" step="1" placeholder="" inputmode="numeric" autocomplete="off">
