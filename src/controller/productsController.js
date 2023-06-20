@@ -21,8 +21,9 @@ let productsController = {
       "precio": req.body.precio,
       "descripcion2":req.body.descripcion2,
       "titulo":req.body.titulo,
-      "imagen":req.body.img
-      } 
+      "imagen":req.body.imagen
+      }
+    console.log(req.body)
     fs.writeFileSync(rutaArchivo, JSON.stringify([...productoProducts, productoNuevo], null, 2), "utf-8")
     return res.redirect("/")
   },
