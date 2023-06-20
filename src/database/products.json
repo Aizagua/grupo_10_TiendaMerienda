@@ -65,6 +65,7 @@
     "cantidad": "Té x 1 unid.",
     "desc2": "¿Obtendras los mejores alfajores? ¡Nosotros decimos que sí! Alfajores, ¡sabrosos de producción capitalina! Un alfajor es un galleta de mantequilla con una capa de caramelo cubierta de chocolate fino o merengue. Estos deliciosos dulces existen en muchas versiones y son <b>consumidos con pasión por los argentinos, casi siempre con yerba mate.Hoy compras tus alfajores acompañada con yerba mate, café o té podras disfrutar de la merienda ideal .Los Alfajores son un regalo perfecto ¡Regálalos y espera hacer muy feliz a alguien! Los alfajores son una maravillosa y original idea de regalo cuando no sabes qué regalar a un amigo o familiar.La caja de alfajores mixtos vienen en una bonita presentación: una caja con 6 alfajores envueltos individualmente en papel de regalo dorado y plateado de la mejor calidad. Tenga la seguridad de que cuando el homenajeado los pruebe ¡superará cualquiera de sus expectativas! Ingredientes: Chocolate: Azúcar, leche, harina de trigo, licor de cacao, margarina, glucosa, manteca de cacao, huevos en polvo, almidón de maíz, miel, cacao en polvo, sorbitol, bicarbonato sódico, lecitina de soja, sal, bicarbonato amónico, vainillina, aroma natural de limón y almendra.Merengue:  Azúcar, leche, harina de trigo, huevos, margarina, glucosa, almidón de maíz, miel, cacao en polvo, sorbitol, bicarbonato sódico, sal, aroma de vainilla, bicarbonato amónico, proteína vegetal hidrolizada, aroma natural de limón, aroma artificial de almendra, vainillina, aroma natural de naranja.Encuentre muchos más Alfajores  aquí"
   },
+
   {
     "id": 7,
     "nombre": "Torta de Chocolate",
@@ -75,5 +76,126 @@
     "titulo": "Torta de Chocolate",
     "cantidad": "Té x 1 unid.",
     "descripcion2": "¿Obtendras los mejores alfajores? ¡Nosotros decimos que sí! Alfajores, ¡sabrosos de producción capitalina! Un alfajor es un galleta de mantequilla con una capa de caramelo cubierta de chocolate fino o merengue. Estos deliciosos dulces existen en muchas versiones y son <b>consumidos con pasión por los argentinos, casi siempre con yerba mate.Hoy compras tus alfajores acompañada con yerba mate, café o té podras disfrutar de la merienda ideal .Los Alfajores son un regalo perfecto ¡Regálalos y espera hacer muy feliz a alguien! Los alfajores son una maravillosa y original idea de regalo cuando no sabes qué regalar a un amigo o familiar.La caja de alfajores mixtos vienen en una bonita presentación: una caja con 6 alfajores envueltos individualmente en papel de regalo dorado y plateado de la mejor calidad. Tenga la seguridad de que cuando el homenajeado los pruebe ¡superará cualquiera de sus expectativas! Ingredientes: Chocolate: Azúcar, leche, harina de trigo, licor de cacao, margarina, glucosa, manteca de cacao, huevos en polvo, almidón de maíz, miel, cacao en polvo, sorbitol, bicarbonato sódico, lecitina de soja, sal, bicarbonato amónico, vainillina, aroma natural de limón y almendra.Merengue:  Azúcar, leche, harina de trigo, huevos, margarina, glucosa, almidón de maíz, miel, cacao en polvo, sorbitol, bicarbonato sódico, sal, aroma de vainilla, bicarbonato amónico, proteína vegetal hidrolizada, aroma natural de limón, aroma artificial de almendra, vainillina, aroma natural de naranja. Encuentre muchos más Alfajores aquí Descripcion"
+  },
+  {
+    "id": 8,
+    "nombre": "Mañanita yerba mate set ",
+    "precio": "13,99",
+    "imagen": "mananita-yerba-mate.jpg",
+    "descripcion": "Este set es un paquete de inicio completo y adaptado de accesorios y deliciosa yerba mate.",
+    "codigo": "se_ym_1_ua",
+    "titulo": "Mañanita yerba mate set",
+    "cantidad": "Set x 1 unid.",
+    "descripcion2": "También es una buena opción si usted quiere comprar un conjunto específicamente para la yerba mate, especialmente si usted ha estado bebiendo previamente de un vaso normal. El paquete un poco más pequeño de yerba, que pesa 250g, le permite probar y familiarizarse con sus sabores. Vale la pena saber que la compra de un conjunto es siempre más rentable, y usted puede estar seguro de que los productos que hemos seleccionado especialmente se combinan perfectamente entre sí."
+  },
+  {
+    "id": 9,
+    "nombre": "Taragüi Mate Xperience Kit",
+    "precio": "7",
+    "imagen": "yerba-mate-taragui-mate-xperience.jpg",
+    "descripcion": "Taragüi Mate Xperience es un set de yerba mate para principiantes para experimentar esta típica infusión en su forma tradicional.    Cuenta con todos los elementos necesarios para disfrutar del ritual único del mate preparándolo en forma tradicional.",
+    "codigo": "me_tgkit_1_ua",
+    "titulo": "Taragüi Mate Xperience Kit",
+    "cantidad": "Kit x 1 unid.",
+    "descripcion2": "¡Vive la Mate Xperience durante 7 días! El set Taragüi mate Xperience tiene suficientes porciones para preparar la infusión durante 7 días. Te animamos a que pruebes la experiencia mate durante una semana y compruebes por ti mismo lo que la yerba mate puede hacer por ti."
+  },
+  {
+    "id": 10,
+    "nombre": "Kit de iniciación Taragüi Edición Especial",
+    "precio": "32",
+    "imagen": "taraguei-starter-kit-special-edition.jpg",
+    "descripcion": "Todo lo necesario para empezar a tomar mate a la manera tradicional argentina, con la yerba más consumida en Argentina.",
+    "codigo": "me_tgkit_1_ua",
+    "titulo": "Kit de iniciación Taragüi Edición Especial",
+    "cantidad": "Kit x 1 unid.",
+    "descripcion2": "Este kit se compone de: 1 paquete de 500 g de mate tradicional Taragüi, 1 taza de mate de vidrio, envuelta en cuero genuino y con anillo de acero inoxidable, volumen aprox. 2 dl,  Una bombilla (pajita para beber) de acero inoxidable, con filtro extraíble, longitud 17 cm"
+  },
+  {
+    "id": 11,
+    "nombre": "Havanna salsa de dulce de leche Cacao Puro",
+    "precio": "11",
+    "imagen": "dulce-de-leche-con-chocolate-sauce.jpg",
+    "descripcion": "Cualquiera que haya probado la salsa de dulce de leche Havanna 70% Cacao Puro puede confirmar que este irresistible caramelo es demasiado bueno para dejarlo. El Caramelo Havanna te proporciona una sensación dulce que se fundirá en tu boca y lo mejor es que puedes combinarlo con muchos alimentos y siempre estará delicioso. Pídelo hoy mismo.",
+    "codigo": "sdl_ha_1_ua",
+    "titulo": "Havanna salsa de dulce de leche Cacao Puro",
+    "cantidad": "1 unid.",
+    "descripcion2": "¿Qué es la salsa de dulce de leche Havanna 70% Cacao Puro? El dulce de leche Havanna es un caramelo celestial y dulce para untar con cacao puro añadido (chocolate) que puedes comprar online en nuestra tienda. El dulce de leche Havanna es uno de los productos más sabrosos de Argentina y uno de los que definitivamente deberías comprar si eres goloso."
+  },
+  {
+    "id": 11,
+    "nombre": "Alfajores de Maicena Mardel",
+    "precio": "7",
+    "imagen": "alfajores-de-maicena-mardel-mais.jpg",
+    "descripcion": "Existen varias recetas de alfajores. También se pueden hacer con harina de maíz. Este es el caso de estos deliciosos alfajores de maicena, que consisten en 2 pasteles, crema de caramelo de leche con un poco de copos de coco en los bordes.",
+    "codigo": "af_mm_1_ua",
+    "titulo": "Alfajores de Maicena Mardel ",
+    "cantidad": "1 unid.",
+    "descripcion2": "Composición: Crema de caramelo de leche (min. 45%) (jarabe de glucosa y fructosa, LECHE entera en polvo, agua, azúcar, LECHE en polvo, conservador (E202), aroma (vainilla)), harina de TRIGO, almidón de maíz, LEVADURA, grasa vegetal (palma), azúcar, copos de coco, gasificantes (E450i, E500ii), conservador (E200)."
+  },
+  {
+    "id": 12,
+    "nombre": "Dulce de Batata Los Nietitos",
+    "precio": "6",
+    "imagen": "Dulce_de_Batata_Los_Nietitos.jpg",
+    "descripcion": "Esta pasta de boniato de la marca Los Nietitos puede comerse sola o, como suele ocurrir en Argentina o Uruguay, junto con queso y otra pasta de fruta, el dulce de membrillo. ",
+    "codigo": "db_ln_1_t",
+    "titulo": "Dulce de Batata Los Nietitos",
+    "cantidad": "Tarros de plástico de 400gr. (netos). Listo para servir!",
+    "descripcion2": "Cuenta la leyenda que una monja inventó la receta de esta pasta de boniato con vainilla. El boniato es diferente de la patata. Se cultiva en todas partes excepto en Europa. Se pueden utilizar las hojas y las raíces de almacenamiento. Sin embargo, sólo los tubérculos constituyen la base de esta pasta de boniato con vainilla."
+  },
+  {
+    "id": 13,
+    "nombre": "Galletitas Havanna Limon Chocolate",
+    "precio": "6",
+    "imagen": "galletitas-havanna-limon-chocolate.jpg",
+    "descripcion": "6 tentadoras galletas habaneras rellenas de la más delicada crema con sabor a limón, recubiertas de chocolate semidulce.",
+    "codigo": "g_hv_6_ua",
+    "titulo": "Galletitas Havanna Limon Chocolate",
+    "cantidad": "Caja de 6 piezas de 35g. Peso neto total 210gr.",
+    "descripcion2": "Cada galleta viene envuelta individualmente. Ingredientes: Harina de TRIGO, pasta de cacao, manteca de cacao, azúcar, grasa vegetal interesterificada, margarina, glucosa, huevo en polvo, LECHE en polvo, almidón de maíz, miel, sal, aroma de limón, lecitina de girasol (E322), bicarbonato amónico (E503ii), bicarbonato sódico (E500ii), ácido cítrico (E330), aroma de vainilla, vainillina. "
+  },
+  {
+    "id": 14,
+    "nombre": "Dulce De Membrillo Campagnola",
+    "precio": "10",
+    "imagen": "dulce-de-membrillo-esnaola.jpg",
+    "descripcion": "Producto de calidad. Se puede disfrutar con queso, como preparación de postre o para acompañar a su pareja Famoso porque con él se elabora La Señora Pastafrola, un dulce muy popular en Argentina",
+    "codigo": "dm_cp_1_ua",
+    "titulo": "Dulce De Membrillo Campagnola",
+    "cantidad": "Caja con un peso neto total 220gr.",
+    "descripcion2": "Los productos de la marca Esnaola son sinónimo de calidad porque desarrollan y elaboran sus productos cuidando la selección de las mejores materias primas para obtener el auténtico sabor de la pasta de frutas. Ingredientes: Membrillo, jarabe de glucosa, azúcar, citrato sódico E331, ácido cítrico E330, conservador (sorbato potásico E202)."
+  },
+  {
+    "id": 15,
+    "nombre": "Facturas 1 Docena",
+    "precio": "14",
+    "imagen": "facturas-1.jpg",
+    "descripcion": "Producto de calidad y fresco, solo o para compartir.",
+    "codigo": "fa_12_ua",
+    "titulo": "Facturas 1 Docena",
+    "cantidad": "Caja con 12 unidades, con un peso neto total 250gr.",
+    "descripcion2": "4 variedaes de facturas tradiconales"
+  },
+  {
+    "id": 16,
+    "nombre": "Masas secas 1/2 kilo",
+    "precio": "14",
+    "imagen": "masa-seca.jpg",
+    "descripcion": "Si te invitan a almorzar, no te olvides de llevar las masas secas para el café. Fáciles de comer, no hay que ensuciar y están buenísimas.",
+    "codigo": "ms_1_ua",
+    "titulo": "Masas secas 1/2 kilo",
+    "cantidad": "Caja con un peso neto total 500gr.",
+    "descripcion2": "Tradiconales Masas secas"
+  },
+  {
+    "id": 17,
+    "nombre": "Conitos 12 unidades",
+    "precio": "19",
+    "imagen": "conitos-de-dulce-de-leche.jpg",
+    "descripcion": "Si tenés algunos en la heladera, no creo que te duren mucho. Nadie puede resistirse al crack del chocolate frío junto con el dulce de leche. Irán desapareciendo uno por uno y nunca sabrás quien fue.",
+    "codigo": "cn_12_ua",
+    "titulo": "Conitos 12 unidades",
+    "cantidad": "Caja con 12 unidades, un peso neto total 350gr.",
+    "descripcion2": "Tradiconales Conitos "
   }
 ]
