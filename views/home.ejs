@@ -13,15 +13,14 @@
         </div>
 
         <div class="productos">
-            <% menu.forEach(homeProductos => { %>
+            <% for (let i = 0; i < 6; i++) { %>
                 <div>
-                    <a href="/detalle/<%=homeProductos.id%>"> 
-                    <img src="/images/<%=homeProductos.imagen%>"></a>
-                    <h4><%=homeProductos.nombre%></h4>
-                    <p><%=homeProductos.precio%>$</p>
+                    <img src="/images/<%= menu[i].imagen %>" alt="">
+                    <h4><%= menu[i].nombre %></h4>
+                    <p>$<%= menu[i].precio %></p>
                 </div>
-                    <% }) %>
-             </div>
+            <% }; %>
+        </div>
 
         <article class="lore">
             <h3>Cosas Interesantes</h3>

@@ -27,7 +27,7 @@ let productsController = {
     return res.redirect("/")
   },
   list: function (req, res) {
-      res.render("../views/productos/listadoDeProductos")
+      res.render('productos/listadoDeProductos', {listaProductos: productoProducts})
     },
 }
 

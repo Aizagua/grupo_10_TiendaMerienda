@@ -7,56 +7,14 @@
     <%- include("../partials/header") %>
     
         <main>
-    
             <div class="productos">
-                <div>
-                    <img src="/images/Capuchino.jpg" alt="">
-                    <h4>Cafe</h4>
-                    <p>800$</p>
-                </div>
-                <div>
-                    <img src="/images/Cheesecake.jpg" alt="">
-                    <h4>Torta</h4>
-                    <p>1500$</p>
-                </div>
-                <div>
-                    <img src="/images/Scones.jpg" alt="">
-                    <h4>Scons</h4>
-                    <p>600$</p>
-                </div>
-                <div>
-                    <img src="/images/TeMatcha.jpg" alt="">
-                    <h4>Te de Matcha</h4>
-                    <p>400$</p>
-                </div>
-                <div>
-                  <a href="/productDetail">
-                    <img src="/images/alfajores01p1.jpg" alt="">
-                  </a>
-                    <h4>Alfajores</h4>
-                    <p>200$</p>
-                  
-                </div>
-                <div>
-                  <img src="/images/Te.jpg" alt="">
-                  <h4>Te</h4>
-                  <p>350$</p>
-                </div>
-                <div>
-                    <img src="/images/torta-de-chocolate-porcion.jpg" alt="">
-                    <h4>Torta de Chocolate</h4>
-                    <p>350$</p>
-                </div>
-                <div>
-                    <img src="/images/mate.jpg" alt="">
-                    <h4>Mate</h4>
-                    <p>350$</p>
-                </div>
-                <div>
-                    <img src="/images/facturas.jpg" alt="">
-                    <h4>Facturas</h4>
-                    <p>350$</p>
-                </div>
+                <% for (let i = 0; i < listaProductos.length; i++) { %>
+                    <div>
+                        <img src="/images/<%= listaProductos[i].imagen %>" alt="">
+                        <h4><%= listaProductos[i].nombre %></h4>
+                        <p>$<%= listaProductos[i].precio %></p>
+                    </div>
+                <% }; %>
             </div>
         </main>
             <%- include("../partials/footer") %>
