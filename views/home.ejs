@@ -15,8 +15,15 @@
         <div class="productos">
             <% for (let i = 0; i < 6; i++) { %>
                 <div>
-                    <img src="/images/<%= menu[i].imagen %>" alt="">
-                    <h4><%= menu[i].nombre %></h4>
+                    <a href="/detalle/<%= menu[i].id %>">
+                        
+                       <img src="/images/<%= menu[i].imagen %>" alt=""> 
+                    </a>
+                    <h4>
+                        <a href="/detalle/<%= menu[i].id %>">
+                            <%= menu[i].nombre %>
+                        </a>
+                    </h4>
                     <p>$<%= menu[i].precio %></p>
                 </div>
             <% }; %>
