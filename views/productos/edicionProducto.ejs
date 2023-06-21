@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<%- include("../partials/head") %>
+
+<body>
+    
+<%- include("../partials/header") %>
+    
+    <main id="formulario-inicio" >
+        <form class="formularios-login" method="POST" action="/productos/<%= producto.id %>?_method=PUT" enctype="multipart/form-data">
+            <h3 class="iniciartextologin">Editar Producto</h3>
+
+            <div class="bloquesdellogin">
+                <input class="textodelogin" type="text" name="nombre" placeholder="nombre" value="<%= producto.nombre%>">
+            </div>
+            <div class="bloquesdellogin">
+                <input class="textodelogin" type="number" name="precio" placeholder="precio" value="<%= producto.precio%>">
+            </div>
+            <div class="bloquesdellogin">
+                <input class="textodelogin" type="text" name="titulo" placeholder="titulo" value="<%= producto.titulo%>">
+            </div>
+            <div class="bloquesdellogin">
+                <input class="textodelogin" type="text" name="cantidad" placeholder="cantidad" value="<%= producto.cantidad%>">
+            </div>
+            </div>
+            <div class="bloquesdellogin">
+                <input class="textodelogin" type="text" name="descripcion" placeholder="descripcion" value="<%= producto.descripcion%>">
+            </div>
+            <div class="bloquesdellogin">
+                <textarea class="bloquesdellogin" name="descripcion2" placeholder="desc2">Descripcion</textarea value="<%= producto.descripcion2%>">
+            </div>
+            <div class="bloquesdellogin">
+                <input class="textodelogin" type="file" name="imagen" placeholder="img" value="<%= producto.imagen%>">
+            </div>
+            <div class="bloquesdellogin-send">
+                <a href="/"><button class="botonform botonsend" type="submit">Editar</button></a>
+            </div>
+        </form>
+    </main>
+    <%- include("../partials/footer") %>
+  </body>
+  
+  </html>

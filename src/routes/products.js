@@ -23,7 +23,9 @@ router.get('/detalle/:id', products.detalle);
 router.get('/crear/producto', products.create)
 router.post('/products', uploadFile.single('imagen'), products.processCreate)
 
-
+//Editar
+router.get('/productos/edit/:id', products.edit)
+router.put('/productos/:id', products.editProcess)
 
 
 
