@@ -19,31 +19,33 @@ let productsController = {
       "nombre": req.body.nombre,
       "descripcion": req.body.descripcion,
       "precio": req.body.precio,
-      "descripcion2":req.body.descripcion2,
+      "desc2":req.body.desc2,
       "titulo":req.body.titulo,
-      "imagen":req.body.imagen,
-      "cantidad":req.body.cantidad
+      "imagen":req.file.filename,
+      "cantidad":req.body.cantidad,
+      "codigo":req.body.codigo
       }
     console.log(req.body)
     fs.writeFileSync(rutaArchivo, JSON.stringify([...productoProducts, productoNuevo], null, 2), "utf-8")
     return res.redirect("/")
   },
   edit: (req,res)=>{
-    let editarProducto=productoProducts.find(row=>row.id==req.params.id)
-    if (editarProducto) return res.render('productos/edicionProducto', { producto: editarProducto})
+    const buscarProducto = productoProducts.find(row=>row.id==req.params.id)
+    if (buscarProducto) return res.render('productos/edicionProducto', { producto: buscarProducto})
             else return res.send("ERROR 404 NOT FOUND")
       },
-      editProcess:(req,res)=>{
-        const editarProducto = productoProducts.find(row => row.id == req.params.id)
-        editarProducto.nombre = req.body.nombre,
-        editarProducto.descripcion = req.body.descripcion,
-        editarProducto.precio = req.body.precio,
-        editarProducto.descripcion2 = req.body.descripcion2,
-        editarProducto.imagen = req.body.titulo,
-        editarProducto.titulo = req.body.imagen,
-        editarProducto.cantidad = req.body.cantidad
-        fs.writeFileSync(rutaArchivo, JSON.stringify(productoProducts, null, 2), "utf-8") 
-        return res.redirect("/")
+  editProcess:(req,res)=>{
+    const editarProducto = productoProducts.find(row => row.id == req.params.id)
+    editarProducto.nombre = req.body.nombre
+    editarProducto.descripcion = req.body.descripcion  
+    editarProducto.precio = req.body.precio  
+    editarProducto.desc2 = req.body.desc2  
+    editarProducto.imagen = req.body.imagen  
+    editarProducto.titulo = req.body.titulo
+    editarProducto.cantidad = req.body.cantidad  
+
+    fs.writeFileSync(rutaArchivo, JSON.stringify([...productoProducts], null, 2), "utf-8") 
+    return res.redirect("/")
         
       },
   list: function (req, res) {
