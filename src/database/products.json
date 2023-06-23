@@ -121,7 +121,7 @@
     "desc2": "¿Qué es la salsa de dulce de leche Havanna 70% Cacao Puro? El dulce de leche Havanna es un caramelo celestial y dulce para untar con cacao puro añadido (chocolate) que puedes comprar online en nuestra tienda. El dulce de leche Havanna es uno de los productos más sabrosos de Argentina y uno de los que definitivamente deberías comprar si eres goloso."
   },
   {
-    "id": 11,
+    "id": 12,
     "nombre": "Alfajores de Maicena Mardel",
     "precio": "7",
     "imagen": "alfajores-de-maicena-mardel-mais.jpg",
@@ -132,7 +132,7 @@
     "desc2": "Composición: Crema de caramelo de leche (min. 45%) (jarabe de glucosa y fructosa, LECHE entera en polvo, agua, azúcar, LECHE en polvo, conservador (E202), aroma (vainilla)), harina de TRIGO, almidón de maíz, LEVADURA, grasa vegetal (palma), azúcar, copos de coco, gasificantes (E450i, E500ii), conservador (E200)."
   },
   {
-    "id": 12,
+    "id": 13,
     "nombre": "Dulce de Batata Los Nietitos",
     "precio": "6",
     "imagen": "Dulce_de_Batata_Los_Nietitos.jpg",
@@ -143,7 +143,7 @@
     "desc2": "Cuenta la leyenda que una monja inventó la receta de esta pasta de boniato con vainilla. El boniato es diferente de la patata. Se cultiva en todas partes excepto en Europa. Se pueden utilizar las hojas y las raíces de almacenamiento. Sin embargo, sólo los tubérculos constituyen la base de esta pasta de boniato con vainilla."
   },
   {
-    "id": 13,
+    "id": 14,
     "nombre": "Galletitas Havanna Limon Chocolate",
     "precio": "6",
     "imagen": "galletitas-havanna-limon-chocolate.jpg",
@@ -154,7 +154,7 @@
     "desc2": "Cada galleta viene envuelta individualmente. Ingredientes: Harina de TRIGO, pasta de cacao, manteca de cacao, azúcar, grasa vegetal interesterificada, margarina, glucosa, huevo en polvo, LECHE en polvo, almidón de maíz, miel, sal, aroma de limón, lecitina de girasol (E322), bicarbonato amónico (E503ii), bicarbonato sódico (E500ii), ácido cítrico (E330), aroma de vainilla, vainillina. "
   },
   {
-    "id": 14,
+    "id": 15,
     "nombre": "Dulce De Membrillo Campagnola",
     "precio": "10",
     "imagen": "dulce-de-membrillo-esnaola.jpg",
@@ -165,7 +165,7 @@
     "desc2": "Los productos de la marca Esnaola son sinónimo de calidad porque desarrollan y elaboran sus productos cuidando la selección de las mejores materias primas para obtener el auténtico sabor de la pasta de frutas. Ingredientes: Membrillo, jarabe de glucosa, azúcar, citrato sódico E331, ácido cítrico E330, conservador (sorbato potásico E202)."
   },
   {
-    "id": 15,
+    "id": 16,
     "nombre": "Facturas 1 Docena",
     "precio": "14",
     "imagen": "facturas-1.jpg",
@@ -176,7 +176,7 @@
     "desc2": "4 variedaes de facturas tradiconales"
   },
   {
-    "id": 16,
+    "id": 17,
     "nombre": "Masas secas 1/2 kilo",
     "precio": "14",
     "imagen": "masa-seca.jpg",
@@ -187,7 +187,7 @@
     "des2": "Tradiconales Masas secas"
   },
   {
-    "id": 17,
+    "id": 18,
     "nombre": "Conitos 12 unidades",
     "precio": "19",
     "imagen": "conitos-de-dulce-de-leche.jpg",

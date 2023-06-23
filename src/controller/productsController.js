@@ -9,10 +9,12 @@ let productsController = {
       if (productoEncontrado) return res.render('productos/productDetail', { producto: productoEncontrado })
       else return res.send("ERROR 404 NOT FOUND")
       
-    },
+  },
+
   create: (req, res) => {
   return res.render('productos/creacionProducto')
   },
+
   processCreate: (req, res) => {
   let productoNuevo = {
       "id": productoProducts.length+1, 
@@ -29,28 +31,33 @@ let productsController = {
     fs.writeFileSync(rutaArchivo, JSON.stringify([...productoProducts, productoNuevo], null, 2), "utf-8")
     return res.redirect("/")
   },
+
   edit: (req,res)=>{
     const buscarProducto = productoProducts.find(row=>row.id==req.params.id)
     if (buscarProducto) return res.render('productos/edicionProducto', { producto: buscarProducto})
             else return res.send("ERROR 404 NOT FOUND")
-      },
+  },
+
   editProcess:(req,res)=>{
-    const editarProducto = productoProducts.find(row => row.id == req.params.id)
+    let editarProducto = {}
+    editarProducto = productoProducts.find(row => row.id == req.params.id)
     editarProducto.nombre = req.body.nombre
     editarProducto.descripcion = req.body.descripcion  
     editarProducto.precio = req.body.precio  
     editarProducto.desc2 = req.body.desc2  
-    editarProducto.imagen = req.body.imagen  
+    editarProducto.imagen = req.file.filename  
     editarProducto.titulo = req.body.titulo
     editarProducto.cantidad = req.body.cantidad  
 
-    fs.writeFileSync(rutaArchivo, JSON.stringify([...productoProducts], null, 2), "utf-8") 
+    fs.writeFileSync(rutaArchivo, JSON.stringify(productoProducts, null, 2), "utf-8") 
+    console.log(req.editarProducto)
     return res.redirect("/")
         
-      },
+  },
+
   list: function (req, res) {
       res.render('productos/listadoDeProductos', {listaProductos: productoProducts})
-    },
+  },
 }
 
 module.exports = productsController

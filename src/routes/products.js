@@ -25,7 +25,7 @@ router.post('/products', uploadFile.single('imagen'), products.processCreate)
 
 //Editar
 router.get('/productos/edit/:id', products.edit)
-router.put('/productos/:id', products.editProcess)
+router.put('/productos/:id', uploadFile.single('imagen'),products.editProcess)
 
 
 
