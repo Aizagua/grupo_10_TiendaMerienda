@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "nombre": "Carlos",
+    "apellido": "Duarte",
+    "celular": "4587844574",
+    "email": "carlos@gmail.com",
+    "imagen": "alfajores01p1.jpg",
+    "password": "1234"
+  },
+  {
+    "id": 2,
+    "nombre": "Andres",
+    "apellido": "Mendoza",
+    "celular": "4587844574",
+    "email": "andres@gmail.com",
+    "imagen": "alfajores01p1.jpg",
+    "password": "4567"
+  },
+  {
+    "id": 3,
+    "nombre": "Liliana antonia",
+    "apellido": "Aranda",
+    "celular": "4587844574",
+    "email": "liliana@gmail.com",
+    "imagen": "alfajores01p1.jpg",
+    "password": "8910",
+    "avatar": "1687615704113.jpg"
+  }
+]
