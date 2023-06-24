@@ -17,7 +17,20 @@ let registrocontroller = {
       if (buscarUsurio) return res.render('users/edicionUser', { user: buscarUsurio})
               else return res.send("ERROR 404 NOT FOUND")
     },
-  
+    processCreate: (req, res) => {
+      let userNew = {
+          "id": userUsers.length+1, 
+          "nombre": req.body.nombre,
+          "apellido": req.body.apellido,
+          "celular": req.body.celular,
+          "email": req.body.correo,
+          "imagen": req.file.filename,
+          "password": req.body.password,
+          }
+        
+        fs.writeFileSync(rutaArchivo, JSON.stringify([...userUsers, userNew], null, 2), "utf-8")
+        return res.redirect("/")
+      },
     editProcess:(req,res)=>{
       let editarUsuario = {}
       editarUsuario = userUsers.find(row => row.id == req.params.id)
@@ -25,12 +38,11 @@ let registrocontroller = {
       editarUsuario.apellido = req.body.apellido 
       editarUsuario.celular = req.body.celular 
       editarUsuario.correo = req.body.correo
-      editarUsuario.correo = req.body.password
+      editarUsuario.password = req.body.password
       editarUsuario.avatar = req.file.filename  
-      
+      console.log(req.file.filename)
       fs.writeFileSync(rutaArchivo, JSON.stringify(userUsers, null, 2), "utf-8") 
-      //console.log(req.editarUserio)
-      return res.redirect("/")
+        return res.redirect("/")
           
     }
 

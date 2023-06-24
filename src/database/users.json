@@ -26,5 +26,21 @@
     "imagen": "alfajores01p1.jpg",
     "password": "8910",
     "avatar": "1687615704113.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Fermin",
+    "apellido": "Bianco",
+    "celular": "116857307",
+    "imagen": "1687620747188.jpg",
+    "password": "1111"
+  },
+  {
+    "id": 5,
+    "nombre": "santiago",
+    "apellido": "andujar",
+    "celular": "1111111",
+    "imagen": "1687621077006.jpg",
+    "password": "1111"
   }
 ]

@@ -9,13 +9,13 @@
 
     <main>
         
-        <form class = formregistro type = "/registro" method = "Post">
+        <form class = formregistro type = "/Registro" method = "POST" enctype="multipart/form-data">
           <h3> Registrarte: </h3>
             <p class = bloques-registro>
               <input class = bloquestext-registro type = "text" name = "nombre" placeholder ="Nombre">
             </p>
             <p class = bloques-registro>
-              <input class = bloquestext-registro type = "text" name = "Apellido" placeholder ="Apellido">
+              <input class = bloquestext-registro type = "text" name = "apellido" placeholder ="Apellido">
             </p class = bloques-registro>
             <p class = bloques-registro>
               <input class = bloquestext-registro type = "tel" name = "celular" placeholder="Celular">
@@ -24,7 +24,10 @@
             <input class = bloquestext-registro type = "email" name = "email" placeholder="Correo">
             </p>         
             <p  class = bloques-registro>
-            <input class = bloquestext-registro class = bloquestext-registro type = "password" name = "clave" placeholder="Clave">
+            <input class = bloquestext-registro  type = "password" name = "password" placeholder="Clave">
+            </p>
+            <p  class = bloques-registro>
+              <input class = bloquestext-registro  type = "file" name = "imagen">
             </p>
             <p class = boton-registro>
             <button class = botontexto-registro type = "submit"> Enviar </button>
