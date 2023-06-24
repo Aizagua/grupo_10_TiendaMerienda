@@ -20,14 +20,16 @@ let uploadFile = multer({ storage: storage });
 router.get('/detalle/:id', products.detalle);
 
 //Crear Producto
-router.get('/crear/producto', products.create)
+router.get('/producto/crear', products.create)
 router.post('/products', uploadFile.single('imagen'), products.processCreate)
 
-//Editar
+//Editar Producto
 router.get('/productos/edit/:id', products.edit)
 router.put('/productos/:id', uploadFile.single('imagen'),products.editProcess)
 
-
+//Borrar Producto
+router.get('/productos/delete/:id', products.delete)
+router.delete('/productos/:id', products.deleteProcess)
 
 router.get ("/productList", products.list);
 

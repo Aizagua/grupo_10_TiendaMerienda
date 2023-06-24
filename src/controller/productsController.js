@@ -58,6 +58,25 @@ let productsController = {
   list: function (req, res) {
       res.render('productos/listadoDeProductos', {listaProductos: productoProducts})
   },
+
+  delete: (req,res)=>{
+    const buscarProducto = productoProducts.find(row=>row.id==req.params.id)
+    if (buscarProducto) return res.render('productos/borrarProducto', { producto: buscarProducto})
+            else return res.send("ERROR 404 NOT FOUND")
+  },
+  deleteProcess: (req,res)=>{
+    function encontrarId(item) { 
+      return item.id == req.params.id;
+    }
+    const index = productoProducts.findIndex(encontrarId)
+    if (index != -1) {
+      productoProducts.splice(index, 1);
+      fs.writeFileSync(rutaArchivo, JSON.stringify(productoProducts, null, 2), "utf-8")
+      return res.redirect("/")
+    }else{
+      return res.render("Error en el borrado")
+    }
+  },
 }
 
 module.exports = productsController
