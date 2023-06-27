@@ -9,20 +9,23 @@
         <main>
             <div class="productos">
                 <% for (let i = 0; i < listaProductos.length; i++) { %>
-                    <div>
+                    
+                    <div class="productos-rec">
                         <a href="/detalle/<%= listaProductos[i].id %>">
-                            <img src="/images/<%= listaProductos[i].imagen %>" alt="<%= listaProductos[i].nombre %>">
+                            
+                           <img src="/images/<%= listaProductos[i].imagen %>" class="productos-img"> 
                         </a>
+                        <h4>
+                            <a href="/detalle/<%= listaProductos[i].id %>">
+                                <%= listaProductos[i].nombre %>
+                            </a>
+                        </h4>
+                        <div class="flex"><div><p><%= listaProductos[i].precio %>$</p></div></div>
                         
-                         <h4><a href="/detalle/<%= listaProductos[i].id %>">
-                            <%= listaProductos[i].nombre %>
-                        </a>
-                    </h4>
-                         
-                        <p>$<%= listaProductos[i].precio %></p>
                     </div>
                 <% }; %>
             </div>
+            
         </main>
             <%- include("../partials/footer") %>
         </body>
