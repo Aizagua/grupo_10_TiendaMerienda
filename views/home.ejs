@@ -14,17 +14,19 @@
 
         <div class="productos">
             <% for (let i = 0; i < 6; i++) { %>
-                <div>
+                
+                <div class="productos-rec">
                     <a href="/detalle/<%= menu[i].id %>">
                         
-                       <img src="/images/<%= menu[i].imagen %>" alt=""> 
+                       <img src="/images/<%= menu[i].imagen %>" class="productos-img"> 
                     </a>
                     <h4>
                         <a href="/detalle/<%= menu[i].id %>">
                             <%= menu[i].nombre %>
                         </a>
                     </h4>
-                    <p>$<%= menu[i].precio %></p>
+                    <div class="flex"><div><p><%= menu[i].precio %>$</p></div>
+                    <div class="taza-cafe"><img src="/images/humo.png" class="humo"> <i class="fa-solid fa-mug-saucer"></i></div></div>
                 </div>
             <% }; %>
         </div>

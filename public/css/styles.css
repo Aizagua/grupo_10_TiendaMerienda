@@ -170,15 +170,32 @@ button[type="submit"]:hover .fa-search {
 
 /*fin header*/
 
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+.productos-vendidos{
+    margin-bottom: 5%;
+}
 .banner img{
-    width: 100%;
+    width: 70%;
     padding: 20px 0 20px 0;
+    height: 10%;
+    margin-top: -20px;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+}
+.banner{ 
+    width: 100%;
+    justify-content: center;
+align-items: center;
+text-align: center;
+margin-bottom: 1%; 
+
 }
 
 .productos {
@@ -190,20 +207,75 @@ main {
     width: 80%;
 }
 
-.productos div {
-    border: solid 2px black;
+.productos-rec {
+    border: solid 1px rgb(197, 196, 196);
     background-color: #ebebeb;
     padding: 10px;
     margin: 10px;
     width: 25%;
-    height: 25%;
+    height: 30%;
     min-width: 100px;
     min-height: 100px;
+    transition: all 0.7s;
 }
 
-.productos div img{
+.productos-rec:hover{
+    
+    border: solid 1px black;
+    animation: nose ;
+    }
+    .productos-rec:hover .humo{
+animation-duration: 3s;
+animation-name: nose;
+position: relative;
+animation-iteration-count: infinite;
+animation-timing-function: ease;
+    }
+.productos-rec h4{
+    margin-left: auto;
+    text-align: center;
+}
+.productos-img{
     width: 100%;
 }
+.taza-cafe{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    margin-left: 50%;
+}
+
+.flex{
+    display: flex;
+}
+.flex div p{
+    margin-top: 45%;
+    margin-left: 90%;
+}
+.humo{
+width: 20px;
+height: 20px;
+margin-left: 18%;
+transition: all 0s ;
+visibility: hidden;
+position: relative;
+z-index: 0;
+}
+ @keyframes nose{
+    0%{bottom : -19.5px;visibility: visible};
+    50%{bottom: -10px;}
+100%{bottom : 1px}}
+   
+
+   
+   
+
+   .taza-cafe i{
+    font-size: 23px;
+    z-index: 1;
+    background-color: #ebebeb;
+   }
+
 
 .lore {
     display: flex;
@@ -313,6 +385,13 @@ display: flex;  /*contenedor partes del detalle*/
 flex-wrap:wrap;
 justify-content: space-around;
 }
+.sproducto img{
+    margin-left: 12%;
+    border: solid 1px #ebebeb;
+    height: 82%;
+    width: 70%;
+    margin-top: 5%;
+}
 .sproducto h1{
 font-family: 'Questrial', sans-serif;
 font-size: 24px;
@@ -327,8 +406,33 @@ font-weight: 700;
 color: #666;
 padding: 20px 0px 16px 0px;
 }
-
-
+.contador-detalle{
+    display: flex;
+    margin-top: 3%;
+    justify-content: center;
+}
+#cantidad{
+    text-align: center;
+    width: 10%;
+    height: 30px;
+    text-align: center;
+}
+.minus{
+width: 8%;
+height: 30px;
+font-size: 30px;
+cursor: pointer; 
+}
+.plus{
+    width: 8%;
+    height: 30px;
+    font-size: 30px;
+    cursor: pointer; 
+}
+.cantidad{
+    text-align: center;
+    margin-bottom: 3%;
+}
 
 .sproducto .texto16-negrita{
 font-family: 'Lato', sans-serif;
@@ -336,8 +440,31 @@ font-size: 16px;
 font-weight: 500;
 
 }
-
-
+.button-agregar-comprar button p{
+    color: #ebebeb;
+    justify-content: center;
+    
+}
+.button-agregar-comprar{
+    display: block;
+    text-align: center;
+}
+.button-adicionar-carrito {
+    width: 30%;
+    border-radius: 5px;
+    border: #7c7373 solid 1px;
+    height: 40px;
+    color: #f3e28d;
+    background-color: #d77e10;
+    transition: all 0.6s;
+    cursor: pointer;    
+    
+    }  
+    .button-adicionar-carrito:hover{
+        border-radius: 10px;
+        background-color: #cf944c;
+        border: solid 1px #ebebeb;
+    }
 .sproducto {
 font-size: 16px;
 text-align: left;
@@ -356,7 +483,6 @@ width: 100%;
     font-size: 16px;
     text-align: left;
     width: 50%;
-    border: 1px solid #000000;
     padding: 25px;  
     position: relative;
     display: flex;
@@ -368,6 +494,10 @@ width: 100%;
 .sproducto {
     flex: 0 0 50%;
     max-width: 50%;
+}
+
+#borde{
+    border-left: 1px solid #ebebeb;
 }
 }
 
@@ -404,7 +534,10 @@ padding-right: 5px;
 .product_meta_text{
 font-family: Arial, Helvetica, sans-serif;
 font-size: 14px;
-text-align: left;
+justify-content: center;
+align-items: center;
+text-align: center;
+
 }
 
 /*Login*/
@@ -559,7 +692,6 @@ width: 100%;
     font-size: 16px;
     text-align: left;
     width: 50%;
-    border: 1px solid #000000;
     padding: 25px;  
     position: relative;
     display: flex;
@@ -588,12 +720,10 @@ padding: 10px 5px;
 }
 .product_meta {
 margin-bottom: 10px;
-border-top: 1px solid #ebebeb;
-padding: 15px;
-position: relative;
-display: flex;
+border-top: 1px solid #aea7a7;
 width: 100%;
-flex-flow: column;
+height: 12%;
+
 }
 
 .product_meta_text_bold{
@@ -601,44 +731,18 @@ font-family: Arial, Helvetica, sans-serif;
 font-size: 14px;
 font-weight: 600;
 padding-right: 5px;
-
+text-align: center;
 }
-
+.titulo-producto{
+    text-align: center;
+}
 .product_meta_text{
 font-family: Arial, Helvetica, sans-serif;
 font-size: 14px;
-
-text-align: left;
-}
-
-.button-adicionar-carrito {
-height: 40px;
-margin: 5px 5px;
-width: 45%;
-border-radius: 12px;
-color: #f3e28d;
-background-color: #de7a22;
-text-transform: uppercase;
-font-weight: 400;
-font-family: Arial, Helvetica, sans-serif;
-display: inline-block;
-padding: 5px 5px;
-cursor: pointer;
 text-align: center;
-text-decoration: none;
-outline: none;
-border: none;
-box-shadow: 0 2px #f0c290;     
-}  
-.button-adicionar-carrito:hover {
-background-color: #a75004;
 }
-  
-.button-adicionar-carrito:active {
-background-color: #e69e60;
-box-shadow: 0 2px #aa7e50;
-transform: translateY(2px);
-}
+
+
 
 /* termina detalle del producto*/
 

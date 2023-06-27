@@ -12,13 +12,14 @@
     <div class="detalle-producto">   
    
         <!-- imagen de producto--> 
+       
         <div class="sproducto">
             <img src="/images/<%=producto.imagen%>"  width="100%">
         </div>
           
         <div class="sproducto" id="borde">
              <!-- Nombre del producto-->
-            <div>
+            <div class="titulo-producto"> 
                 <h1><%=producto.titulo%></h1>
             </div>
              <!-- precio del producto, moneda-->
@@ -53,20 +54,21 @@
                         <!-- pedido de producto x cantidad-->
                             <div class="cantidad">
                                 <label class="text-ctd-pedido" for="cantidad-pc6a"><%=producto.cantidad%></label>      
-                                <div>           
+                                <div class="contador-detalle">           
                                 <input type="button" value="-" class="minus">                
                                 <input type="number" id="cantidad" class="input-text ctd text" value="1" title="Cantidad" min="1" max="" name="cantidad" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                 <input type="button" value="+" class="plus">  
                             </div>                     
                             </div>
-                            
+                           <div class="button-agregar-comprar">
                             <button type="submit" name="add-carrito" value="palfajores" class="button-adicionar-carrito">
-                                AÑADIR A LA CESTA
+                                <p>AÑADIR A LA CESTA</p>
                             </button>
                             
                             <button id="button-add-to-cart" type="submit" name="wd-add-to-cart" value="palfajores" class="button-adicionar-carrito">
-                                COMPRAR AHORA			
+                            <p>COMPRAR AHORA</p>			
                             </button>
+                            </div> 
                         </form>
                     </div>
                 </div>
