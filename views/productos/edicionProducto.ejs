@@ -28,9 +28,10 @@
                 <input class="textodelogin" type="text" name="descripcion" placeholder="descripcion" value="<%= producto.descripcion%>">
             </div>
             <div class="bloquesdellogin">
-                <textarea class="bloquesdellogin" name="desc2" placeholder="desc2">Descripcion</textarea value="<%= producto.desc2%>">
+                <textarea class="bloquesdellogin" name="desc2"><%= producto.desc2%></textarea>
             </div>
             <div class="bloquesdellogin">
+                <img src="/images/<%= producto.imagen%>" width="40%">
                 <input class="textodelogin" type="file" name="imagen" placeholder="img" value="<%= producto.imagen%>">
             </div>
             <div class="bloquesdellogin-send">
