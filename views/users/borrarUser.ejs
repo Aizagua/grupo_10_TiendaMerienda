@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<%- include("../partials/head") %>
+
+<body>
+    
+<%- include("../partials/header") %>
+
+    <main>
+        
+        <form class = "formregistro" method="POST" action="/users/<%= user.id %>?_method=DELETE" enctype="multipart/form-data">
+          <h3> Edición de Datos del Usurio: </h3>
+            <p class = bloques-registro>
+              <input disabled class = bloquestext-registro type = "text" name = "nombre" placeholder ="Nombre" value="<%= user.nombre %>"> 
+            </p>
+            <p class = bloques-registro>
+              <input disabled class = bloquestext-registro type = "text" name = "apellido" placeholder ="Apellido" value="<%= user.apellido %>">
+            </p class = bloques-registro>
+            <p class = bloques-registro>
+              <input disabled class = bloquestext-registro type = "tel" name = "celular" placeholder="Celular" value="<%= user.celular %>">
+            </p>
+            <p class = bloques-registro>
+            <input disabled class = bloquestext-registro type = "email" name = "email" placeholder="Correo" value="<%= user.email %>">
+            </p>                  
+            <p  class = bloques-registro>
+            <input disabled class = bloquestext-registro class = bloquestext-registro type = "password" name = "clave"  disabled>
+            </p>
+            <p class = boton-registro>
+            <button class = botontexto-registro type = "submit"> Borrar </button>
+            </p>
+        </form> 
+    </main>
+    <%- include("../partials/footer") %>
+</body>
+
+</html>
