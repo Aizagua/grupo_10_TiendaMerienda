@@ -13,13 +13,14 @@ let registrocontroller = {
     },
 
     edit: (req,res)=>{
-      const buscarUsurio = userUsers.find(row=>row.id==req.params.id)
-      if (buscarUsurio) return res.render('users/edicionUser', { user: buscarUsurio})
+      const buscarUsuario = userUsers.find(row=>row.id==req.params.id)
+      if (buscarUsuario) return res.render('users/edicionUser', { user: buscarUsuario})
               else return res.send("ERROR 404 NOT FOUND")
     },
     processCreate: (req, res) => {
+      let ultimoUser = userUsers.slice(-1)
       let userNew = {
-          "id": userUsers.length+1, 
+          "id": ultimoUser.id+1, 
           "nombre": req.body.nombre,
           "apellido": req.body.apellido,
           "celular": req.body.celular,
@@ -49,10 +50,25 @@ let registrocontroller = {
       fs.writeFileSync(rutaArchivo, JSON.stringify(userUsers, null, 2), "utf-8") 
         return res.redirect("/")
           
-    }
-
-
-
+    },
+    delete: (req,res)=>{
+      const buscarUsuario = userUsers.find(row=>row.id==req.params.id)
+      if (buscarUsuario) return res.render('users/borrarUser', {user: buscarUsuario})
+              else return res.send("ERROR 404 NOT FOUND")
+    },
+    deleteProcess: (req,res)=>{
+      function encontrarId(item) { 
+        return item.id == req.params.id;
+      }
+      const index = userUsers.findIndex(encontrarId)
+      if (index != -1) {
+        userUsers.splice(index, 1);
+        fs.writeFileSync(rutaArchivo, JSON.stringify(userUsers, null, 2), "utf-8")
+        return res.redirect("/")
+      }else{
+        return res.render("Error en el borrado")
+      }
+    },
 };
 
 

@@ -25,7 +25,10 @@ router.post('/registro', uploadFile.single('imagen'), userController.processCrea
 
 //Editar USER
 router.get('/users/edit/:id', userController.edit);
-//router.put('/users/:id', userController.editProcess);
 router.put('/users/:id', uploadFile.single('imagen'),userController.editProcess);
+
+//Borrar USER
+router.get('/users/delete/:id', userController.delete);
+router.delete('/users/:id', uploadFile.single('imagen'),userController.deleteProcess);
 
 module.exports = router;

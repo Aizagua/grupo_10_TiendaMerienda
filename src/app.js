@@ -29,14 +29,3 @@ app.use (rutaUser);
 app.use (rutaProductos);
 
 app.use (rutaCarrito);
-
-app.get("/productDetail", (req, res)=>{
-    res.render("productos/productDetail")
-})
-app.get('/carrito',(req,res)=>{
-    res.render("carrito")
-})
-
-app.get('/creation',(req,res)=>{
-    res.render("productos/creacionProducto")
-})
