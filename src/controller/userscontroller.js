@@ -57,7 +57,7 @@ let registrocontroller = {
       }
       const index = userUsers.findIndex(encontrarId)
       if (index != -1) {
-        productoProducts.splice(index, 1);
+        userUsers.splice(index, 1);
         fs.writeFileSync(rutaArchivo, JSON.stringify(userUsers, null, 2), "utf-8")
         return res.redirect("/")
       }else{
