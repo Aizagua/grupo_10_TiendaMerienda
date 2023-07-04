@@ -8,13 +8,19 @@ let registrocontroller = {
     registroUser: function (req, res) {
       res.render("../views/users/formRegistro")
     },
-    loginUser:function (req,res) {
+
+    perfilUser:(req,res)=>{
+      const buscarUsuario = userUsers.find(row=>row.id==req.params.id)
+      if (buscarUsuario) return res.render('users/perfilUser', {user: buscarUsuario})
+              else return res.send("ERROR 404 NOT FOUND")
+    },
+    loginUser: function (req,res) {
       res.render("../views/users/login")
     },
 
     edit: (req,res)=>{
       const buscarUsuario = userUsers.find(row=>row.id==req.params.id)
-      if (buscarUsuario) return res.render('users/edicionUser', { user: buscarUsuario})
+      if (buscarUsuario) return res.render('users/edicionUser', {user: buscarUsuario})
               else return res.send("ERROR 404 NOT FOUND")
     },
     processCreate: (req, res) => {
