@@ -7,24 +7,27 @@
     
 <%- include("../partials/header") %>
 
-    <main id="formulario-inicio">
-        <form class="formularios-login" action="/login" method="POST">
-            <h3 class="iniciartextologin">Iniciar Sesión</h3>
-            <div class="bloquesdellogin">
-                <input class="textodelogin" type="email" name="email" placeholder="Email">
-            </div>
-            <div class="bloquesdellogin">
-                <input class="textodelogin" type="Password" name="password" placeholder="Contraseña">
-            </div>
-            <div>
-                <label class="textorecordar"for="remember">Recordar contraseña:</label>
-                <input type="checkbox" id="remember" name="remember">
-            </div>
-            <div class="bloquesdellogin-send">
-                <a href="/"><button class="botonform botonsend" type="submit">Enviar</button></a>
-            </div>
-        </form>
-    </main>
+    <div class="inicioTM">
+        <main id="formulario-inicio">
+            <form class="formularios-login" action="/login" method="POST">
+                <h3 class="iniciartextologin">Iniciar Sesión</h3>
+                <div class="bloquesdellogin">
+                    <input class="textodelogin" type="email" name="email" placeholder="Email">
+                </div>
+                <div class="bloquesdellogin">
+                    <input class="textodelogin" type="Password" name="password" placeholder="Contraseña">
+                </div>
+                <div>
+                    <label class="textorecordar"for="remember">Recordar contraseña:</label>
+                    <input type="checkbox" id="remember" name="remember">
+                </div>
+                <div class="bloquesdellogin-send">
+                    <a href="/"><button class="botonform botonsend" type="submit">Enviar</button></a>
+                </div>
+            </form>
+        </main>
+    </div>
+
     <%- include("../partials/footer") %>
 </body>
 

@@ -171,6 +171,9 @@ button[type="submit"]:hover .fa-search {
 
 /*fin header*/
 
+.inicioTM {
+    min-height: 58vh;
+}
 
 main {
     display: flex;
