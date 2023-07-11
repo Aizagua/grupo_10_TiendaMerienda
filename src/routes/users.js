@@ -19,9 +19,11 @@ const storage = multer.diskStorage({
 let uploadFile = multer({ storage: storage });
 
 router.get ("/login", userController.loginUser);
+router.post("/login", userController.loginProcess);
+
 //Nuevo User
-router.get ("/registro", userController.registroUser);
-router.post('/registro', uploadFile.single('imagen'), userController.processCreate)
+router.get ("/register", userController.registroUser);
+router.post('/register', uploadFile.single('imagen'), userController.processCreate)
 
 //Editar USER
 router.get('/users/edit/:id', userController.edit);

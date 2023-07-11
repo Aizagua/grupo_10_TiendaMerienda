@@ -17,19 +17,19 @@ let uploadFile = multer({ storage: storage });
 
 
 //Detalle
-router.get('/detalle/:id', products.detalle);
+router.get('/detail/:id', products.detalle);
 
 //Crear Producto
-router.get('/producto/crear', products.create)
+router.get('/products/create', products.create)
 router.post('/products', uploadFile.single('imagen'), products.processCreate)
 
 //Editar Producto
-router.get('/productos/edit/:id', products.edit)
-router.put('/productos/:id', uploadFile.single('imagen'),products.editProcess)
+router.get('/products/edit/:id', products.edit)
+router.put('/products/:id', uploadFile.single('imagen'),products.editProcess)
 
 //Borrar Producto
-router.get('/productos/delete/:id', products.delete)
-router.delete('/productos/:id', products.deleteProcess)
+router.get('/products/delete/:id', products.delete)
+router.delete('/products/:id', products.deleteProcess)
 
 router.get ("/productList", products.list);
 

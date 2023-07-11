@@ -14,9 +14,26 @@ let registrocontroller = {
       if (buscarUsuario) return res.render('users/perfilUser', {user: buscarUsuario})
               else return res.send("ERROR 404 NOT FOUND")
     },
+
     loginUser: function (req,res) {
       res.render("../views/users/login")
     },
+
+    loginProcess: function (req, res){
+      console.log(userUsers)
+      console.log(req.body)
+      const usuario = userUsers.find((row) => row.email == req.body.email);
+      console.log(usuario)
+        if (usuario) {
+            console.log("usuario encontrado")
+            if (usuario.password == req.body.password){
+                delete usuario.password
+                req.session.usuarioLogeado = usuario
+                console.log("session creada")
+                res.redirect("/")
+    }else{console.log("contraseña incorrecta")
+    res.redirect("/login")}
+    }},
 
     edit: (req,res)=>{
       const buscarUsuario = userUsers.find(row=>row.id==req.params.id)

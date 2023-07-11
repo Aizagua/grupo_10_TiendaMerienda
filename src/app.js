@@ -3,6 +3,7 @@ const app = express();
 const path = require("path");
 const methodOverride = require('method-override');
 const publicPath = path.resolve(__dirname, "../public")
+const session = require('express-session');
 
 
 let rutaUser = require ("./routes/users");
@@ -14,7 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 
-const session = require('express-session');
+
 
 app.use(session({
     secret: 'Nombre del sitio',

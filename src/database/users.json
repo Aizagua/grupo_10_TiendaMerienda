@@ -37,15 +37,7 @@
     "celular": "116857307",
     "imagen": "1687620747188.jpg",
     "password": "1111",
+    "email": "fermin@gmail.com",
     "admin": true
-  },
-  {
-    "id": 5,
-    "nombre": "santiago",
-    "apellido": "andujar",
-    "celular": "1111111",
-    "imagen": "1687621077006.jpg",
-    "password": "1111",
-    "admin": false
   }
 ]
