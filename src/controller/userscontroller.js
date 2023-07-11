@@ -8,13 +8,19 @@ let registrocontroller = {
     registroUser: function (req, res) {
       res.render("../views/users/formRegistro")
     },
-    loginUser:function (req,res) {
+
+    perfilUser:(req,res)=>{
+      const buscarUsuario = userUsers.find(row=>row.id==req.params.id)
+      if (buscarUsuario) return res.render('users/perfilUser', {user: buscarUsuario})
+              else return res.send("ERROR 404 NOT FOUND")
+    },
+    loginUser: function (req,res) {
       res.render("../views/users/login")
     },
 
     edit: (req,res)=>{
       const buscarUsuario = userUsers.find(row=>row.id==req.params.id)
-      if (buscarUsuario) return res.render('users/edicionUser', { user: buscarUsuario})
+      if (buscarUsuario) return res.render('users/edicionUser', {user: buscarUsuario})
               else return res.send("ERROR 404 NOT FOUND")
     },
     processCreate: (req, res) => {
@@ -25,10 +31,13 @@ let registrocontroller = {
           "apellido": req.body.apellido,
           "celular": req.body.celular,
           "email": req.body.correo,
-          "imagen": req.file.filename,
+          //"imagen": req.file.filename,
           "password": req.body.password,
           "admin": false
           }
+          if (req.file == undefined){  userNew.imagen = "logo_tienda_merienda_white.png"} 
+          else {   userNew.imagen = req.file.filename  }
+         
         
         fs.writeFileSync(rutaArchivo, JSON.stringify([...userUsers, userNew], null, 2), "utf-8")
         return res.redirect("/")
@@ -41,8 +50,10 @@ let registrocontroller = {
       editarUsuario.celular = req.body.celular 
       editarUsuario.correo = req.body.correo
       editarUsuario.password = req.body.password
-      editarUsuario.avatar = req.file.filename  
-      console.log(req.file.filename)
+      //editarUsuario.imagen = req.file.filename  
+      if (req.file == undefined){  editarUsuario.imagen = editarUsuario.imagen} 
+      else {   editarUsuario.imagen = req.file.filename  }
+     
       fs.writeFileSync(rutaArchivo, JSON.stringify(userUsers, null, 2), "utf-8") 
         return res.redirect("/")
           

@@ -24,11 +24,14 @@ let productsController = {
       "precio": req.body.precio,
       "desc2":req.body.desc2,
       "titulo":req.body.titulo,
-      "imagen":req.file.filename,
+      //"imagen":req.file.filename,
       "cantidad":req.body.cantidad,
       "codigo":req.body.codigo
       }
-    console.log(req.body)
+      if (req.file == undefined){  productoNuevo.imagen = "logo_tienda_merienda_white.png"} 
+      else {   productoNuevo.imagen = req.file.filename  }
+     
+    
     fs.writeFileSync(rutaArchivo, JSON.stringify([...productoProducts, productoNuevo], null, 2), "utf-8")
     return res.redirect("/")
   },
@@ -45,10 +48,13 @@ let productsController = {
     editarProducto.nombre = req.body.nombre
     editarProducto.descripcion = req.body.descripcion  
     editarProducto.precio = req.body.precio  
-    editarProducto.desc2 = req.body.desc2  
-    editarProducto.imagen = req.file.filename  
+    editarProducto.desc2 = req.body.desc2   
     editarProducto.titulo = req.body.titulo
-    editarProducto.cantidad = req.body.cantidad  
+    editarProducto.cantidad = req.body.cantidad 
+    //editarProducto.imagen = req.file.filename  
+    if (req.file == undefined){  editarProducto.imagen = editarProducto.imagen} 
+    else {   editarProducto.imagen = req.file.filename  }
+     
 
     fs.writeFileSync(rutaArchivo, JSON.stringify(productoProducts, null, 2), "utf-8") 
     console.log(req.editarProducto)

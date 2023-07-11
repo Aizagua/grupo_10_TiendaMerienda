@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head") %>
+<body>
+    <%- include("../partials/header") %>
+<main>
+    <h3 class="tiilodeDestacados"> Perfil de Usuario </h3>
+    <div class = "datosUser">
+        <div class = "bloqueAvatar">
+        <img  src="/images/user/<%=user.imagen%>">
+        </div>
+        <div>
+            <p class = bloques-registro> Nombre:
+                <input disabled class = bloquestext-registro type = "text" name = "nombre" placeholder ="Nombre" value="<%= user.nombre %>"> 
+            </p>
+            <p class = bloques-registro> Apellido:
+                <input disabled class = bloquestext-registro type = "text" name = "apellido" placeholder ="Apellido" value="<%= user.apellido %>">
+            </p class = bloques-registro>
+            <p class = bloques-registro> Celular:
+                <input disabled class = bloquestext-registro type = "tel" name = "celular" placeholder="Celular" value="<%= user.celular %>">
+            </p>
+            <p class = bloques-registro> E-Mail:
+            <input disabled class = bloquestext-registro type = "email" name = "email" placeholder="Correo" value="<%= user.email %>">
+            </p>
+        </div>
+    </div>
+</main>
+
+
+    <%- include("../partials/footer") %>
+</body>
+</html>

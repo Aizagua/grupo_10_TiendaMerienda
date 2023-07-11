@@ -1,0 +1,11 @@
+.datosUser {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.bloqueAvatar {
+    margin-right: 40px;
+}
+.datosUser img {
+    width: 20vw;
+    height: 20vw;
+}

@@ -1,3 +1,4 @@
+@import url(perfilUser.css);
 * {
     box-sizing: border-box;
     padding: 0;
@@ -180,7 +181,8 @@ main {
     margin-bottom: 5%;
 }
 .banner img {
-    width: 100vw;
+    width: 70%;
+    height: 10%;
     padding: 20px 0 20px 0;
     margin-top: -20px;
     justify-content: center;
@@ -190,8 +192,8 @@ main {
 
 
 .banner{ 
-   /* align-items: center;
-    text-align: center;*/
+    align-items: center;
+   /* text-align: center;*/
     margin-bottom: 1%; 
     position: relative;
    /*  display: inline-block;
@@ -213,10 +215,10 @@ main {
     letter-spacing: 0.4cap;
     font-size: 1.8em;  
     position: absolute;
-    width: 80%;
+    width:60%;
     height: 100px;
     top: 18%;
-    left: 30%;     
+    left: 25%;     
 }
 
 .titelTiendawhite{
@@ -229,7 +231,7 @@ main {
     width: 50%;
     height: 100px;
     top: 30%;
-    left:30%;     
+    left:25%;     
 }
 .titelTiendamarron{
     font-family: 'Bebas Neue', sans-serif;
@@ -241,7 +243,7 @@ main {
     width: 50%;
     height: 100px;
     top:40%;
-    left: 30%;     
+    left: 25%;     
 }
 
 .textbanner{
@@ -258,6 +260,13 @@ main {
      
 
 }
+
+.tiilodeDestacados {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 70%;
+    text-align: center;
+  }
 
 .productos {
     display: flex;

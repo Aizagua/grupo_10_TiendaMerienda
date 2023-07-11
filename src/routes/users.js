@@ -31,4 +31,7 @@ router.put('/users/:id', uploadFile.single('imagen'),userController.editProcess)
 router.get('/users/delete/:id', userController.delete);
 router.delete('/users/:id', uploadFile.single('imagen'),userController.deleteProcess);
 
+//Perfil USER
+router.get ("/users/perfil/:id", userController.perfilUser);
+
 module.exports = router;

@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "nombre": "Cappuccino",
-    "precio": 800,
-    "imagen": "cafe3.webp",
+    "nombre": "Cappuccino ",
+    "precio": "800",
+    "imagen": "1687991571496.webp",
     "descripcion": "Nescafé Dolce Gusto Cappuccino",
     "codigo": "capuchino_1_ua",
     "titulo": "Cafe Capuchino",
@@ -24,30 +24,30 @@
   {
     "id": 3,
     "nombre": "Scons",
-    "precio": 600,
-    "imagen": "Scons3.jpg",
-    "descripcion": "Placeholder Scons",
+    "precio": "600",
+    "descripcion": "Scons",
     "codigo": "scons_3_ua",
     "titulo": "Scons",
     "cantidad": "Scons x 3 unid.",
-    "desc2": "¿Obtendras los mejores alfajores? ¡Nosotros decimos que sí! Alfajores, ¡sabrosos de producción capitalina! Un alfajor es un galleta de mantequilla con una capa de caramelo cubierta de chocolate fino o merengue. Estos deliciosos dulces existen en muchas versiones y son <b>consumidos con pasión por los argentinos, casi siempre con yerba mate.Hoy compras tus alfajores acompañada con yerba mate, café o té podras disfrutar de la merienda ideal .Los Alfajores son un regalo perfecto ¡Regálalos y espera hacer muy feliz a alguien! Los alfajores son una maravillosa y original idea de regalo cuando no sabes qué regalar a un amigo o familiar.La caja de alfajores mixtos vienen en una bonita presentación: una caja con 6 alfajores envueltos individualmente en papel de regalo dorado y plateado de la mejor calidad. Tenga la seguridad de que cuando el homenajeado los pruebe ¡superará cualquiera de sus expectativas! Ingredientes: Chocolate: Azúcar, leche, harina de trigo, licor de cacao, margarina, glucosa, manteca de cacao, huevos en polvo, almidón de maíz, miel, cacao en polvo, sorbitol, bicarbonato sódico, lecitina de soja, sal, bicarbonato amónico, vainillina, aroma natural de limón y almendra.Merengue:  Azúcar, leche, harina de trigo, huevos, margarina, glucosa, almidón de maíz, miel, cacao en polvo, sorbitol, bicarbonato sódico, sal, aroma de vainilla, bicarbonato amónico, proteína vegetal hidrolizada, aroma natural de limón, aroma artificial de almendra, vainillina, aroma natural de naranja.Encuentre muchos más Alfajores  aquí"
+    "desc2": "¿Obtendras los mejores alfajores? ¡Nosotros decimos que sí! Alfajores, ¡sabrosos de producción capitalina! Un alfajor es un galleta de mantequilla con una capa de caramelo cubierta de chocolate fino o merengue. Estos deliciosos dulces existen en muchas versiones y son <b>consumidos con pasión por los argentinos, casi siempre con yerba mate.Hoy compras tus alfajores acompañada con yerba mate, café o té podras disfrutar de la merienda ideal .Los Alfajores son un regalo perfecto ¡Regálalos y espera hacer muy feliz a alguien! Los alfajores son una maravillosa y original idea de regalo cuando no sabes qué regalar a un amigo o familiar.La caja de alfajores mixtos vienen en una bonita presentación: una caja con 6 alfajores envueltos individualmente en papel de regalo dorado y plateado de la mejor calidad. Tenga la seguridad de que cuando el homenajeado los pruebe ¡superará cualquiera de sus expectativas! Ingredientes: Chocolate: Azúcar, leche, harina de trigo, licor de cacao, margarina, glucosa, manteca de cacao, huevos en polvo, almidón de maíz, miel, cacao en polvo, sorbitol, bicarbonato sódico, lecitina de soja, sal, bicarbonato amónico, vainillina, aroma natural de limón y almendra.Merengue:  Azúcar, leche, harina de trigo, huevos, margarina, glucosa, almidón de maíz, miel, cacao en polvo, sorbitol, bicarbonato sódico, sal, aroma de vainilla, bicarbonato amónico, proteína vegetal hidrolizada, aroma natural de limón, aroma artificial de almendra, vainillina, aroma natural de naranja.Encuentre muchos más Alfajores  aquí",
+    "imagen": "1687994098297.jpg"
   },
   {
     "id": 4,
-    "nombre": "Té De Matcha",
-    "precio": 400,
-    "imagen": "TeMatcha.jpg",
-    "descripcion": "Placeholder Matcha",
+    "nombre": "Té Matcha",
+    "precio": "400",
+    "descripcion": "Matcha",
     "codigo": "matcha_1_ua",
     "titulo": "Té De Matcha",
     "cantidad": "Té De Matcha x 1 unid.",
-    "desc2": "Yerba Mate La Merced Campo Sur es la última propuesta de Las Marías, empresa responsable también de la producción de marcas tan conocidas como Taragui y Unión. Esta vez, la cartera de la marca se ha ampliado con La Merced. Un producto de alta calidad, conocido por muchos entusiastas experimentados del mate, al que definitivamente vale la pena prestar atención. Yerba Mate La Merced Campo Sur, de perfil suave y amigable, consiste en un blend elaborado exclusivamente con plantas de yerba cultivadas en el noreste de la provincia de Corrientes, almacenadas de manera artesanal. En su molida y limitada recolección predominan las notas amarillas y dulces, que permiten disfrutar de un sabor excepcional y naturalmente equilibrado."
+    "desc2": "Yerba Mate La Merced Campo Sur es la última propuesta de Las Marías, empresa responsable también de la producción de marcas tan conocidas como Taragui y Unión. Esta vez, la cartera de la marca se ha ampliado con La Merced. Un producto de alta calidad, conocido por muchos entusiastas experimentados del mate, al que definitivamente vale la pena prestar atención. Yerba Mate La Merced Campo Sur, de perfil suave y amigable, consiste en un blend elaborado exclusivamente con plantas de yerba cultivadas en el noreste de la provincia de Corrientes, almacenadas de manera artesanal. En su molida y limitada recolección predominan las notas amarillas y dulces, que permiten disfrutar de un sabor excepcional y naturalmente equilibrado.",
+    "imagen": "1687976294406.jpg"
   },
   {
     "id": 5,
     "nombre": "Alfajores",
-    "precio": 200,
-    "imagen": "alfajores01p1.jpg",
+    "precio": "200",
+    "imagen": "1687992477163.jpg",
     "descripcion": "Cualquiera que haya comido alguna vez Alfajores puede confirmar que estas irresistibles galletas están demasiado buenas para dejarlas. Los amantes de la comida dulce descubrirán el paraíso con estas galletas rellenas de dulce de leche cubiertas de chocolate con leche o merengue. Pídalas hoy mismo.",
     "codigo": " alfajores_6_ua",
     "titulo": "Alfajores, Delicatessen",

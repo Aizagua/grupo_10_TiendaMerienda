@@ -24,3 +24,30 @@ Surgio naturamente la puesta en comun, surgieron muchas ideas y mejoras. Creemos
 La toma de decisiones en cuanto algunos aspectos se demoró un poco, si bien es algo natural dado que es un equipo recien formado, es algo que deberiamos mejorar en el futuro.
 
 La implementacion de fechas parciales de entrega (internas) es algo que deberiamos recuperar dado que si bien este sprint se cumplio es el de menor carga y en el futuro seria bueno y ir siguiendo "paso a paso" la marcha general del trabajo (start doing).
+
+
+Retrospectiva Tercer sprint
+
+Descripcion de lo realizado: Se realizaron tres reuniones de trabajo.
+
+En la primera reunion se realizaron las siguientes tareas:
+
+    DEFINIR LA FORMA DE TRABAJO PARA CUMPLIR CON EL SPRINT           
+
+    Chequear y validar datos de entrada. 
+
+    Realizaciones de actividades pendientes del backlog
+
+
+En la Segunda reunion:
+
+     Actualizacion diaria del trabajo realizado individual para mejorarlo en grupo 
+
+En la tercera reunion PARA REALIZAR LA RETROSPECTIVA.
+
+Las reuniones organizativas de corta duracion relativamente corta (1 horas) fueron muy efectivas y eficientes son un practica que se encuandrarian sobre las cosas que deberiamos continuar haciendo (Keep Doing).
+
+Surgio naturamente la puesta en comun, surgieron muchas ideas y mejoras. Creemos que esta practica debemos profundizarla (More OF).
+
+Deberiamos recuperar la actualización de actividades y asignaciones de tareas en trello.
+
