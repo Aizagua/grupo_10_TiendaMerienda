@@ -14,6 +14,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 
+const session = require('express-session');
+
+app.use(session({
+    secret: 'Nombre del sitio',
+    resave: false,
+    saveUninitialized: true,
+}));
 
 app.set ("view engine", "ejs")
 app.set ("views", path.join (__dirname,"../views"))

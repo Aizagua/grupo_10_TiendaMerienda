@@ -27,6 +27,7 @@ let registrocontroller = {
           "email": req.body.correo,
           "imagen": req.file.filename,
           "password": req.body.password,
+          "admin": false
           }
         
         fs.writeFileSync(rutaArchivo, JSON.stringify([...userUsers, userNew], null, 2), "utf-8")

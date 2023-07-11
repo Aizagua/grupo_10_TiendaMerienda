@@ -6,7 +6,8 @@
     "celular": "4587844574",
     "email": "carlos@gmail.com",
     "imagen": "alfajores01p1.jpg",
-    "password": "1234"
+    "password": "1234",
+    "admin": false
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "celular": "4587844574",
     "email": "andres@gmail.com",
     "imagen": "alfajores01p1.jpg",
-    "password": "4567"
+    "password": "4567",
+    "admin": false
   },
   {
     "id": 3,
@@ -25,7 +27,8 @@
     "email": "liliana@gmail.com",
     "imagen": "alfajores01p1.jpg",
     "password": "8910",
-    "avatar": "1687615704113.jpg"
+    "avatar": "1687615704113.jpg",
+    "admin": false
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "apellido": "Bianco",
     "celular": "116857307",
     "imagen": "1687620747188.jpg",
-    "password": "1111"
+    "password": "1111",
+    "admin": true
   },
   {
     "id": 5,
@@ -41,6 +45,7 @@
     "apellido": "andujar",
     "celular": "1111111",
     "imagen": "1687621077006.jpg",
-    "password": "1111"
+    "password": "1111",
+    "admin": false
   }
 ]
