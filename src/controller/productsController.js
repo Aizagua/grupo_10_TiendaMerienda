@@ -16,9 +16,10 @@ let productsController = {
   },
 
   processCreate: (req, res) => {
-    let ultimoProducto = productoProducts.slice(-1)
+    ultimoProducto = productoProducts.slice(-1)
+    let idProducto = ultimoProducto[0].id
     let productoNuevo = {
-      "id": ultimoProducto.id+1, 
+      "id": idProducto +1, 
       "nombre": req.body.nombre,
       "descripcion": req.body.descripcion,
       "precio": req.body.precio,
