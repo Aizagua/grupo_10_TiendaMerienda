@@ -278,11 +278,31 @@ main {
     justify-content: space-between;
     align-items: center;
     width: 80%;
+    margin-top: 10%;
 }
-
+.titulo-home{
+    margin-top: 7%;
+}
+.cinta-diagonal {
+    width: 200px;
+    height: 0;
+    border-top: 50px solid #ff0000; /* Color de la cinta */
+    border-left: 200px solid transparent;
+    position: relative;
+  }
+  
+  .cinta-diagonal::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border-top: 50px solid #000000; /* Color del fondo detrás de la cinta */
+    border-left: 200px solid transparent;
+  }
 .productos-rec {
     border: solid 1px rgb(197, 196, 196);
-    background-color: #ebebeb;
+    background-color: #f3efef;
     padding: 10px;
     margin: 10px;
     width: 25%;
@@ -297,12 +317,12 @@ main {
     border: solid 1px black;
     animation: nose ;
     }
-    .productos-rec:hover .humo{
-animation-duration: 3s;
-animation-name: nose;
-position: relative;
-animation-iteration-count: infinite;
-animation-timing-function: ease;
+.productos-rec:hover .humo{
+    animation-duration: 3s;
+    animation-name: nose;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
     }
 .productos-rec h4{
     margin-left: auto;
@@ -326,13 +346,13 @@ animation-timing-function: ease;
     margin-left: 90%;
 }
 .humo{
-width: 20px;
-height: 20px;
-margin-left: 18%;
-transition: all 0s ;
-visibility: hidden;
-position: relative;
-z-index: 0;
+    width: 20px;
+    height: 20px;
+    margin-left: 18%;
+    transition: all 0s ;
+    visibility: hidden;
+    position: relative;
+    z-index: 0;
 }
  @keyframes nose{
     0%{bottom : -19.5px;visibility: visible};
@@ -747,7 +767,12 @@ color: #666;
 padding: 20px 0px 16px 0px;
 }
 
-
+.titulo-productos{
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Handlee', cursive;
+    font-weight: 230
+}
 
 .sproducto .texto16-negrita{
 font-family: 'Lato', sans-serif;
@@ -1358,3 +1383,23 @@ form h3 {
     text-align: center;
 }
 /* Fin Formulario de Registro*/ 
+
+.chincheta {
+    width: 20px;
+    height: 40px;
+    background-color: red;
+    position: relative;
+    border-radius: 10px 10px 20px 20px;
+  }
+  
+  .chincheta::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    bottom: -5px;
+    left: 5px;
+    border-radius: 50%;
+  }
+
