@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const rutaArchivo = path.resolve('./src/database/users.json');
 const userUsers = JSON.parse(fs.readFileSync(rutaArchivo));
-
+const bcryptjs = require('bcryptjs');
 
 let registrocontroller = {
     registroUser: function (req, res) {
@@ -25,8 +25,9 @@ let registrocontroller = {
       const usuario = userUsers.find((row) => row.email == req.body.email);
       console.log(usuario)
         if (usuario) {
+          let ClaveOK = bcryptjs.compareSync(req.body.password,usuario.password);
             console.log("usuario encontrado")
-            if (usuario.password == req.body.password){
+            if (ClaveOK){
                 delete usuario.password
                 req.session.usuarioLogeado = usuario
                 console.log("session creada")
@@ -47,9 +48,9 @@ let registrocontroller = {
           "nombre": req.body.nombre,
           "apellido": req.body.apellido,
           "celular": req.body.celular,
-          "email": req.body.correo,
+          "email": req.body.email,
           //"imagen": req.file.filename,
-          "password": req.body.password,
+          "password": bcryptjs.hashSync(req.body.password,10),
           "admin": false
           }
           if (req.file == undefined){  userNew.imagen = "logo_tienda_merienda_white.png"} 

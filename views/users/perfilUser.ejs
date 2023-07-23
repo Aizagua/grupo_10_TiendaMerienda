@@ -9,18 +9,18 @@
         <div class = "bloqueAvatar">
         <img  src="/images/user/<%=user.imagen%>">
         </div>
-        <div>
+        <div class = datosPerfill>
             <p class = bloques-registro> Nombre:
-                <input disabled class = bloquestext-registro type = "text" name = "nombre" placeholder ="Nombre" value="<%= user.nombre %>"> 
+                <%= user.nombre %> 
             </p>
             <p class = bloques-registro> Apellido:
-                <input disabled class = bloquestext-registro type = "text" name = "apellido" placeholder ="Apellido" value="<%= user.apellido %>">
+                <%= user.apellido %>
             </p class = bloques-registro>
             <p class = bloques-registro> Celular:
-                <input disabled class = bloquestext-registro type = "tel" name = "celular" placeholder="Celular" value="<%= user.celular %>">
+               <%= user.celular %>
             </p>
             <p class = bloques-registro> E-Mail:
-            <input disabled class = bloquestext-registro type = "email" name = "email" placeholder="Correo" value="<%= user.email %>">
+            <%= user.email %>
             </p>
         </div>
     </div>

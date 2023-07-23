@@ -57,5 +57,15 @@
     "password": "",
     "admin": false,
     "imagen": "logo_tienda_merienda_white.png"
+  },
+  {
+    "id": null,
+    "nombre": "Sergio",
+    "apellido": "Aguero",
+    "celular": "1165278899",
+    "email": "kun@gmail.com",
+    "password": "$2a$10$gqpCirPr.JZPxwC0IIgEoOlg8XibAfnVy6M3aGwq3eka6Ulctjl/m",
+    "admin": false,
+    "imagen": "1690121640224.jpeg"
   }
 ]

@@ -9,3 +9,8 @@
     width: 20vw;
     height: 20vw;
 }
+.datosPerfil p {
+    display: flex;
+    position:relative;
+    justify-content: left;
+}
