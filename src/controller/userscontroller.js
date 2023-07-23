@@ -32,6 +32,7 @@ let registrocontroller = {
                 delete usuario.password
                 req.session.usuarioLogeado = usuario
                 console.log("session creada")
+                console.log(req.session.usuarioLogeado)
                 res.redirect("/")
     }else{console.log("contraseña incorrecta")
     res.redirect("/login")}
@@ -51,8 +52,9 @@ let registrocontroller = {
         });
       }
       let ultimoUser = userUsers.slice(-1)
+      let idUser = ultimoUser[0].id
       let userNew = {
-          "id": ultimoUser.id+1, 
+          "id": idUser+1, 
           "nombre": req.body.nombre,
           "apellido": req.body.apellido,
           "celular": req.body.celular,

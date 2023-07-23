@@ -41,25 +41,7 @@
     "admin": true
   },
   {
-    "id": null,
-    "nombre": "",
-    "apellido": "",
-    "celular": "",
-    "password": "",
-    "admin": false,
-    "imagen": "logo_tienda_merienda_white.png"
-  },
-  {
-    "id": null,
-    "nombre": "",
-    "apellido": "",
-    "celular": "",
-    "password": "",
-    "admin": false,
-    "imagen": "logo_tienda_merienda_white.png"
-  },
-  {
-    "id": null,
+    "id": 5,
     "nombre": "Sergio",
     "apellido": "Aguero",
     "celular": "1165278899",
@@ -67,5 +49,15 @@
     "password": "$2a$10$gqpCirPr.JZPxwC0IIgEoOlg8XibAfnVy6M3aGwq3eka6Ulctjl/m",
     "admin": false,
     "imagen": "1690121640224.jpeg"
+  },
+  {
+    "id": 6,
+    "nombre": "Santiago",
+    "apellido": "Andújar",
+    "celular": "",
+    "email": "santiagoandujar10@gmail.com",
+    "password": "$2a$10$q/wHnFtFvTb9lkOmq0LIG.V4JX/kkddI4gxBR1Llsg2IZN.EKn8QW",
+    "admin": false,
+    "imagen": "logo_tienda_merienda_white.png"
   }
 ]
