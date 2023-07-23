@@ -5,30 +5,41 @@
 
 <body>
     
-<%- include("../partials/header") %>
+    <header>
+        <div class="con-header-login">
+          <div class="logo-login">
+            <a>
+              <img src="/images/logoTM.png" alt="tienda-Merienda">
+            </a>
+          </div>
+        </div>
+    </header>
 
-    <div class="inicioTM">
+    
         <main id="formulario-inicio">
             <form class="formularios-login" action="/login" method="POST">
                 <h3 class="iniciartextologin">Iniciar Sesión</h3>
+            <div class="contenedor-iniciar-sesion">
                 <div class="bloquesdellogin">
-                    <input class="textodelogin" type="email" name="email" placeholder="Email">
+                    <input class="textodelogin1" type="email" name="email" placeholder="Email">
+                    <input class="textodelogin2" type="Password" name="password" placeholder="Contraseña">
                 </div>
-                <div class="bloquesdellogin">
-                    <input class="textodelogin" type="Password" name="password" placeholder="Contraseña">
-                </div>
-                <div>
+                <div class="textrecordar">
                     <label class="textorecordar"for="remember">Recordar contraseña:</label>
                     <input type="checkbox" id="remember" name="remember">
                 </div>
                 <div class="bloquesdellogin-send">
-                    <a href="/"><button class="botonform botonsend" type="submit">Enviar</button></a>
+                    <a href="/"><button class="botonform botonsend" type="submit">Iniciar</button></a>
                 </div>
+                <div class="abajo">
+                    <div class="a"><a>¿Olvidaste tu cuenta?</a></div><div class="a"><a href="/register">Registrarse</a></div>
+                </div>
+            </div>
             </form>
         </main>
-    </div>
+    
 
-    <%- include("../partials/footer") %>
+        <%- include("../partials/footer") %>
 </body>
 
 </html>

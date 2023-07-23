@@ -283,23 +283,7 @@ main {
 .titulo-home{
     margin-top: 7%;
 }
-.cinta-diagonal {
-    width: 200px;
-    height: 0;
-    border-top: 50px solid #ff0000; /* Color de la cinta */
-    border-left: 200px solid transparent;
-    position: relative;
-  }
-  
-  .cinta-diagonal::after {
-    content: "";
-    position: absolute;
-    top: 50px;
-    width: 0;
-    height: 0;
-    border-top: 50px solid #000000; /* Color del fondo detrás de la cinta */
-    border-left: 200px solid transparent;
-  }
+
 .productos-rec {
     border: solid 1px rgb(197, 196, 196);
     background-color: #f3efef;
@@ -644,103 +628,169 @@ text-align: center;
 }
 
 /*Login*/
-
-
-.iniciartextologin {
-    color: #ebebeb;
-    padding-bottom: 10px;
+.logo-login img {
+    text-align: center;
+    width: 27vw;
 }
-
-#formulario-inicio {
-    align-items: center;
+#formulario-inicio{
+    background-color: #ebe8e8;;
 }
-
-.formularios-login {
+.formularios-login{
+    text-align: center;
+    margin-top: 10%;
+   margin-bottom: 3%;
+   width: 40vw;
+}
+.formularios-login div{
+    margin: 7%;
+}
+.bloquesdellogin input{
+    height: 25px;
+}
+.iniciartextologin{
+    margin-top: 7%;
+    
+}
+.bloquesdellogin{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: rgba(23, 20, 23, 0.75);
-    border-radius: 15px;
-    max-width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: 25px;
-}
-
-.textorecordar {
-    color: #ebebeb;
-    font-size: 12px;
-}
-
-.textodelogin{
-    border-radius: 5px;
-    border-color: #de7627;
-    border-width: 2px;
-    display: flex;
+    text-align: center;
+    justify-content: center;
     align-items: center;
 }
-.textodelogin[type="submit"] {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-
-.bloquesdellogin {
-    margin-bottom: 10px;
-    width: 100%;
-    border-radius: 5%;
-    text-align: center;
+.textrecordar{
+    color: #adadad;
+    font-size: 80%;
 }
-
-.bloquesdellogin-send{
-    padding-top: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    border-radius: 5%;
-    text-align: center;
-}
-
-.botonform{
-    width: 40%;
-}
-
-.botonforma{
-    width: 20px;
-}
-
 .botonsend{
-    background-color: #de7627;
-    color: #ebebeb;
+    background-color: #895d39;
     border-radius: 5px; 
     border: none;
-    height: 27px;
+    padding: 7px 20px;
+    color: #e6e3e3;
+}
+.textodelogin1{
+    margin-bottom: 4%;
+}
+.textodelogin2{
+    margin-bottom: 3%;
+}
+.a a{
+    text-decoration: none;
+    color: inherit;
+}
+.con-header-login{
+    border-bottom: 1px solid #895d39;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: beige;
 }
 
-.iniciartextologin:hover {
-    color: #de7627;
-        transition-duration: 200ms;
+@media (min-width: 1200px){
+   .formularios-login{
+background-color: rgb(255, 255, 255);
+border-radius: 15px;
+box-shadow: 0px 0px 10px rgb(180, 180, 180);
+  width: 25vw; 
+margin-top: 3%;}
+  .logo-login img {
+    text-align: center;
+    width: 17vw;
 }
-
-.botonsend:hover{
-        background-color: #895d39;
-        color: #FFF;
-        cursor: pointer;
-        transition-duration: 300ms;
+.inicioTM{
+    background-color: #f1f0f0;
+} 
+.textodelogin1{
+    border-color: #ebe8e5;
+    border-width: 2px;
+    align-items: center;
+    border-radius: 5px;
 }
-
-
-
-@media(min-width: 769px){
-    main section article{
-        width: 22.5%;
-    }
-    header .main-nav {
-    display:flex;  }
-       
-     }
-@media (min-width: 1200px){}
-    
-
+.textodelogin2{
+    border-color: #ebe8e5;
+    border-width: 2px;
+    align-items: center;
+    border-radius: 5px;
+}
+.bloquesdellogin input{
+height: 40px;
+width: 100%;
+color:#895d39;
+}
+.textodelogin1::placeholder{
+    color:#895d39;
+    margin: 3px;
+}
+.textodelogin2::placeholder{
+    color:#895d39;
+    margin: 3px;
+}
+.abajo{
+    display: flex;
+}}
+/*Fin Login*/
+/*Registro*/
+.main-register{
+    background-color: #ebe8e8;;
+}
+.formregistro{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+   margin-bottom: 3%;
+   width: 40vw;
+}
+.inputs p{
+margin:5%;
+width: 100%;
+text-align: center;
+align-items: center;
+justify-content: center;
+}
+.inputs input{
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+}
+.foto{
+    margin-top: 15%;
+}
+.botonsend-register{
+    margin-top: 6%;
+    background-color: #895d39;
+    border-radius: 5px; 
+    border: none;
+    padding: 7px 20px;
+    color: #e6e3e3;
+}
+.boton-registro{
+    text-align: center;   
+}
+@media (min-width:1200px){
+.formregistro h3{
+    margin-top: 10%;
+}
+.main-register{
+    background-color: #f1f0f0;
+}
+.foto{
+    margin-bottom: 10%;
+}
+    .formregistro{
+background-color: rgb(255, 255, 255);
+border-radius: 15px;
+box-shadow: 0px 0px 10px rgb(180, 180, 180);
+width: 25vw; 
+margin-top: 3%;}
+.logo-login img {
+text-align: center;
+ width: 17vw;
+}
+}
+/*Fin del register*/
 /*Detalle del Producto */
 
 .detalle-producto{    
@@ -1333,73 +1383,4 @@ text-align: center;
     align-items: center;
 }
 
-  /* Formulario de Registro */
-
-  .bloques-registro {
-    margin-bottom: 10px;
-    width: 100%;
-    border-radius: 5%;
-    text-align: center;
-}
-.bloquestext-registro{
-    text-align: center;
-}
-
-form h3 {
-    text-align: center;
-    color: #ebebeb;
-    padding-bottom: 10px;
-}
-
-.formregistro{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(23, 20, 23, 0.75);
-    border-radius: 15px;
-    max-width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-
-.boton-registro {
-    background-color: #de7627;
-    color: #ebebeb;
-    border-radius: 5px; 
-    border: none;
-    height: 27px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-}
-
-.botontexto-registro {
-    background-color: #de7627;
-    color: #ebebeb;
-    border: none;
-    text-align: center;
-}
-/* Fin Formulario de Registro*/ 
-
-.chincheta {
-    width: 20px;
-    height: 40px;
-    background-color: red;
-    position: relative;
-    border-radius: 10px 10px 20px 20px;
-  }
-  
-  .chincheta::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    position: absolute;
-    bottom: -5px;
-    left: 5px;
-    border-radius: 50%;
-  }
 

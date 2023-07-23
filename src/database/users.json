@@ -39,5 +39,23 @@
     "password": "1111",
     "email": "fermin@gmail.com",
     "admin": true
+  },
+  {
+    "id": null,
+    "nombre": "",
+    "apellido": "",
+    "celular": "",
+    "password": "",
+    "admin": false,
+    "imagen": "logo_tienda_merienda_white.png"
+  },
+  {
+    "id": null,
+    "nombre": "",
+    "apellido": "",
+    "celular": "",
+    "password": "",
+    "admin": false,
+    "imagen": "logo_tienda_merienda_white.png"
   }
 ]
