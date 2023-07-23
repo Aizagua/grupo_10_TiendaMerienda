@@ -769,6 +769,10 @@ justify-content: center;
 .boton-registro{
     text-align: center;   
 }
+.avisoError{
+    color: red;
+    font-size: 10px;
+}
 @media (min-width:1200px){
 .formregistro h3{
     margin-top: 10%;

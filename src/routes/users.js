@@ -4,6 +4,7 @@ let router = express.Router();
 
 let path = require('path');
 const multer = require("multer");
+const {body} = require('express-validator');
 
 
 const storage = multer.diskStorage({
@@ -22,9 +23,20 @@ router.get ("/login", userController.loginUser);
 router.post("/login", userController.loginProcess);
 
 //Nuevo User
-router.get ("/register", userController.registroUser);
-router.post('/register', uploadFile.single('imagen'), userController.processCreate)
 
+const validations = [
+          body("nombre").notEmpty().withMessage('Debe completar su nombre'),
+          body("apellido").notEmpty().withMessage('Debe completar su apellido'),
+          body("celular").notEmpty().withMessage('Debe completar su celular'),
+          body("email").notEmpty().withMessage('Debe completar su email'),
+          body("password").notEmpty().withMessage('Debe completar su Clave'),
+          body("imagen").custom((value,{req})=>{
+           
+          })
+]
+
+router.get ("/register", userController.registroUser);
+router.post('/register', uploadFile.single('imagen'),validations, userController.processCreate)
 //Editar USER
 router.get('/users/edit/:id', userController.edit);
 router.put('/users/:id', uploadFile.single('imagen'),userController.editProcess);

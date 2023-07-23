@@ -3,6 +3,7 @@ const path = require('path');
 const rutaArchivo = path.resolve('./src/database/users.json');
 const userUsers = JSON.parse(fs.readFileSync(rutaArchivo));
 const bcryptjs = require('bcryptjs');
+const { validationResult } = require('express-validator');
 
 let registrocontroller = {
     registroUser: function (req, res) {
@@ -42,6 +43,13 @@ let registrocontroller = {
               else return res.send("ERROR 404 NOT FOUND")
     },
     processCreate: (req, res) => {
+      const resultValidation = validationResult(req);
+      if (resultValidation.errors.length>0){
+        return res.render('users/formRegistro',{
+          errors: resultValidation.mapped(),
+          oldData: req.body
+        });
+      }
       let ultimoUser = userUsers.slice(-1)
       let userNew = {
           "id": ultimoUser.id+1, 
