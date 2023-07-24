@@ -4,6 +4,7 @@ const rutaArchivo = path.resolve('./src/database/users.json');
 const userUsers = JSON.parse(fs.readFileSync(rutaArchivo));
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
+;
 
 let registrocontroller = {
     registroUser: function (req, res) {

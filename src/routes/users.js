@@ -5,6 +5,8 @@ let router = express.Router();
 let path = require('path');
 const multer = require("multer");
 const {body} = require('express-validator');
+const logMiddelware = require("../../middlewares/logMiddleware");
+const { log } = require("console");
 
 
 const storage = multer.diskStorage({
@@ -30,22 +32,19 @@ const validations = [
           body("celular").notEmpty().withMessage('Debe completar su celular'),
           body("email").notEmpty().withMessage('Debe completar su email'),
           body("password").notEmpty().withMessage('Debe completar su Clave'),
-          body("imagen").custom((value,{req})=>{
-           
-          })
 ]
 
 router.get ("/register", userController.registroUser);
 router.post('/register', uploadFile.single('imagen'),validations, userController.processCreate)
 //Editar USER
-router.get('/users/edit/:id', userController.edit);
-router.put('/users/:id', uploadFile.single('imagen'),userController.editProcess);
+router.get('/users/edit/:id',logMiddelware, userController.edit);
+router.put('/users/:id',logMiddelware, uploadFile.single('imagen'),userController.editProcess);
 
 //Borrar USER
-router.get('/users/delete/:id', userController.delete);
-router.delete('/users/:id', uploadFile.single('imagen'),userController.deleteProcess);
+router.get('/users/delete/:id',logMiddelware, userController.delete);
+router.delete('/users/:id',logMiddelware, uploadFile.single('imagen'),userController.deleteProcess);
 
 //Perfil USER
-router.get ("/users/perfil/:id", userController.perfilUser);
+router.get ("/users/perfil/:id",logMiddelware, userController.perfilUser);
 
 module.exports = router;
