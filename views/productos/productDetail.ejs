@@ -3,12 +3,16 @@
     
 <%- include("../partials/head") %>
 
-<body>
+<body class="contenedor">
     
 <%- include("../partials/header") %>
 
 
 <main>
+    <div class="prefooter">
+        <div class="container">
+        </div>
+    </div>
     <div class="detalle-producto">   
    
         <!-- imagen de producto--> 
@@ -85,15 +89,25 @@
                     
                     </div>
                     <%= producto.desc2 %>
-                <p>
-                    Encuentre muchos más <a href="/"> aquí</a>.
-                </p>
+                    <div class="prefooter">
+                        <div class="container">
+                        </div>
+                    </div>
+                <h4>
+                    Encuentre muchos más <a href="/productList"> aquí</a>.
+                </h4>
             </div>
         </div>
 
     </main>
-    <!-- una barra fija con seguir en el shop - ir al carrito- hacer login-->
-    <%- include("../partials/footer") %>
+    <div class="prefooter">
+        <div class="container">
+        </div>
+    </div>
+    <div class="footer-contenedor">
+        <!-- una barra fija con seguir en el shop - ir al carrito- hacer login-->
+        <%- include("../partials/footer") %>
+    </div>
 </body>
 
 </html>

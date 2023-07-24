@@ -21,13 +21,21 @@
                         
                        <img src="/images/<%= menu[i].imagen %>" class="productos-img"> 
                     </a>
-                    <h4>
-                        <a class="titulo-productos" href="/detail/<%= menu[i].id %>">
-                            <%= menu[i].nombre %>
-                        </a>
-                    </h4>
-                    <div class="flex"><div><p><%= menu[i].precio %>$</p></div>
-                    <div class="taza-cafe"><img src="/images/humo.png" class="humo"> <i class="fa-solid fa-mug-saucer"></i></div></div>
+                    <div class="productos-rec2">
+                        <h4>
+                            <a class="titulo-productos" href="/detail/<%= menu[i].id %>">
+                                <%= menu[i].nombre %>
+                            </a>
+                        </h4>
+                        <div class="flex">
+                            <div>
+                                <p><%= menu[i].precio %>$</p>
+                            </div>
+                            <div class="taza-cafe">
+                                <img src="/images/humo.png" class="humo"> <i class="fa-solid fa-mug-saucer"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             <% }; %>
         </div>

@@ -4,28 +4,38 @@
 <body>
     <%- include("../partials/header") %>
 <main>
-    <h3 class="tiilodeDestacados"> Perfil de Usuario </h3>
+    <h3 class="titelperfil"> Perfil de Usuario </h3>
     <div class = "datosUser">
+        <!--foto de perfil del usuario-->
         <div class = "bloqueAvatar">
-        <img  src="/images/user/<%=user.imagen%>">
+            <img  src="/images/user/<%=user.imagen%>">
         </div>
-        <div class = datosPerfill>
-            <p class = bloques-registro> Nombre:
+        <!--datos del usuario-->
+        <div class="usuario-meta">
+            <div class="perfil_meta_text_bold">Nombre:                
+            </div>
+            <div class = "perfil_meta_text"> 
                 <%= user.nombre %> 
-            </p>
-            <p class = bloques-registro> Apellido:
-                <%= user.apellido %>
-            </p class = bloques-registro>
-            <p class = bloques-registro> Celular:
-               <%= user.celular %>
-            </p>
-            <p class = bloques-registro> E-Mail:
-            <%= user.email %>
-            </p>
+            </div>
+        </div>
+        <div class="usuario-meta">
+            <div class = "perfil_meta_text_bold">Apellido:</div>
+            <div class = "perfil_meta_text">  <%= user.apellido %>
+            </div>
+        </div>   
+        <div class="usuario-meta">   
+            <div class = "perfil_meta_text_bold">Celular:</div>
+            <div class = "perfil_meta_text"> 
+                <%= user.celular %>
+            </div>
+        </div>    
+        <div class="usuario-meta">   
+            <div class = "perfil_meta_text_bold"> E-Mail:</div>
+            <div class = "perfil_meta_text"> <%= user.email %>
+            </div>        
         </div>
     </div>
 </main>
-
 
     <%- include("../partials/footer") %>
 </body>
