@@ -34,7 +34,7 @@ let registrocontroller = {
                 req.session.usuarioLogeado = usuario
                 console.log("session creada")
                 console.log(req.session.usuarioLogeado)
-                res.redirect("/")
+                res.redirect("/perfil/"+usuario.id)
     }else{console.log("contraseña incorrecta")
     res.redirect("/login")}
     }},

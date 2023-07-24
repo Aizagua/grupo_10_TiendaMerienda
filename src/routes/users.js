@@ -31,7 +31,7 @@ const validations = [
           body("apellido").notEmpty().withMessage('Debe completar su apellido'),
           body("celular").notEmpty().withMessage('Debe completar su celular'),
           body("email").notEmpty().withMessage('Debe completar su email'),
-          body("password").notEmpty().withMessage('Debe completar su Clave'),
+          body("password").notEmpty().withMessage('Debe completar su Clave').bail().isStrongPassword({minlength: 5, maxlength: 10}).withMessage("La calve debe contener entre 5 y 10 caracteres"),
 ]
 
 router.get ("/register", userController.registroUser);
@@ -45,6 +45,6 @@ router.get('/users/delete/:id',logMiddelware, userController.delete);
 router.delete('/users/:id',logMiddelware, uploadFile.single('imagen'),userController.deleteProcess);
 
 //Perfil USER
-router.get ("/users/perfil/:id",logMiddelware, userController.perfilUser);
+router.get ("/perfil/:id",logMiddelware, userController.perfilUser);
 
 module.exports = router;
