@@ -1,5 +1,5 @@
 
-const logMiddelware = (req,res,next) => {
+const logMiddleware = (req,res,next) => {
   
     if(!req.session.usuarioLogeado){
         return res.redirect('/login')
@@ -9,4 +9,4 @@ const logMiddelware = (req,res,next) => {
     
 }
 
-module.exports = logMiddelware
+module.exports = logMiddleware

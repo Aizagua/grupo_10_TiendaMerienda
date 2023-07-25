@@ -5,7 +5,7 @@ let router = express.Router();
 let path = require('path');
 const multer = require("multer");
 const {body} = require('express-validator');
-const logMiddelware = require("../middlewares/logMiddleware");
+const logMiddleware = require("../middlewares/logMiddleware");
 const { log } = require("console");
 
 
@@ -37,14 +37,14 @@ const validations = [
 router.get ("/register", userController.registroUser);
 router.post('/register', uploadFile.single('imagen'),validations, userController.processCreate)
 //Editar USER
-router.get('/users/edit/:id',logMiddelware, userController.edit);
-router.put('/users/:id',logMiddelware, uploadFile.single('imagen'),userController.editProcess);
+router.get('/users/edit/:id',logMiddleware, userController.edit);
+router.put('/users/:id',logMiddleware, uploadFile.single('imagen'),userController.editProcess);
 
 //Borrar USER
-router.get('/users/delete/:id',logMiddelware, userController.delete);
-router.delete('/users/:id',logMiddelware, uploadFile.single('imagen'),userController.deleteProcess);
+router.get('/users/delete/:id',logMiddleware, userController.delete);
+router.delete('/users/:id',logMiddleware, uploadFile.single('imagen'),userController.deleteProcess);
 
 //Perfil USER
-router.get ("/perfil/:id",logMiddelware, userController.perfilUser);
+router.get ("/perfil/:id",logMiddleware, userController.perfilUser);
 
 module.exports = router;

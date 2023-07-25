@@ -3,7 +3,7 @@ let path = require('path')
 const products = require("../controller/productsController");
 const multer = require("multer")
 let router = express.Router();
-const logMiddelware = require("../middlewares/logMiddleware")
+const logMiddleware = require("../middlewares/logMiddleware")
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -21,15 +21,15 @@ let uploadFile = multer({ storage: storage });
 router.get('/detail/:id', products.detalle);
 
 //Crear Producto
-router.get('/products/create',logMiddelware, products.create)
+router.get('/products/create',logMiddleware, products.create)
 router.post('/products', uploadFile.single('imagen'), products.processCreate)
 
 //Editar Producto
-router.get('/products/edit/:id',logMiddelware,products.edit)
+router.get('/products/edit/:id',logMiddleware,products.edit)
 router.put('/products/:id', uploadFile.single('imagen'),products.editProcess)
 
 //Borrar Producto
-router.get('/products/delete/:id',logMiddelware,products.delete)
+router.get('/products/delete/:id',logMiddleware,products.delete)
 router.delete('/products/:id', products.deleteProcess)
 
 router.get ("/productList", products.list);
