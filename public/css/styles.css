@@ -100,9 +100,13 @@ button[type="submit"]:hover .fa-search {
     margin-right: 20px;
 }
 
-.boton-carrito, .boton-login {
+.boton-carrito, .boton-login, .boton-perfil {
     text-decoration: none;
     font-size: 20px;
+}
+
+.boton-perfil {
+    margin-right: 10px;
 }
 
 .dropdown {
@@ -121,11 +125,6 @@ button[type="submit"]:hover .fa-search {
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-.boton-login {
-    text-decoration: none;
-    font-size: 20px;
 }
 
 .dropdown-content a {

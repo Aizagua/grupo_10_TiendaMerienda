@@ -89,5 +89,15 @@
     "password": "$2a$10$3EL2BzHkJcXznXaih1u.XeFhK3Yb6HbkuEadgm3H.lfGl78J151CO",
     "admin": false,
     "imagen": "1690252797748.png"
+  },
+  {
+    "id": 10,
+    "nombre": "Bruno",
+    "apellido": "Loriente",
+    "celular": "098373866",
+    "email": "bruloriente@gmail.com",
+    "password": "$2a$10$y2JGR.736TXTf2A8puD5NuTaMs/9N7a24Mk.83PzMLbQjXGAevjM.",
+    "admin": false,
+    "imagen": "1690314559403.jpg"
   }
 ]

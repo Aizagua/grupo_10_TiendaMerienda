@@ -14,17 +14,26 @@
         </a>
       </div>
       <div class="botones">
-        <%if(locals.isLogged){%>
-  <p>Mi Cuenta</p>
-       <%}else{%>
+
+      <%if(locals.isLogged){%>
+
+        <div class="dropdown">
+          <button class="boton-perfil"><i class="fa-solid fa-user" style="color: #de7627;"></i></button>
+            <div class="dropdown-content">
+              <a href="/perfil">Mi perfil</a>
+              <a href="/">Cerrar sesión</a>
+            </div>
+        </div>
+
+      <%}else{%>
         <div class="dropdown">
           <button class="boton-login"><i class="fas fa-sign-in-alt" style="color: #de7627"></i></button>
             <div class="dropdown-content">
              <a href="/login">Ingresá</a>
               <a href="/register">Regístrate</a>
             </div>
-          </div>
-       <%}%>
+        </div>
+      <%}%>
 
         <a href="/carrito" class="boton-carrito"><i class="fas fa-shopping-cart" style="color: #de7627;"></i></a>
       </div>
