@@ -45,11 +45,13 @@ let registrocontroller = {
               else return res.send("ERROR 404 NOT FOUND")
     },
     processCreate: (req, res) => {
+      console.log(req.body)
       const resultValidation = validationResult(req);
+      console.log(resultValidation)
       if (resultValidation.errors.length>0){
         return res.render('users/formRegistro',{
           errors: resultValidation.mapped(),
-          oldData: req.body
+          oldData: req.body,
         });
       }
       let ultimoUser = userUsers.slice(-1)
@@ -104,7 +106,8 @@ let registrocontroller = {
       }else{
         return res.render("Error en el borrado")
       }
-    },
+      
+    }
 };
 
 

@@ -687,7 +687,48 @@ text-align: center;
     padding: 10px;
     background-color: beige;
 }
-
+@media (min-width: 769px){
+    .formularios-login{
+ background-color: rgb(255, 255, 255);
+ border-radius: 15px;
+ box-shadow: 0px 0px 10px rgb(180, 180, 180);
+   width: 25vw; 
+ margin-top: 3%;}
+   .logo-login img {
+     text-align: center;
+     width: 17vw;
+ }
+ .inicioTM{
+     background-color: #f1f0f0;
+ } 
+ .textodelogin1{
+     border-color: #ebe8e5;
+     border-width: 2px;
+     align-items: center;
+     border-radius: 5px;
+ }
+ .textodelogin2{
+     border-color: #ebe8e5;
+     border-width: 2px;
+     align-items: center;
+     border-radius: 5px;
+ }
+ .bloquesdellogin input{
+ height: 40px;
+ width: 100%;
+ color:#895d39;
+ }
+ .textodelogin1::placeholder{
+     color:#895d39;
+     margin: 3px;
+ }
+ .textodelogin2::placeholder{
+     color:#895d39;
+     margin: 3px;
+ }
+ .abajo{
+     display: flex;
+ }}
 @media (min-width: 1200px){
    .formularios-login{
 background-color: rgb(255, 255, 255);
@@ -794,6 +835,27 @@ text-align: center;
  width: 17vw;
 }
 }
+@media (min-width:769px){
+    .formregistro h3{
+        margin-top: 10%;
+    }
+    .main-register{
+        background-color: #f1f0f0;
+    }
+    .foto{
+        margin-bottom: 10%;
+    }
+        .formregistro{
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgb(180, 180, 180);
+    width: 25vw; 
+    margin-top: 3%;}
+    .logo-login img {
+    text-align: center;
+     width: 17vw;
+    }
+    }
 /*Fin del register*/
 /*Detalle del Producto */
 

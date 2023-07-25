@@ -59,5 +59,35 @@
     "password": "$2a$10$q/wHnFtFvTb9lkOmq0LIG.V4JX/kkddI4gxBR1Llsg2IZN.EKn8QW",
     "admin": false,
     "imagen": "logo_tienda_merienda_white.png"
+  },
+  {
+    "id": 7,
+    "nombre": "Leonel",
+    "apellido": "Martin",
+    "celular": "03487-640943",
+    "email": "leonelmartin9808@gmail.com",
+    "password": "$2a$10$Gezh/wjPUTqLzVQPH7hW4ej3UUfL2C4hq7RyTLgTbDarkVdSdzKk6",
+    "admin": false,
+    "imagen": "logo_tienda_merienda_white.png"
+  },
+  {
+    "id": 8,
+    "nombre": "Leonel",
+    "apellido": "Martin",
+    "celular": "03487-640943",
+    "email": "leonelmartin9808@gmail.com",
+    "password": "$2a$10$fmTiLruEs8JFPkkjn4XSTeUUZmN27fUeuk/vX67.ytnr68NPHQ/iW",
+    "admin": false,
+    "imagen": "1690252464105.png"
+  },
+  {
+    "id": 9,
+    "nombre": "Leonel",
+    "apellido": "Martin",
+    "celular": "03487-640943",
+    "email": "leonelmartin9808@gmail.com",
+    "password": "$2a$10$3EL2BzHkJcXznXaih1u.XeFhK3Yb6HbkuEadgm3H.lfGl78J151CO",
+    "admin": false,
+    "imagen": "1690252797748.png"
   }
 ]

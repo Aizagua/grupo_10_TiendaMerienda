@@ -3,7 +3,7 @@ let path = require('path')
 const products = require("../controller/productsController");
 const multer = require("multer")
 let router = express.Router();
-const logMiddelware = require("../../middlewares/logMiddleware")
+const logMiddelware = require("../middlewares/logMiddleware")
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {

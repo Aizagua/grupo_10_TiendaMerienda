@@ -4,7 +4,7 @@ const path = require("path");
 const methodOverride = require('method-override');
 const publicPath = path.resolve(__dirname, "../public")
 const session = require('express-session');
-
+const userLogMiddleware=require('./middlewares/userLogMiddleware')
 
 let rutaUser = require ("./routes/users");
 let rutaHome = require ("./routes/home");
@@ -22,7 +22,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
 }));
-
+app.use(userLogMiddleware)
 app.set ("view engine", "ejs")
 app.set ("views", path.join (__dirname,"../views"))
 
