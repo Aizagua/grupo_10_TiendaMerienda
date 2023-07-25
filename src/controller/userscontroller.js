@@ -27,7 +27,7 @@ let registrocontroller = {
       const usuario = userUsers.find((row) => row.email == req.body.email);
       console.log(usuario)
         if (usuario) {
-          let ClaveOK = bcryptjs.compareSync(req.body.password,usuario.password);
+          let ClaveOK = bcryptjs.compareSync(req.body.password, usuario.password);
             console.log("usuario encontrado")
             if (ClaveOK){
                 delete usuario.password
@@ -107,7 +107,10 @@ let registrocontroller = {
         return res.render("Error en el borrado")
       }
       
-    }
+    },
+    logout: (req,res)=>{
+      {res.redirect('/');}
+    }    
 };
 
 
