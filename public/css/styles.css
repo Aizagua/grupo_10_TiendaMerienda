@@ -107,11 +107,13 @@ button[type="submit"]:hover .fa-search {
 
 .boton-perfil {
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
+    cursor: pointer;
 }
 
 .dropdown-content {
@@ -125,6 +127,7 @@ button[type="submit"]:hover .fa-search {
 
 .dropdown:hover .dropdown-content {
     display: block;
+    cursor: pointer;
 }
 
 .dropdown-content a {
@@ -167,7 +170,37 @@ button[type="submit"]:hover .fa-search {
 .menu nav ul li a:hover {
     color: #de7627;
 }  
-
+.admin-iconos{
+position:absolute;
+    flex-direction: column;
+    left: 67%;
+    font-size: 1.3vw;   
+}
+.i-admin{
+    bottom: -25px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    
+}
+.i-admin i{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.i-admin a{
+transition: all 1s;
+}
+.i-admin a:hover{
+color: rgb(189, 184, 184);
+transition: all 1s;
+}
+.admin-iconos a{
+    text-decoration: none;
+    color: inherit;
+}
+.eres-admin{
+    color: #cac251;
+}
 /*fin header*/
 
 .inicioTM {

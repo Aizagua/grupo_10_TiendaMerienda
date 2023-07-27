@@ -8,6 +8,8 @@ const {body} = require('express-validator');
 const logMiddleware = require("../middlewares/logMiddleware");
 const { log } = require("console");
 const logoutMiddleware = require("../middlewares/logoutMiddleware");
+const adminMiddleware = require("../middlewares/adminMiddleware");
+
 
 
 const storage = multer.diskStorage({
@@ -48,5 +50,7 @@ router.delete('/users/:id',logMiddleware, uploadFile.single('imagen'),userContro
 //Perfil USER
 router.get ("/perfil/:id",logMiddleware, userController.perfilUser);
 router.get('/logout', logoutMiddleware, userController.logout);
+
+
 
 module.exports = router;

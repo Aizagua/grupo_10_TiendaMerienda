@@ -16,15 +16,33 @@
       <div class="botones">
 
       <%if(locals.isLogged){%>
-
-        <div class="dropdown">
-          <button class="boton-perfil"><i class="fa-solid fa-user" style="color: #de7627;"></i></button>
+        
+        <%if(locals.isAdmin == true){%>
+          <article class="admin-iconos">
+            <div><p class="eres-admin">Eres administrador<i class="fa-solid fa-crown"></i></p></div>
+            <div class="i-admin"><a href="/products/create">Agregar<i class="fa-solid fa-circle-down"></i></a><a href="/products/edit">Editar<i class="fa-regular fa-pen-to-square"></i></a></div>
+          </article>  
+          <div class="dropdown">
+            <button class="boton-perfil"><i class="fa-solid fa-user" style="color: #de7627;"></i></button>
             <div class="dropdown-content">
-              <a href="/">Mi perfil</a>
-              <a href="/logout">Cerrar sesión</a>
-            </div>
+                <a href="/perfil/:id">Mi perfil</a>
+                <a href="/logout">Cerrar sesión</a>
+              </div>
+          </div>
+          <a href="/carrito" class="boton-carrito"><i class="fas fa-shopping-cart" style="color: #de7627;"></i></a>
         </div>
-
+         
+          <%}else{%>
+            <div class="dropdown">
+              <button class="boton-perfil"><i class="fa-solid fa-user" style="color: #de7627;"></i></button>
+                <div class="dropdown-content">
+                  <a href="/">Mi perfil</a>
+                  <a href="/logout">Cerrar sesión</a>
+                </div>
+            </div>
+            <a href="/carrito" class="boton-carrito"><i class="fas fa-shopping-cart" style="color: #de7627;"></i></a>
+          </div>
+          <%}%>
       <%}else{%>
         <div class="dropdown">
           <button class="boton-login"><i class="fas fa-sign-in-alt" style="color: #de7627"></i></button>
@@ -33,10 +51,11 @@
               <a href="/register">Regístrate</a>
             </div>
         </div>
+        <a href="/" class="boton-carrito"><i class="fas fa-shopping-cart" style="color: beige;"></i></a>
+      </div>
       <%}%>
 
-        <a href="/carrito" class="boton-carrito"><i class="fas fa-shopping-cart" style="color: #de7627;"></i></a>
-      </div>
+       
     </div>
     <div class="menu">
       <nav>

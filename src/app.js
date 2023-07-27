@@ -9,7 +9,8 @@ const userLogMiddleware=require('./middlewares/userLogMiddleware')
 let rutaUser = require ("./routes/users");
 let rutaHome = require ("./routes/home");
 let rutaCarrito = require ("./routes/carrito"); 
-let rutaProductos = require ("./routes/products")
+let rutaProductos = require ("./routes/products");
+const adminMiddleware = require("./middlewares/adminMiddleware");
 app.use(express.static(publicPath))
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -22,7 +23,8 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
 }));
-app.use(userLogMiddleware)
+app.use(userLogMiddleware);
+app.use(adminMiddleware)
 app.set ("view engine", "ejs")
 app.set ("views", path.join (__dirname,"../views"))
 

@@ -62,36 +62,6 @@
   },
   {
     "id": 7,
-    "nombre": "Leonel",
-    "apellido": "Martin",
-    "celular": "03487-640943",
-    "email": "leonelmartin9808@gmail.com",
-    "password": "$2a$10$Gezh/wjPUTqLzVQPH7hW4ej3UUfL2C4hq7RyTLgTbDarkVdSdzKk6",
-    "admin": false,
-    "imagen": "logo_tienda_merienda_white.png"
-  },
-  {
-    "id": 8,
-    "nombre": "Leonel",
-    "apellido": "Martin",
-    "celular": "03487-640943",
-    "email": "leonelmartin9808@gmail.com",
-    "password": "$2a$10$fmTiLruEs8JFPkkjn4XSTeUUZmN27fUeuk/vX67.ytnr68NPHQ/iW",
-    "admin": false,
-    "imagen": "1690252464105.png"
-  },
-  {
-    "id": 9,
-    "nombre": "Leonel",
-    "apellido": "Martin",
-    "celular": "03487-640943",
-    "email": "leonelmartin9808@gmail.com",
-    "password": "$2a$10$3EL2BzHkJcXznXaih1u.XeFhK3Yb6HbkuEadgm3H.lfGl78J151CO",
-    "admin": false,
-    "imagen": "1690252797748.png"
-  },
-  {
-    "id": 10,
     "nombre": "Bruno",
     "apellido": "Loriente",
     "celular": "098373866",
@@ -99,5 +69,15 @@
     "password": "$2a$10$y2JGR.736TXTf2A8puD5NuTaMs/9N7a24Mk.83PzMLbQjXGAevjM.",
     "admin": false,
     "imagen": "1690314559403.jpg"
+  },
+  {
+    "id": 9,
+    "nombre": "Leonel2",
+    "apellido": "Martin",
+    "celular": "03487-640943",
+    "email": "leomartin9808@gmail.com",
+    "password": "$2a$10$c7yg7rECVKjaak8RYIwbQ.arFyo3OKUuw9El2pD1O3D8oWqCRWa3O",
+    "admin": true,
+    "imagen": "1690438567686.png"
   }
 ]

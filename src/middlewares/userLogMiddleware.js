@@ -5,8 +5,7 @@ module.exports=(req,res,next)=>{
             res.locals.isLogged=true;
             res.locals.usuarioLogeado=req.session.usuarioLogeado
         }
-        next()
-        
+        next() 
     } catch (error) {
         console.log(error)
     }
