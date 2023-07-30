@@ -4,7 +4,7 @@ const rutaArchivo = path.resolve('./src/database/users.json');
 const userUsers = JSON.parse(fs.readFileSync(rutaArchivo));
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
-;
+const userlogMiddleware = require ('../middlewares/userLogMiddleware')
 
 let registrocontroller = {
     registroUser: function (req, res) {
@@ -34,7 +34,7 @@ let registrocontroller = {
                 req.session.usuarioLogeado = usuario
                 console.log("session creada")
                 console.log(req.session.usuarioLogeado)
-                res.redirect("/perfil/"+usuario.id)
+                res.redirect("/perfil/"+req.session.usuarioLogeado.id)
     }else{console.log("contraseña incorrecta")
     res.redirect("/login")}
     }},
