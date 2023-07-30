@@ -8,7 +8,7 @@
     <div class = "datosUser">
         <!--foto de perfil del usuario-->
         <div class = "bloqueAvatar">
-            <img  src="/images/user/<%=user.imagen%>">
+            <img  src="/images/user/<%= user.imagen ? user.imagen : 'default.png' %>">
         </div>
         <!--datos del usuario-->
         <div class="usuario-meta">
