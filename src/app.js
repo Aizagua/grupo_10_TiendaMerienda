@@ -12,17 +12,18 @@ let rutaCarrito = require ("./routes/carrito");
 let rutaProductos = require ("./routes/products");
 const adminMiddleware = require("./middlewares/adminMiddleware");
 app.use(express.static(publicPath))
+app.use(session({
+    secret: 'Nombre del sitio',
+    resave: false,
+    saveUninitialized: true,
+}));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 
 
 
-app.use(session({
-    secret: 'Nombre del sitio',
-    resave: false,
-    saveUninitialized: true,
-}));
+
 app.use(userLogMiddleware);
 app.use(adminMiddleware)
 app.set ("view engine", "ejs")

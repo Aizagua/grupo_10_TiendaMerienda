@@ -62,6 +62,18 @@ let productsController = {
     return res.redirect("/")
         
   },
+  mostrarProducto:function (producto) {
+    let nose=productoProducts.find(row => row.id == req.params.id)
+    if (nose) {
+      // Si se encontró el producto, mostramos la información en los campos de edición del formulario
+      document.getElementById("nombre").value =nose.id;
+      document.getElementById("precio").value = nose.nombre;
+      document.getElementById("descripcion").value =nose.precio ;
+    } else {
+      // Si el producto no se encuentra, mostramos un mensaje de error
+      alert("Producto no encontrado.");
+    }
+  },
 
   list: function (req, res) {
       res.render('productos/listadoDeProductos', {listaProductos: productoProducts})

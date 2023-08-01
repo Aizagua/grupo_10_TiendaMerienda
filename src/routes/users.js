@@ -48,8 +48,8 @@ router.get('/users/delete/:id',logMiddleware, userController.delete);
 router.delete('/users/:id',logMiddleware, uploadFile.single('imagen'),userController.deleteProcess);
 
 //Perfil USER
-router.get ("/perfil/:id",logMiddleware, userController.perfilUser);
-router.get('/logout', logoutMiddleware, userController.logout);
+router.get ("/perfil",logMiddleware, userController.perfilUser);
+router.get('/logout', userController.logout);
 
 
 

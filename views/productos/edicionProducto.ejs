@@ -10,7 +10,9 @@
     <main id="formulario-inicio" >
         <form class="formularios-login" method="POST" action="/products/<%= producto.id %>?_method=PUT" enctype="multipart/form-data">
             <h3 class="iniciartextologin">Editar Producto</h3>
-
+            <div class="bloquesdellogin">
+                <input class="textodelogin" type="text" name="nombre" placeholder="nombre" value="<%= producto.id%>">
+            </div>
             <div class="bloquesdellogin">
                 <input class="textodelogin" type="text" name="nombre" placeholder="nombre" value="<%= producto.nombre%>">
             </div>

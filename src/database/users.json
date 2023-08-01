@@ -70,13 +70,13 @@
     "imagen": "1690314559403.jpg"
   },
   {
-    "id": 9,
-    "nombre": "Leonel2",
+    "id": 10,
+    "nombre": "Leonel3",
     "apellido": "Martin",
     "celular": "03487-640943",
-    "email": "leomartin9808@gmail.com",
-    "password": "$2a$10$c7yg7rECVKjaak8RYIwbQ.arFyo3OKUuw9El2pD1O3D8oWqCRWa3O",
-    "admin": true,
-    "imagen": "1690438567686.png"
+    "email": "hola@gmail.com",
+    "password": "$2a$10$wV9oA5Erf2vbY5dS21Pxh.J6Xu0Qdzvwx4VzZrLkJQrvZNn75iWQ2",
+    "admin": false,
+    "imagen": "1690851713590.png"
   }
 ]

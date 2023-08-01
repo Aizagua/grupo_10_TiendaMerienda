@@ -26,6 +26,7 @@ router.post('/products', uploadFile.single('imagen'), products.processCreate)
 
 //Editar Producto
 router.get('/products/edit/:id',logMiddleware,products.edit)
+router.get('/products/edit',logMiddleware,products.mostrarProducto)
 router.put('/products/:id', uploadFile.single('imagen'),products.editProcess)
 
 //Borrar Producto

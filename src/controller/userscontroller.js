@@ -12,7 +12,7 @@ let registrocontroller = {
     },
 
     perfilUser:(req,res)=>{
-      const buscarUsuario = userUsers.find(row=>row.id==req.params.id)
+      const buscarUsuario = userUsers.find(row=>row.id==req.session.usuarioLogeado.id)
       if (buscarUsuario) return res.render('users/perfilUser', {user: buscarUsuario})
               else return res.send("ERROR 404 NOT FOUND")
     },
@@ -34,7 +34,7 @@ let registrocontroller = {
                 req.session.usuarioLogeado = usuario
                 console.log("session creada")
                 console.log(req.session.usuarioLogeado)
-                res.redirect("/perfil/"+req.session.usuarioLogeado.id)
+                res.redirect("/perfil")
     }else{console.log("contraseña incorrecta")
     res.redirect("/login")}
     }},
@@ -109,7 +109,8 @@ let registrocontroller = {
       
     },
     logout: (req,res)=>{
-      {res.redirect('/');}
+      req.session.destroy()
+        return res.redirect('/');
     }    
 };
 
