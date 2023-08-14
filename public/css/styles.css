@@ -26,7 +26,7 @@ header div a {
     display: flex;
     align-items: center;
     height: auto;
-    margin-left: 0;
+    margin:    0px 0px 10px;
 }
 
 .logo img {

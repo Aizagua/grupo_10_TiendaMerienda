@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<%- include("../partials/head") %>
+<body>
+    
+    <%- include("../partials/header") %>
+    
+        <main>
+            <h3 class="titelperfil"> Usuarios </h3>
+   
+            <div class="usurios">
+                <% for (let i = 0; i < listaUsuarios.length; i++) { %>
+                    <div class = "datosUser">
+                   
+                         <!--foto de perfil del usuario-->
+                        <div class = "bloqueAvatar">
+                            <img  src="/images/user/<%= listaUsuarios[i].imagen %>">
+                        </div>
+                        <!--datos del usuario-->
+                    </div> 
+                    <div> 
+                        <div class="usuario-meta">
+                            <div class="perfil_meta_text_bold">Nombre:                
+                            </div>
+                            <div class = "perfil_meta_text"> 
+                                <%= listaUsuarios[i].nombre %> 
+                            </div>
+                        </div>
+                        <div class="usuario-meta">
+                            <div class = "perfil_meta_text_bold">Apellido:</div>
+                            <div class = "perfil_meta_text">  <%= listaUsuarios[i].apellido %>
+                            </div>
+                        </div>   
+                        <div class="usuario-meta">   
+                            <div class = "perfil_meta_text_bold">Celular:</div>
+                            <div class = "perfil_meta_text"> 
+                                <%= listaUsuarios[i].celular %>
+                            </div>
+                        </div>    
+                        <div class="usuario-meta">   
+                            <div class = "perfil_meta_text_bold"> E-Mail:</div>
+                            <div class = "perfil_meta_text"> <%= listaUsuarios[i].email %>
+                            </div>        
+                        </div>                        
+                    </div>                
+                        
+                    
+                <% }; %>
+            </div>
+            
+        </main>
+            <%- include("../partials/footer") %>
+        </body>
+        
+        </html>

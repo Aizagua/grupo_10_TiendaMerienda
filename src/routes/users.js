@@ -47,6 +47,9 @@ router.put('/users/:id',logMiddleware, uploadFile.single('imagen'),userControlle
 router.get('/users/delete/:id',logMiddleware, userController.delete);
 router.delete('/users/:id',logMiddleware, uploadFile.single('imagen'),userController.deleteProcess);
 
+//lista de USERS
+router.get ("/usersList",logMiddleware, userController.list);
+
 //Perfil USER
 router.get ("/perfil",logMiddleware, userController.perfilUser);
 router.get('/logout', userController.logout);

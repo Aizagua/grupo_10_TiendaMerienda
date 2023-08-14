@@ -89,6 +89,10 @@ let registrocontroller = {
         return res.redirect("/")
           
     },
+
+    list: function (req, res) {
+      res.render('users/listadoDeUsers', {listaUsuarios: userUsers})
+  },
     delete: (req,res)=>{
       const buscarUsuario = userUsers.find(row=>row.id==req.params.id)
       if (buscarUsuario) return res.render('users/borrarUser', {user: buscarUsuario})
