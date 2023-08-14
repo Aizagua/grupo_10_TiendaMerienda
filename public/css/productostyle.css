@@ -1,0 +1,30 @@
+.polaroid {
+    background-color:white;
+    padding:10px 10px 50px 10px;
+    border:1px solid #BFBFBF;
+    box-shadow:10px 10px 30px;
+      border: solid 1px rgb(244, 165, 112);
+}
+
+.polaroidContenedor {
+  
+
+      width: 240px;
+       /* background-image: url(../images/vintage.png);
+      padding: 20px 20px 20px 20px;
+      border: 1px solid #fafae0;
+      /* background-color: white; 
+      box-shadow: 8px 8px 16px rgb(244, 165, 112) ;*/
+     
+      background-size: cover;
+
+
+
+}
+.textoPolaroid {
+    display:block;
+    margin-top:1em;
+    text-align:center;
+    font-style:italic;
+    font-family:"Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

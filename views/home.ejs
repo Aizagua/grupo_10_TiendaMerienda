@@ -9,19 +9,19 @@
 
     <main>
         <div class="banner">
-            <img src="/images/banner_tienda_merienda.png" alt="banner">    
+            <img src="/images/bienvenido2.jpg" alt="banner">    
         </div>
 
 <div><h2 class="titulo-home">Nuestros productos mas vendidos</h2></div>
         <div class="productos">
             <% for (let i = 0; i < 6; i++) { %>
                 
-                <div class="productos-rec">
+                <div class="productos-rec polaroidContenedor">
                     <a href="/detail/<%= menu[i].id %>">
                         
                        <img src="/images/<%= menu[i].imagen %>" class="productos-img"> 
                     </a>
-                    <div class="productos-rec2">
+                    <div class="productos-rec2 textoPolaroid">
                         <h4>
                             <a class="titulo-productos" href="/detail/<%= menu[i].id %>">
                                 <%= menu[i].nombre %>

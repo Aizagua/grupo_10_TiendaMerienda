@@ -78,5 +78,15 @@
     "password": "$2a$10$wV9oA5Erf2vbY5dS21Pxh.J6Xu0Qdzvwx4VzZrLkJQrvZNn75iWQ2",
     "admin": false,
     "imagen": "1690851713590.png"
+  },
+  {
+    "id": 11,
+    "nombre": "Nathaly ",
+    "apellido": "Moreno",
+    "celular": "1212",
+    "email": "nathy@yo.es",
+    "password": "$2a$10$u8C.rv3gvqP0VcpWPO6TdeQl3lySscmnkqTSou9RitH.sQovMTuSu",
+    "admin": true,
+    "imagen": "logo_tienda_merienda_white.png"
   }
 ]

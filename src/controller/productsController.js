@@ -11,6 +11,7 @@ let productsController = {
       
   },
 
+
   create: (req, res) => {
   return res.render('productos/creacionProducto')
   },

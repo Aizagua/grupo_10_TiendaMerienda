@@ -19,6 +19,9 @@ let uploadFile = multer({ storage: storage });
 
 //Detalle
 router.get('/detail/:id', products.detalle);
+router.get('/detail/:id',logMiddleware, products.detalle);
+
+
 
 //Crear Producto
 router.get('/products/create',logMiddleware, products.create)

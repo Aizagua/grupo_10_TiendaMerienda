@@ -1,4 +1,5 @@
 @import url(perfilUser.css);
+@import url(productostyle.css);
 * {
     box-sizing: border-box;
     padding: 0;
@@ -216,7 +217,7 @@ main {
     margin-bottom: 5%;
 }
 .banner img {
-    width: 70%;
+    width: 100vw;
     height: 10%;
     padding: 20px 0 20px 0;
     margin-top: -20px;
@@ -304,35 +305,50 @@ main {
   }
 
 .productos {
+    background-image: url(../images/metalloberflaechenbeschaffenheit.jpg);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;   
+    margin : 10%;
     align-items: center;
-    width: 80%;
-    margin-top: 10%;
+    padding: 25px 25px 45px 25px;
+    width: 100vW;
+    background-size: cover;
 }
 .titulo-home{
     margin-top: 7%;
+    font-family: League Spartan;
+    font-size: 1.9em;
+    text-align: center;
 }
 
 .productos-rec {
-    border: solid 1px rgb(197, 196, 196);
-    background-color: #f3efef;
-    padding: 10px;
-    margin: 10px;
+    padding: 130px 48px 52px 58px;
+    margin: 20px;
     width: 25%;
-    height: 30%;
-    min-width: 100px;
-    min-height: 100px;
+    height: 85%;
+    min-width: 225px;
+    min-height: 410px;
     transition: all 0.7s;
+    background: url(../images/vintage4.png);
+    background-size: cover;
 }
 
+
+
+
 .productos-rec:hover{
-    
-    border: solid 1px black;
+    /*rotar a la izquerda*/
+    transform:rotate(2deg);
+    -ms-transform:rotate(2deg); /* IE9 */
+    -webkit-transform:rotate(2deg); /* Safari y Chrome */
+    -moz-transform:rotate(2deg); 
+
+    /*  box-shadow: 2px 2px 18px #de76273b ;*/
     animation: nose ;
     }
+
 .productos-rec:hover .humo{
     animation-duration: 3s;
     animation-name: nose;
@@ -357,10 +373,21 @@ main {
 .flex{
     display: flex;
 }
+
+
+
 .flex div p{
     margin-top: 45%;
-    margin-left: 90%;
-}
+    margin-left: 60%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Handlee', cursive;
+    font-size: 1.0em;
+    
+        color: #895D39;
+        background: #FAFAE0;
+        margin: 10px 10px; 
+      
+    }
+
 .humo{
     width: 20px;
     height: 20px;
@@ -382,7 +409,7 @@ main {
    .taza-cafe i{
     font-size: 23px;
     z-index: 1;
-    background-color: #ebebeb;
+    background-color: #ffffff;
    }
 
 
@@ -400,6 +427,7 @@ main {
 }
 
 .lore h3 {
+    font-family: League Spartan;
     margin-top: 15px;
     margin-bottom: 10px;
     width: 70%;
@@ -581,9 +609,50 @@ font-weight: 500;
     }  
     .button-adicionar-carrito:hover{
         border-radius: 10px;
-        background-color: #cf944c;
-        border: solid 1px #ebebeb;
+        background-color: #cf944c ;
+        border: solid 1px #ebebeb ;
     }
+
+
+
+    .button-agregar-producto button p{
+        color: #482a06;
+        justify-content: center;
+        
+    }
+    .button-agregar-producto{
+        display: block;
+        text-align: center;
+    }
+    .button-adicionar-producto{
+        width: 30%;
+        border-radius: 5px;
+        border: #7c7373 solid 1px;
+        height: 40px;
+        color:#000; /*#f3e28d;*/
+        background-color: #d77e10;
+        transition: all 0.6s;
+        cursor: pointer;    
+        
+        } 
+        
+        .spacio{
+            padding: 10px;
+        }
+        .button-adicionar-producto:hover{
+            border-radius: 10px;
+            background-color: #ebebeb;
+            border: solid 1px #090909;
+            color: #000;
+        }
+
+
+
+
+
+
+
+
 .sproducto {
 font-size: 16px;
 text-align: left;
@@ -918,8 +987,9 @@ padding: 20px 0px 16px 0px;
 .titulo-productos{
     text-decoration: none;
     color: inherit;
-    font-family: 'Handlee', cursive;
-    font-weight: 230
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Handlee', cursive;
+    font-size: 1.4em;
+    font-weight: 600;
 }
 
 .sproducto .texto16-negrita{
@@ -959,6 +1029,11 @@ width: 100%;
 .sproducto {
     flex: 0 0 50%;
     max-width: 50%;
+}
+.titulo-home{
+    margin-top: 7%;
+    font-family: League Spartan;
+    font-size: 1.8em;
 }
 }
 

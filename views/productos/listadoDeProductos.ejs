@@ -8,6 +8,7 @@
     
         <main>
             <div class="productos">
+                
                 <% for (let i = 0; i < listaProductos.length; i++) { %>
                     
                     <div class="productos-rec">
@@ -15,12 +16,17 @@
                             
                            <img src="/images/<%= listaProductos[i].imagen %>" class="productos-img"> 
                         </a>
-                        <h4>
+                        <div class="productos-rec2 textoPolaroid">
+                            <h4>
                             <a class="titulo-productos" href="/detail/<%= listaProductos[i].id %>">
                                 <%= listaProductos[i].nombre %>
                             </a>
-                        </h4>
-                        <div class="flex"><div><p><%= listaProductos[i].precio %>$</p></div></div>
+                            </h4>
+                        </div>
+                        <div class="flex">
+                            <div><p><%= listaProductos[i].precio %>$</p>  </div>
+                            <div></div>
+                        </div>
                         
                     </div>
                 <% }; %>
