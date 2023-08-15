@@ -225,8 +225,55 @@ main {
     align-items: center;
     text-align: center;    
   }
-
-
+  .circulos{
+    display: flex;
+    position: absolute;
+    bottom: 20%;
+  }
+  .circle{
+    margin-left: 15%;
+    color: white;
+    font-size: 13px;
+  }
+  .circulogris{
+    color: gray;
+  }
+  .i1{
+    position: absolute;
+    font-size: 40px;
+    color: gray;
+    left: 5%;
+    transition:all 0.8s ;
+    cursor: pointer;
+  }
+  .i2{
+    position: absolute;
+    font-size: 40px;
+    color: gray;
+    right: 5%;
+    transition:all 0.8s  ;
+    cursor: pointer;
+  }
+  .i2:hover{
+    color: white;
+  }
+  .i1:hover{
+    color: white;
+  }
+  .banner1{
+      display: flex;
+  }
+  
+  .banner-none {
+     display: none;
+  }
+  
+.imagenes-banner{
+    display: flex;
+    overflow: hidden;
+    width: 99vw;
+    margin-left: -10px;
+}
 .banner{ 
     align-items: center;
    /* text-align: center;*/
