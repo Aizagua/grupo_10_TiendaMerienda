@@ -1,27 +1,27 @@
-module.exports = (sequelize, datatypes) => {
+module.exports = (sequelize, DataTypes) => {
 
     let alias = 'Perfiles';
 
     let cols = {
         id: {
-            type: datatypes.BIGINT,
+            type: DataTypes.BIGINT,
             primaryKey: true,
             autoIncrement: true,
         },
         nombre: {
-            type: datatypes.STRING
+            type: DataTypes.STRING
         },
         descripcion: {
-            type: datatypes.STRING
+            type: DataTypes.STRING
         },
         createdAt: {
-            type: datatypes.DATE,
+            type: DataTypes.DATE,
         },
         updatedAt: {
-            type: datatypes.DATE,
+            type: DataTypes.DATE,
         },
         deletedAt: {
-            type: datatypes.DATE,
+            type: DataTypes.DATE,
         }
     };
 

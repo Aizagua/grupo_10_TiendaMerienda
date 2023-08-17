@@ -1,24 +1,24 @@
-module.exports = (sequelize, datatypes) => {
+module.exports = (sequelize, DataTypes) => {
 
     let alias = 'Categorias';
 
     let cols = {
         id: {
-            type: datatypes.BIGINT,
+            type: DataTypes.BIGINT,
             primaryKey: true,
             autoIncrement: true,
         },
         nombre: {
-            type: datatypes.STRING
+            type: DataTypes.STRING
         },
         createdAt: {
-            type: datatypes.DATE,
+            type: DataTypes.DATE,
         },
         updatedAt: {
-            type: datatypes.DATE,
+            type: DataTypes.DATE,
         },
         deletedAt: {
-            type: datatypes.DATE,
+            type: DataTypes.DATE,
         }
     };
 
@@ -26,7 +26,7 @@ module.exports = (sequelize, datatypes) => {
         tableName: 'categorias',
     };
     
-    const Categorias = sequelize.define(alias, cols, config);
+    const Categoria = sequelize.define(alias, cols, config);
 
-    return Categorias;
+    return Categoria;
 }
