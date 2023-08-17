@@ -97,6 +97,10 @@ button[type="submit"]:hover .fa-search {
     display: flex;
 }
 
+.boton-carrito {
+    margin: 2px;
+}
+
 .boton-login {
     margin-right: 20px;
 }

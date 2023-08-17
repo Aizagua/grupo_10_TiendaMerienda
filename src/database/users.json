@@ -88,5 +88,15 @@
     "password": "$2a$10$u8C.rv3gvqP0VcpWPO6TdeQl3lySscmnkqTSou9RitH.sQovMTuSu",
     "admin": true,
     "imagen": "logo_tienda_merienda_white.png"
+  },
+  {
+    "id": 12,
+    "nombre": "Bruno",
+    "apellido": "Loriente",
+    "celular": "098373866",
+    "email": "bruloriente@hotmail.com",
+    "password": "$2a$10$9/w/2HfE22LelNAvAyFFZu4vaW84aymNzsM/cpvnEhQjhzMBm8uES",
+    "admin": false,
+    "imagen": "1692306099744.jpg"
   }
 ]
