@@ -1,10 +1,8 @@
-const { DataTypes } = require("sequelize");
-const { sequelize } = require(".");
 module.exports = (sequelize,DataTypes) => {
 let alias = "Usuarios";
 let cols ={
     id: {
-        type:DataTypes.bigint(20),
+        type:DataTypes.BIGINT,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
@@ -19,7 +17,7 @@ let cols ={
         allowNull: false
     },
     cuit: {
-        type:DataTypes.bigint(20),
+        type: DataTypes.BIGINT,
         allowNull: false
     },
     email: {
@@ -31,7 +29,7 @@ let cols ={
         allowNull: false
     },
     id_perfil: {
-        type:DataTypes.bigint(20),
+        type:DataTypes.BIGINT,
         allowNull: false
     }
 

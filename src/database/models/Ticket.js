@@ -1,5 +1,3 @@
-const { DataTypes } = require("sequelize");
-const { sequelize } = require(".");
 module.exports = (sequelize,DataTypes) => {
 let alias = "Tickets";
 let cols ={
@@ -10,7 +8,7 @@ let cols ={
         allowNull: false,
     },
     fecha:{
-        type:DataTypes.DATETIME,
+        type:DataTypes.DATE,
     },
     id_usuario:{
         type:DataTypes.BIGINT,

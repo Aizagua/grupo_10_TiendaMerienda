@@ -1,5 +1,3 @@
-const { DataTypes } = require("sequelize");
-const { sequelize } = require(".");
 module.exports = (sequelize,DataTypes) => {
 let alias = "ProductoTickets";
 let cols ={
