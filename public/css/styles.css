@@ -22,6 +22,10 @@ body{
     background-color: beige;
 }
 
+header nav ul li {
+    margin-top: 10px;
+}
+
 header div a {
     display: flex;
     align-items: center;
