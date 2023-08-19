@@ -10,11 +10,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         nombre: {
-            type: DataTypes.VARCHAR(255),
+            type: DataTypes.STRING(255),
             allowNull: false
         },
         descripcion: {
-            type: DataTypes.VARCHAR(255),
+            type: DataTypes.STRING(255),
             allowNull: false
         },
         createdAt: {
