@@ -7,27 +7,35 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.BIGINT,
             primaryKey: true,
             autoIncrement: true,
+            allowNull: false
         },
         nombre: {
-            type: DataTypes.STRING
+            type: DataTypes.VARCHAR(255),
+            allowNull: false
         },
         descripcion: {
-            type: DataTypes.STRING
+            type: DataTypes.VARCHAR(255),
+            allowNull: false
         },
         precio: {
-            type: DataTypes.BIGINT
+            type: DataTypes.BIGINT,
+            allowNull: false
         },
         id_productoCat: {
-            type: DataTypes.BIGINT
+            type: DataTypes.BIGINT,
+            allowNull: false
         },
         createdAt: {
             type: DataTypes.DATE,
+            allowNull: false
         },
         updatedAt: {
             type: DataTypes.DATE,
+            allowNull: false
         },
         deletedAt: {
             type: DataTypes.DATE,
+            allowNull: false
         }
     };
 
