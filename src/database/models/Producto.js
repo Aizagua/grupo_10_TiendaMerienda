@@ -7,30 +7,32 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.BIGINT,
             primaryKey: true,
             autoIncrement: true,
-            allowNull: false
         },
         nombre: {
-            type: DataTypes.STRING(255),
-            allowNull: false
+            type: DataTypes.STRING
         },
         descripcion: {
-            type: DataTypes.STRING(255),
-            allowNull: false
+            type: DataTypes.STRING
         },
         precio: {
-            type: DataTypes.BIGINT,
-            allowNull: false
+            type: DataTypes.BIGINT
         },
         id_productoCat: {
-            type: DataTypes.BIGINT,
-            allowNull: false
+            type: DataTypes.BIGINT
         },
-
+        createdAt: {
+            type: DataTypes.DATE,
+        },
+        updatedAt: {
+            type: DataTypes.DATE,
+        },
+        deletedAt: {
+            type: DataTypes.DATE,
+        }
     };
 
     let config ={
         tableName: 'productos',
-        timestamps: false
     };
 
     const Producto = sequelize.define(alias, cols, config);

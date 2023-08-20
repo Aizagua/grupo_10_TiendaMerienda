@@ -7,23 +7,18 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.BIGINT,
             primaryKey: true,
             autoIncrement: true,
-            allowNull: false
         },
         nombre: {
-            type: DataTypes.STRING(255),
-            allowNull: false
+            type: DataTypes.STRING
         },
         createdAt: {
             type: DataTypes.DATE,
-            allowNull: false
         },
         updatedAt: {
             type: DataTypes.DATE,
-            allowNull: false
         },
         deletedAt: {
             type: DataTypes.DATE,
-            allowNull: false
         }
     };
 

@@ -24,10 +24,11 @@
             <input class = bloquestext-registro type = "email" name = "email" placeholder="Correo" value="<%= user.email %>">
             </p>                  
             <div class="bloquesdellogin">
-                <input class="textodelogin" type="file" name="imagen" placeholder="img" value="<%= user.imagen%>">
+                <img src="/images/user/<%= user.imagen %>" width="50%">
+                <input class="textodelogin" type="file" name="imagen" placeholder="img" value="<%= user.imagen %>">
             </div>
             <p  class = bloques-registro>
-            <input class = bloquestext-registro class = bloquestext-registro type = "password" name = "clave"  disabled>
+            <input class = bloquestext-registro class = bloquestext-registro type = "password" name = "password"  hidden>
             </p>
             <p class = boton-registro>
             <button class = botontexto-registro type = "submit"> Editar </button>

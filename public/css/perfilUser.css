@@ -1,6 +1,6 @@
 
 .datosUser {   
-    margin: 20px;
+    /*margin: 20px;
     font-size: 16px;
     text-align: center;
     border: 1px solid #f4f3bf;
@@ -8,9 +8,35 @@
     position: relative;
     display: flex;
     flex-flow: column;    
-    width: 40vw;    
+    width: 40vw; */ 
+    margin: 20px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #f4f3bf;
+    padding: 35px;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    width: 60vw;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center ;
+    align-items: center;
+  
 }
 
+.usuario-blockmeta{
+    padding: 15px;
+    display: flex;
+    width: 100%;
+    flex-flow: row;
+    text-align: center;
+    margin-bottom: 10px;
+    border-top: 1px solid #aea7a7;
+    width: 100%;
+    height: 12%;
+}
 .usuario-meta{
     padding: 15px;
     display: flex;
@@ -26,8 +52,8 @@
     margin: 20px;
 }
 .datosUser img {
-    width: 30vw;
-    height: 30vw;
+    width: 20vw;
+    height: 25vw;
   }
 .datosPerfil p {
     display: flex;
@@ -78,3 +104,76 @@
     width: 100vW;
     
 }
+.verperfil{   
+    font-family: 'Bebas Neue', sans-serif;
+    color: #de7627;
+    font-weight: 300;
+    font-size: 1.3em;          
+    text-align: center;    
+    margin: 30px;
+    text-decoration: none;
+}
+.modificaruser{
+padding: 0px;
+    position: absolute;
+    display: flex;
+    flex-flow: row;
+    width: 40%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+}
+.button-modificar-user {
+    width: 130%;
+    border-radius: 5px;
+    border: #7c7373 solid 1px;
+    height: 40px;
+    color: #000;
+    background-color: #d77e10;
+    transition: all 0.6s;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+
+
+.button-agregar-user button p{
+    color: #482a06;
+    justify-content: center;
+    
+}
+
+.button-agregar-user{
+    display: block;
+    text-align: center;
+}
+.button-adicionar-user{
+    width: 130%;
+    border-radius: 5px;
+    border: #7c7373 solid 1px;
+    height: 40px;
+    color:#000; /*#f3e28d;*/
+    background-color: #d77e10;
+    transition: all 0.6s;
+    cursor: pointer;    
+    
+    } 
+    
+    .spacio{
+        padding: 10px;
+    }
+
+    .button-adicionar-user:hover{
+        border-radius: 10px;
+        background-color: #ebebeb;
+        border: solid 1px #090909;
+        color: #000;
+    }
+
+
+
+
+

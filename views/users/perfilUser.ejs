@@ -11,28 +11,65 @@
             <img  src="/images/user/<%= user.imagen ? user.imagen : 'default.png' %>">
         </div>
         <!--datos del usuario-->
-        <div class="usuario-meta">
-            <div class="perfil_meta_text_bold">Nombre:                
+        <div >
+            <div class="usuario-meta">
+                <div class="perfil_meta_text_bold">Nombre:                
+                </div>
+                <div class = "perfil_meta_text"> 
+                    <%= user.nombre %> 
+                </div >
             </div>
-            <div class = "perfil_meta_text"> 
-                <%= user.nombre %> 
+            <div class="usuario-meta">
+                <div class = "perfil_meta_text_bold">Apellido:</div>
+                <div class = "perfil_meta_text">  <%= user.apellido %>
+                </div>
+            </div>   
+            <div class="usuario-meta">   
+                <div class = "perfil_meta_text_bold">Celular:</div>
+                <div class = "perfil_meta_text"> 
+                    <%= user.celular %>
+                </div>
+            </div>    
+            <div class="usuario-meta">   
+                <div class = "perfil_meta_text_bold"> E-Mail:</div>
+                <div class = "perfil_meta_text"> <%= user.email %>
+                </div>        
             </div>
-        </div>
-        <div class="usuario-meta">
-            <div class = "perfil_meta_text_bold">Apellido:</div>
-            <div class = "perfil_meta_text">  <%= user.apellido %>
-            </div>
-        </div>   
-        <div class="usuario-meta">   
-            <div class = "perfil_meta_text_bold">Celular:</div>
-            <div class = "perfil_meta_text"> 
-                <%= user.celular %>
-            </div>
-        </div>    
-        <div class="usuario-meta">   
-            <div class = "perfil_meta_text_bold"> E-Mail:</div>
-            <div class = "perfil_meta_text"> <%= user.email %>
-            </div>        
+            <%if(locals.isLogged){%>
+        
+                <%if(locals.isAdmin == true){%>
+                    <div class="modificaruser">
+                        <div class="product_meta_text_bold">                        
+                            <!-- editar el usuario-->
+                            <p class="spacio"> </p>
+                        </div> 
+                        <form class="cart" action="/users/edit/<%=user.id%>" method="get" >
+                            <div class="button-agregar-user">
+                                <button id="btnEditUser" type="submit" name="btnEditUser" value="btnEditUser" class="button-adicionar-user">
+                                    <p>EDITAR</p>			
+                                </button>
+                            </div> 
+                        </form>
+
+                        <div class="product_meta_text_bold">                        
+                            <!-- elimnar el usuario-->
+                            <p class="spacio">  </p>
+                        </div> 
+                        <form class="cart" action="/users/delete/<%=user.id%>" method="get" >
+                            <div class="button-agregar-user">
+                                <button id="btnEditUser" type="submit" name="btnEditUser" value="btnEditUser" class="button-adicionar-user">
+                                    <p>ELIMINAR</p>			
+                                </button>
+                            </div> 
+                        </form>
+                    </div>
+                <%}%>                         
+
+            <%}%>
+
+
+
+
         </div>
     </div>
 </main>

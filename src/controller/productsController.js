@@ -2,8 +2,6 @@ const fs = require('fs')
 const path = require('path')
 const rutaArchivo = path.resolve('./src/database/products.json')
 const productoProducts = JSON.parse(fs.readFileSync(rutaArchivo))
-const db = require('../database/models');
-const sequelize = db.sequelize;
 
 let productsController = {
   detalle:  function (req,res){
@@ -78,15 +76,8 @@ let productsController = {
     }
   },
 
-  list: (req, res) => {
-    db.Productos.findAll()
-        .then(productos => {
-            res.render('./productos/listadoDeProductos.ejs', { listaProductos : productos });
-        })
-        .catch(error => {
-            console.error( error);
-            
-        });
+  list: function (req, res) {
+      res.render('productos/listadoDeProductos', {listaProductos: productoProducts})
   },
 
   delete: (req,res)=>{

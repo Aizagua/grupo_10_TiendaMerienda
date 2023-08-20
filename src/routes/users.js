@@ -52,6 +52,7 @@ router.get ("/usersList",logMiddleware, userController.list);
 
 //Perfil USER
 router.get ("/perfil",logMiddleware, userController.perfilUser);
+router.get('/perfil/:id',logMiddleware, userController.perfilUserdetalle);
 router.get('/logout', userController.logout);
 
 

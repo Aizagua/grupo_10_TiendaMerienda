@@ -17,6 +17,13 @@ let registrocontroller = {
               else return res.send("ERROR 404 NOT FOUND")
     },
 
+    perfilUserdetalle:(req,res)=>{
+      
+      const buscarUsuario = userUsers.find(row=>row.id==req.params.id)
+      if (buscarUsuario) return res.render('users/perfilUser', {user: buscarUsuario})
+              else return res.send("ERROR 404 NOT FOUND")
+    },
+
     loginUser: function (req,res) {
       res.render("../views/users/login")
     },
@@ -25,7 +32,7 @@ let registrocontroller = {
       console.log(userUsers)
       console.log(req.body)
       const usuario = userUsers.find((row) => row.email == req.body.email);
-      console.log(usuario)
+      console.log(usuario); console.log("usuario encontrado")
         if (usuario) {
           let ClaveOK = bcryptjs.compareSync(req.body.password, usuario.password);
             console.log("usuario encontrado")
@@ -74,6 +81,7 @@ let registrocontroller = {
         return res.redirect("/")
       },
     editProcess:(req,res)=>{
+      
       let editarUsuario = {}
       editarUsuario = userUsers.find(row => row.id == req.params.id)
       editarUsuario.nombre = req.body.nombre
