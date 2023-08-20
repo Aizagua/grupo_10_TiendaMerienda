@@ -4,7 +4,7 @@ const products = require("../controller/productsController");
 const multer = require("multer")
 let router = express.Router();
 const logMiddleware = require("../middlewares/logMiddleware");
-const prueba = require("../controller/prueba");
+
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
