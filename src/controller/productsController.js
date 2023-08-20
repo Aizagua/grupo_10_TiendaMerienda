@@ -78,8 +78,15 @@ let productsController = {
     }
   },
 
-  list: function (req, res) {
-      res.render('productos/listadoDeProductos', {listaProductos: productoProducts})
+  list: (req, res) => {
+    db.Productos.findAll()
+        .then(productos => {
+            res.render('./productos/listadoDeProductos.ejs', { listaProductos : productos });
+        })
+        .catch(error => {
+            console.error( error);
+            
+        });
   },
 
   delete: (req,res)=>{
