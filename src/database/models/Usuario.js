@@ -1,3 +1,4 @@
+
 module.exports = (sequelize,DataTypes) => {
 let alias = "Usuarios";
 let cols ={
@@ -38,6 +39,14 @@ let cols ={
 let config = {
     tableName: "usuarios",
 };
-const Tickets = sequelize.define (alias,cols,config);
-return Tickets;
-};
+const Usuario = sequelize.define (alias,cols,config);
+
+Usuario.associate = function (models) {
+    Usuario.belongsTo(models.Perfiles, { 
+        as: "usuarioPerfil",
+        foreignKey: "id_perfil"
+    })
+
+}
+return Usuario
+}

@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
 
     let cols = {
         id: {
-            type: DataTypes.BIGINT,
+            type: DataTypes.BIGINT.UNSIGNED,
             primaryKey: true,
             autoIncrement: true,
             allowNull: false
@@ -17,25 +17,21 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(255),
             allowNull: false
         },
-        createdAt: {
-            type: DataTypes.DATE,
-            allowNull: false
-        },
-        updatedAt: {
-            type: DataTypes.DATE,
-            allowNull: false
-        },
-        deletedAt: {
-            type: DataTypes.DATE,
-            allowNull: false
-        }
+
     };
 
     let config ={
         tableName: 'perfiles',
+        timestamps: false
     };
     
     const Perfil = sequelize.define(alias, cols, config);
-
+    
+    Perfil.associate = function(models) {
+        Perfil.hasMany(models.Usuarios, { 
+            as: "usuarioPerfil",
+            foreignKey: "id_perfil"
+        })
+    }
     return Perfil;
 }

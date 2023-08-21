@@ -5,6 +5,8 @@ const userUsers = JSON.parse(fs.readFileSync(rutaArchivo));
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const userlogMiddleware = require ('../middlewares/userLogMiddleware')
+const db = require('../database/models');
+const sequelize = db.sequelize;
 
 let registrocontroller = {
     registroUser: function (req, res) {
@@ -45,9 +47,7 @@ let registrocontroller = {
               else return res.send("ERROR 404 NOT FOUND")
     },
     processCreate: (req, res) => {
-      console.log(req.body)
       const resultValidation = validationResult(req);
-      console.log(resultValidation)
       if (resultValidation.errors.length>0){
         return res.render('users/formRegistro',{
           errors: resultValidation.mapped(),
@@ -66,7 +66,7 @@ let registrocontroller = {
           "password": bcryptjs.hashSync(req.body.password,10),
           "admin": false
           }
-          if (req.file == undefined){  userNew.imagen = "logo_tienda_merienda_white.png"} 
+          if (req.file == undefined){  userNew.imagen = "default.png"} 
           else {   userNew.imagen = req.file.filename  }
          
         
@@ -117,7 +117,6 @@ let registrocontroller = {
         return res.redirect('/');
     }    
 };
-
 
 
 module.exports = registrocontroller

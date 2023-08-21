@@ -98,5 +98,44 @@
     "password": "$2a$10$9/w/2HfE22LelNAvAyFFZu4vaW84aymNzsM/cpvnEhQjhzMBm8uES",
     "admin": false,
     "imagen": "1692306099744.jpg"
+  },
+  {
+    "id": 13,
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "celular": "111111",
+    "email": "juan@gmail.com",
+    "password": "$2a$10$JZCCqFVX4iaZaFbGg53Ld.6aolgb4xZ8Va21NKz/lFQfg/ZwYCpPW",
+    "admin": false,
+    "imagen": "logo_tienda_merienda_white.png"
+  },
+  {
+    "id": 14,
+    "nombre": "Fernando",
+    "apellido": "Caceres",
+    "celular": "11111",
+    "email": "fernando@gmail.com",
+    "password": "$2a$10$75vtBuEa6lu88IwZr42GCuqu10N8AE.JOSgiTUKV/1T/YrqJaRRLe",
+    "admin": false
+  },
+  {
+    "id": 15,
+    "nombre": "Nataly",
+    "apellido": "Perez",
+    "celular": "1111",
+    "email": "nati@gmail.com",
+    "password": "$2a$10$qDiNihmDd.cmQkYd62XQmeYjU5/Po7y3zUSC1GHzC8ssHxoBuSXnW",
+    "admin": false,
+    "imagen": "default.png"
+  },
+  {
+    "id": 16,
+    "nombre": "fermin",
+    "apellido": "bianco",
+    "celular": "1111",
+    "email": "fer@gmail.com",
+    "password": "$2a$10$.Tyv9oKxP3DPBPNOCB/L1uk5Fva7Du3x9Fq.KW/er8SwTkIMtzRd2",
+    "admin": false,
+    "imagen": "default.png"
   }
 ]
