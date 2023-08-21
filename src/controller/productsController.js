@@ -21,26 +21,25 @@ let productsController = {
   return res.render('productos/creacionProducto')
   },
 
-  processCreate: (req, res) => {
-    ultimoProducto = productoProducts.slice(-1)
-    let idProducto = ultimoProducto[0].id
-    let productoNuevo = {
-      "id": idProducto +1, 
-      "nombre": req.body.nombre,
-      "descripcion": req.body.descripcion,
-      "precio": req.body.precio,
-      "desc2":req.body.desc2,
-      "titulo":req.body.titulo,
-      //"imagen":req.file.filename,
-      "cantidad":req.body.cantidad,
-      "codigo":req.body.codigo
-      }
-      if (req.file == undefined){  productoNuevo.imagen = "logo_tienda_merienda_white.png"} 
-      else {   productoNuevo.imagen = req.file.filename  }
-     
+  processCreate: async (req, res) => {
+    const Producto = db.Productos;
+
+    const { nombre, descripcion, precio, id_productoCat  } = req.body;
     
-    fs.writeFileSync(rutaArchivo, JSON.stringify([...productoProducts, productoNuevo], null, 2), "utf-8")
-    return res.redirect("/")
+    try {
+      // Crear un nuevo producto
+      const nuevoProducto = await Producto.create({
+        nombre,
+        descripcion,
+        precio,
+        id_productoCat        
+       
+      });      
+      res.redirect('/productList');
+    } catch (error) {
+      console.error('Error al crear el producto:', error);
+      res.status(500).send('Error al agregar el producto');
+    }
   },
 
   edit: async (req,res)=>{

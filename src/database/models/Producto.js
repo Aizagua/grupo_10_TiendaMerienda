@@ -25,15 +25,27 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.BIGINT,
             allowNull: false
         },
+        deleted_at: {
+            type: DataTypes.DATE, 
+        },
 
     };
 
     let config ={
         tableName: 'productos',
-        timestamps: false
+        timestamps: true,
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
     };
 
     const Producto = sequelize.define(alias, cols, config);
+
+    Producto.associate = function (models) {
+        Producto.belongsTo(models.Categorias, { 
+            as: "categoria",
+            foreignKey: "id_productoCat"
+        })
+    }    
 
     return Producto;
 }
