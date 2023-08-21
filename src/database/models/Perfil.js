@@ -4,20 +4,25 @@ module.exports = (sequelize, DataTypes) => {
 
     let cols = {
         id: {
-            type: DataTypes.BIGINT.UNSIGNED,
+            type: DataTypes.BIGINT.UNSIGNED.UNSIGNED,
             primaryKey: true,
             autoIncrement: true,
-            allowNull: false
         },
         nombre: {
-            type: DataTypes.STRING(255),
-            allowNull: false
+            type: DataTypes.STRING
         },
         descripcion: {
-            type: DataTypes.STRING(255),
-            allowNull: false
+            type: DataTypes.STRING
         },
-
+        createdAt: {
+            type: DataTypes.DATE,
+        },
+        updatedAt: {
+            type: DataTypes.DATE,
+        },
+        deletedAt: {
+            type: DataTypes.DATE,
+        }
     };
 
     let config ={

@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "nombre": "Carlos",
+    "nombre": "Carlos K",
     "apellido": "Duarte",
     "celular": "4587844574",
     "email": "carlos@gmail.com",
-    "imagen": "alfajores01p1.jpg",
-    "password": "1234",
+    "password": "8910",
+    "imagen": "1692386954208.jpg",
     "admin": false
   },
   {
@@ -15,8 +15,8 @@
     "apellido": "Mendoza",
     "celular": "4587844574",
     "email": "andres@gmail.com",
-    "imagen": "alfajores01p1.jpg",
-    "password": "4567",
+    "imagen": "1692390290184.jpg",
+    "password": "$2a$10$vkkVlt7BD5vAI6tBP6NXCebp9YpnzpgoLvzqvQFqYWO2M94mz7lbu",
     "admin": false
   },
   {
@@ -25,8 +25,8 @@
     "apellido": "Aranda",
     "celular": "4587844574",
     "email": "liliana@gmail.com",
-    "imagen": "alfajores01p1.jpg",
-    "password": "8910",
+    "imagen": "1692393466373.jpg",
+    "password": "",
     "avatar": "1687615704113.jpg",
     "admin": false
   },
@@ -35,9 +35,10 @@
     "nombre": "Fermin",
     "apellido": "Bianco",
     "celular": "116857307",
-    "password": "1111",
+    "password": "",
     "email": "fermin@gmail.com",
-    "admin": true
+    "admin": true,
+    "imagen": "1692394278201.jpg"
   },
   {
     "id": 5,
@@ -55,9 +56,9 @@
     "apellido": "Andújar",
     "celular": "",
     "email": "santiagoandujar10@gmail.com",
-    "password": "$2a$10$q/wHnFtFvTb9lkOmq0LIG.V4JX/kkddI4gxBR1Llsg2IZN.EKn8QW",
+    "password": "",
     "admin": false,
-    "imagen": "logo_tienda_merienda_white.png"
+    "imagen": "1692394389189.jpg"
   },
   {
     "id": 7,
@@ -83,11 +84,11 @@
     "id": 11,
     "nombre": "Nathaly ",
     "apellido": "Moreno",
-    "celular": "1212",
+    "celular": "12123",
     "email": "nathy@yo.es",
     "password": "$2a$10$u8C.rv3gvqP0VcpWPO6TdeQl3lySscmnkqTSou9RitH.sQovMTuSu",
     "admin": true,
-    "imagen": "logo_tienda_merienda_white.png"
+    "imagen": "1692388134399.jpg"
   },
   {
     "id": 12,
@@ -95,7 +96,7 @@
     "apellido": "Loriente",
     "celular": "098373866",
     "email": "bruloriente@hotmail.com",
-    "password": "$2a$10$9/w/2HfE22LelNAvAyFFZu4vaW84aymNzsM/cpvnEhQjhzMBm8uES",
+    "password": "",
     "admin": false,
     "imagen": "1692306099744.jpg"
   },

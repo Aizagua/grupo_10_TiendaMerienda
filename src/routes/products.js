@@ -5,7 +5,6 @@ const multer = require("multer")
 let router = express.Router();
 const logMiddleware = require("../middlewares/logMiddleware");
 
-
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path.join(__dirname, '../../public/images'))

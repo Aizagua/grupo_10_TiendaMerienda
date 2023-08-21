@@ -12,8 +12,11 @@
   },
   {
     "id": 2,
-    "nombre": "Torta",
-    "precio": 1500,
+    "nombre": [
+      "2",
+      "Torta"
+    ],
+    "precio": "1501",
     "imagen": "Cheescake2.jpg",
     "descripcion": "Cheesecake",
     "codigo": "tortachees_1_ua",

@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
 
     let alias = 'Productos';
-
+    
     let cols = {
         id: {
             type: DataTypes.BIGINT,

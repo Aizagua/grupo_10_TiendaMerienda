@@ -6,10 +6,13 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 
 let productsController = {
-  detalle:  function (req,res){
-      const productoEncontrado = productoProducts.find(row => row.id == req.params.id)
-      if (productoEncontrado) return res.render('productos/productDetail', { producto: productoEncontrado })
-      else return res.send("ERROR 404 NOT FOUND")
+  detalle: async (req,res) => {
+    const productoEncontrado = await db.Productos.findByPk(req.params.id)
+      try{
+        if (productoEncontrado) return res.render('productos/productDetail', { producto: productoEncontrado })
+      }catch{
+        return res.send("ERROR 404 NOT FOUND")
+      }
       
   },
 
@@ -40,31 +43,36 @@ let productsController = {
     return res.redirect("/")
   },
 
-  edit: (req,res)=>{
-    const buscarProducto = productoProducts.find(row=>row.id==req.params.id)
-    if (buscarProducto) return res.render('productos/edicionProducto', { producto: buscarProducto})
-            else return res.send("ERROR 404 NOT FOUND")
+  edit: async (req,res)=>{
+    const buscarProducto = await db.Productos.findByPk(req.params.id)
+      try {
+        if (buscarProducto) return res.render('productos/edicionProducto', { producto: buscarProducto})
+      }catch{
+        return res.send("ERROR 404 NOT FOUND")
+      }
   },
 
-  editProcess:(req,res)=>{
-    let editarProducto = {}
-    editarProducto = productoProducts.find(row => row.id == req.params.id)
-    editarProducto.nombre = req.body.nombre
-    editarProducto.descripcion = req.body.descripcion  
-    editarProducto.precio = req.body.precio  
-    editarProducto.desc2 = req.body.desc2   
-    editarProducto.titulo = req.body.titulo
-    editarProducto.cantidad = req.body.cantidad 
-    //editarProducto.imagen = req.file.filename  
-    if (req.file == undefined){  editarProducto.imagen = editarProducto.imagen} 
-    else {   editarProducto.imagen = req.file.filename  }
-     
-
-    fs.writeFileSync(rutaArchivo, JSON.stringify(productoProducts, null, 2), "utf-8") 
-    console.log(req.editarProducto)
+  editProcess: async (req,res)=>{
+    try{
+    db.Productos.update({
+      nombre: req.body.nombre,
+      descripcion: req.body.descripcion,
+      precio: req.body.precio
+//editarProducto.desc2 = req.body.desc2   
+//editarProducto.titulo = req.body.titulo
+//editarProducto.cantidad = req.body.cantidad 
+//if (req.file == undefined){  editarProducto.imagen = editarProducto.imagen} 
+//else {   editarProducto.imagen = req.file.filename  }
+    },{
+      where: {id: req.params.id}
+    })
     return res.redirect("/")
-        
-  },
+
+    }catch{
+      console.log("Error")
+      res.redirect("/")
+    }      
+    },
   mostrarProducto:function (producto) {
     let nose=productoProducts.find(row => row.id == req.params.id)
     if (nose) {
@@ -85,7 +93,7 @@ let productsController = {
         })
         .catch(error => {
             console.error( error);
-            
+
         });
   },
 

@@ -1,5 +1,4 @@
-
-module.exports = (req, res, next) => {
+adminMiddleware = module.exports = (req, res, next) => {
     try {
       res.locals.isAdmin = false;
       console.log('req.session.usuarioLogeado',req.session.usuarioLogeado )
@@ -14,3 +13,5 @@ module.exports = (req, res, next) => {
       console.log(error);
     }
   };
+
+  

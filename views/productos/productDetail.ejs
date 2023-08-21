@@ -52,9 +52,7 @@
                     <%=producto.titulo%>
                 </div>                
             </div>
-            <%if(locals.isLogged){%>
-        
-                <%if(locals.isAdmin == true){%>
+           
                 <div class="pedido-producto">
                     <div class="product_meta">
                         <form class="cart" action="/carrito" method="get" >
@@ -77,81 +75,22 @@
                             </button>
                             </div> 
                         </form>
-                       
-                            <div class="product_meta_text_bold">
-                        
-                            <!-- codigo del producto-->
-                            <p class="spacio"> Opcion de editar Producto</p>
-                        </div> 
-                        <form class="cart" action="/products/edit/<%=producto.id%>" method="get" >
-                            <div class="button-agregar-producto">
-                            <button id="btnEditProducto" type="submit" name="btnEditProducto" value="btnEditProducto" class="button-adicionar-producto">
-                            <p>EDITAR</p>			
-                            </button>
-                            </div> 
-                        </form>
+                        <%if(locals.isLogged){%>
+        
+                            <%if(locals.isAdmin == true){%>
+                                <div class="product_meta_text_bold">                        
+                                    <!-- editar el producto-->
+                                    <p class="spacio"> Opcion de editar Producto</p>
+                                </div> 
+                                <form class="cart" action="/products/edit/<%=producto.id%>" method="get" >
+                                    <div class="button-agregar-producto">
+                                    <button id="btnEditProducto" type="submit" name="btnEditProducto" value="btnEditProducto" class="button-adicionar-producto">
+                                    <p>EDITAR</p>			
+                                    </button>
+                                    </div> 
+                                </form>
 
-                        
-                        
-                            <%}else{%>
-
-
-                                <div class="pedido-producto">
-                                    <div class="product_meta">
-                                        <form class="cart" action="/carrito" method="get" >
-                                        <!-- pedido de producto x cantidad-->
-                                            <div class="cantidad">
-                                                <label class="text-ctd-pedido" for="cantidad-pc6a"><%=producto.cantidad%></label>      
-                                                <div class="contador-detalle">           
-                                                <input type="button" value="-" class="minus">                
-                                                <input type="number" id="cantidad" class="input-text ctd text" value="1" title="Cantidad" min="1" max="" name="cantidad" step="1" placeholder="" inputmode="numeric" autocomplete="off">
-                                                <input type="button" value="+" class="plus">  
-                                            </div>                     
-                                            </div>
-                                           <div class="button-agregar-comprar">
-                                            <button type="submit" name="add-carrito" value="palfajores" class="button-adicionar-carrito">
-                                                <p>AÑADIR A LA CESTA</p>
-                                            </button>
-                                            
-                                            <button id="button-add-to-cart" type="submit" name="wd-add-to-cart" value="palfajores" class="button-adicionar-carrito">
-                                            <p>COMPRAR AHORA</p>			
-                                            </button>
-                                            </div> 
-                                        </form>
-
-
-
-
-
-                            <%}%>
-                            <%}else{%>
-
-                            <div class="pedido-producto">
-                                <div class="product_meta">
-                                    <form class="cart" action="/carrito" method="get" >
-                                    <!-- pedido de producto x cantidad-->
-                                        <div class="cantidad">
-                                            <label class="text-ctd-pedido" for="cantidad-pc6a"><%=producto.cantidad%></label>      
-                                            <div class="contador-detalle">           
-                                            <input type="button" value="-" class="minus">                
-                                            <input type="number" id="cantidad" class="input-text ctd text" value="1" title="Cantidad" min="1" max="" name="cantidad" step="1" placeholder="" inputmode="numeric" autocomplete="off">
-                                            <input type="button" value="+" class="plus">  
-                                        </div>                     
-                                        </div>
-                                       <div class="button-agregar-comprar">
-                                        <button type="submit" name="add-carrito" value="palfajores" class="button-adicionar-carrito">
-                                            <p>AÑADIR A LA CESTA</p>
-                                        </button>
-                                        
-                                        <button id="button-add-to-cart" type="submit" name="wd-add-to-cart" value="palfajores" class="button-adicionar-carrito">
-                                        <p>COMPRAR AHORA</p>			
-                                        </button>
-                                        </div> 
-                                    </form>
-
-
-
-                            
+                            <%}%>                         
 
                         <%}%>
 
