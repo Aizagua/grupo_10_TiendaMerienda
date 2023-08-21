@@ -22,8 +22,7 @@ let productsController = {
   },
 
   processCreate: async (req, res) => {
-    const Producto = db.Productos;
-
+    
     const { nombre, descripcion, precio, id_productoCat  } = req.body;
     
     try {
