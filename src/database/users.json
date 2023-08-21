@@ -61,16 +61,6 @@
     "imagen": "1692394389189.jpg"
   },
   {
-    "id": 7,
-    "nombre": "Bruno",
-    "apellido": "Loriente",
-    "celular": "098373866",
-    "email": "bruloriente@gmail.com",
-    "password": "$2a$10$y2JGR.736TXTf2A8puD5NuTaMs/9N7a24Mk.83PzMLbQjXGAevjM.",
-    "admin": false,
-    "imagen": "1690314559403.jpg"
-  },
-  {
     "id": 10,
     "nombre": "Leonel3",
     "apellido": "Martin",
@@ -89,16 +79,6 @@
     "password": "$2a$10$u8C.rv3gvqP0VcpWPO6TdeQl3lySscmnkqTSou9RitH.sQovMTuSu",
     "admin": true,
     "imagen": "1692388134399.jpg"
-  },
-  {
-    "id": 12,
-    "nombre": "Bruno",
-    "apellido": "Loriente",
-    "celular": "098373866",
-    "email": "bruloriente@hotmail.com",
-    "password": "",
-    "admin": false,
-    "imagen": "1692306099744.jpg"
   },
   {
     "id": 13,
@@ -138,5 +118,15 @@
     "password": "$2a$10$.Tyv9oKxP3DPBPNOCB/L1uk5Fva7Du3x9Fq.KW/er8SwTkIMtzRd2",
     "admin": false,
     "imagen": "default.png"
+  },
+  {
+    "id": 17,
+    "nombre": "Bruno",
+    "apellido": "Loriente",
+    "celular": "098373866",
+    "email": "bruloriente@gmail.com",
+    "password": "$2a$10$4yIgf23bi0scJorWEeryjuZnsSfxbwiAyCYPutobacXOFmWbuJiOC",
+    "admin": true,
+    "imagen": "1692657693015.webp"
   }
 ]
