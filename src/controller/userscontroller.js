@@ -18,70 +18,65 @@ let registrocontroller = {
       if (buscarUsuario) return res.render('users/perfilUser', {user: buscarUsuario})
               else return res.send("ERROR 404 NOT FOUND")
     },
-
     perfilUserdetalle:(req,res)=>{
-      
+
       const buscarUsuario = userUsers.find(row=>row.id==req.params.id)
       if (buscarUsuario) return res.render('users/perfilUser', {user: buscarUsuario})
               else return res.send("ERROR 404 NOT FOUND")
     },
-
     loginUser: function (req,res) {
       res.render("../views/users/login")
     },
 
-    loginProcess: function (req, res){
-      console.log(userUsers)
-      console.log(req.body)
-      const usuario = userUsers.find((row) => row.email == req.body.email);
-      console.log(usuario); console.log("usuario encontrado")
-        if (usuario) {
-          let ClaveOK = bcryptjs.compareSync(req.body.password, usuario.password);
-            console.log("usuario encontrado")
-            if (ClaveOK){
-                delete usuario.password
-                req.session.usuarioLogeado = usuario
-                console.log("session creada")
-                console.log(req.session.usuarioLogeado)
-                res.redirect("/perfil")
-    }else{console.log("contraseña incorrecta")
-    res.redirect("/login")}
-    }},
+    loginProcess: async (req,res) => {
+      const usuario = await db.Usuarios.findOne({
+          where: {
+            email: req.body.email
+          }});
+        console.log(usuario);      
+        try{
+          if (usuario) {
+            let ClaveOK = bcryptjs.compareSync(req.body.password, usuario.password);
+              if (ClaveOK== true){
+                  delete usuario.password
+                  req.session.usuarioLogeado = usuario
+                  res.redirect("/perfil")
+              } else{console.log("contraseña incorrecta")}
+        } else{
+        res.redirect("/login")}
+        } catch (error) {
+          console.log("Error :",error)
+        }},
 
     edit: (req,res)=>{
       const buscarUsuario = userUsers.find(row=>row.id==req.params.id)
       if (buscarUsuario) return res.render('users/edicionUser', {user: buscarUsuario})
               else return res.send("ERROR 404 NOT FOUND")
     },
-    processCreate: (req, res) => {
-      const resultValidation = validationResult(req);
+    processCreate: async (req, res) => {
+       const resultValidation = validationResult(req);
       if (resultValidation.errors.length>0){
         return res.render('users/formRegistro',{
           errors: resultValidation.mapped(),
           oldData: req.body,
         });
-      }
-      let ultimoUser = userUsers.slice(-1)
-      let idUser = ultimoUser[0].id
-      let userNew = {
-          "id": idUser+1, 
+      }else{
+      try{
+          await db.Usuarios.create({
           "nombre": req.body.nombre,
           "apellido": req.body.apellido,
           "celular": req.body.celular,
           "email": req.body.email,
-          //"imagen": req.file.filename,
+          "imagen": req.file ? req.file.filename : "default.png",
           "password": bcryptjs.hashSync(req.body.password,10),
           "admin": false
-          }
-          if (req.file == undefined){  userNew.imagen = "default.png"} 
-          else {   userNew.imagen = req.file.filename  }
-         
-        
-        fs.writeFileSync(rutaArchivo, JSON.stringify([...userUsers, userNew], null, 2), "utf-8")
+          })
+      } catch (error) {
+        console.log("Error :",error)
+      }}
         return res.redirect("/")
       },
     editProcess:(req,res)=>{
-      
       let editarUsuario = {}
       editarUsuario = userUsers.find(row => row.id == req.params.id)
       editarUsuario.nombre = req.body.nombre
@@ -98,8 +93,16 @@ let registrocontroller = {
           
     },
 
-    list: function (req, res) {
-      res.render('users/listadoDeUsers', {listaUsuarios: userUsers})
+    list: (req, res) =>{
+      db.Usuarios.findAll()
+      .then(usuarios => {
+        res.render('users/listadoDeUsers', {listaUsuarios: usuarios})
+      })
+      .catch(error => {
+          console.error( error);
+
+      });
+      
   },
     delete: (req,res)=>{
       const buscarUsuario = userUsers.find(row=>row.id==req.params.id)

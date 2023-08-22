@@ -19,7 +19,7 @@ let cols ={
     },
     cuit: {
         type: DataTypes.BIGINT,
-        allowNull: false
+        allowNull: true
     },
     email: {
         type: DataTypes.STRING(255),
@@ -27,17 +27,43 @@ let cols ={
     },
     direccion: {
         type: DataTypes.STRING(255),
-        allowNull: false
+        allowNull: true
     },
     id_perfil: {
         type:DataTypes.BIGINT,
+        allowNull: true
+    },
+
+    created_at: {
+        type: DataTypes.DATE,
+        allowNull: false
+    },
+
+    updated_at: {
+        type: DataTypes.DATE,
+        allowNull: false
+    },
+
+    deleted_at: {
+        type: DataTypes.DATE,
+        allowNull: true
+    },
+    imagen:{
+        type: DataTypes.STRING(100),
+        allowNull: true
+    },
+    password:{
+        type: DataTypes.STRING(100),
         allowNull: false
     }
-
-
 };
 let config = {
     tableName: "usuarios",
+    timestamps: true,
+    createdAt: 'created_at',
+    deletedAt: "deleted_at",
+    updatedAt: "updated_at",
+    updatedAt: "updated_at"
 };
 const Usuario = sequelize.define (alias,cols,config);
 
