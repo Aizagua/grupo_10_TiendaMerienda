@@ -4,6 +4,7 @@ const rutaArchivo = path.resolve('./src/database/products.json')
 const productoProducts = JSON.parse(fs.readFileSync(rutaArchivo))
 const db = require('../database/models');
 const sequelize = db.sequelize;
+const { validationResult } = require('express-validator');
 
 let productsController = {
   detalle: async (req,res) => {
@@ -22,17 +23,20 @@ let productsController = {
   },
 
   processCreate: async (req, res) => {
-    const Producto = db.Productos;
-
-    const { nombre, descripcion, precio, id_productoCat  } = req.body;
-    
+    const errores = validationResult(req)
+    if (!errores.isEmpty()) {
+      return res.render('productos/creacionProducto', {errores:errores.mapped()})
+    }
     try {
-      // Crear un nuevo producto
-      const nuevoProducto = await Producto.create({
-        nombre,
-        descripcion,
-        precio,
-        id_productoCat        
+      const nuevoProducto = await db.Productos.create({
+        nombre: req.body.nombre,
+        precio: req.body.precio,
+        cantidad: req.body.cantidad,
+        codigo: req.body.codigo,
+        descripcion: req.body.descripcion,
+        id_productoCat: req.body.id_productoCat,
+        desc2: req.body.desc2,
+
        
       });      
       res.redirect('/productList');

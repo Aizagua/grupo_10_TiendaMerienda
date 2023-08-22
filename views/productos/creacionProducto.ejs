@@ -7,6 +7,14 @@
     
 <%- include("../partials/header") %>
     
+    <% if (locals.errores) { %>
+        <div>
+        <% for (let error in errores) { %>
+            <p><%= errores[error].msg %></p>
+        <% } %>
+        </div>
+    <% } %>
+
     <main id="formulario-inicio" >
         <form class="formularios-login" method="POST" action="/products" enctype="multipart/form-data">
             <h3 class="iniciartextologin">Agregar Producto</h3>
@@ -16,9 +24,6 @@
             </div>
             <div class="bloquesdellogin">
                 <input class="textodelogin" type="number" name="precio" placeholder="precio">
-            </div>
-            <div class="bloquesdellogin">
-                <input class="textodelogin" type="text" name="titulo" placeholder="titulo">
             </div>
             <div class="bloquesdellogin">
                 <input class="textodelogin" type="text" name="cantidad" placeholder="cantidad">
@@ -31,10 +36,10 @@
                 <input class="textodelogin" type="text" name="descripcion" placeholder="descripcion">
             </div>
             <div class="bloquesdellogin">
-                <textarea class="bloquesdellogin" name="desc2" placeholder="Mas Informacion">Mas Informacion</textarea>
+                <input class="textodelogin" type="number" name="id_productoCat" placeholder="categoria">
             </div>
             <div class="bloquesdellogin">
-                <input class="textodelogin" type="number" name="id_productoCat" placeholder="categoria">
+                <textarea class="bloquesdellogin" name="desc2" placeholder="Mas Informacion"></textarea>
             </div>
             <div class="bloquesdellogin">
                 <input class="textodelogin" type="file" name="imagen" placeholder="img">
