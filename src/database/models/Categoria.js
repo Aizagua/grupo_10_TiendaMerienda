@@ -9,21 +9,16 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
         },
         nombre: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
-        createdAt: {
-            type: DataTypes.DATE,
-        },
-        updatedAt: {
-            type: DataTypes.DATE,
-        },
-        deletedAt: {
-            type: DataTypes.DATE,
-        }
     };
 
     let config ={
         tableName: 'categorias',
+        timestamps: true,
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
     };
     
     const Categoria = sequelize.define(alias, cols, config);

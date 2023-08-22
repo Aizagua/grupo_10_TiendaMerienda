@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<%- include("../partials/head") %>
+
+<body>
+    
+<%- include("../partials/header") %>
+    
+    <% if (locals.errores) { %>
+        <div>
+        <% for (let error in errores) { %>
+            <p><%= errores[error].msg %></p>
+        <% } %>
+        </div>
+    <% } %>
+
+    <main id="formulario-inicio" >
+        <form class="formularios-login" method="POST" action="/categorias">
+            <h3 class="iniciartextologin">Agregar Categoria</h3>
+
+            <div class="bloquesdellogin">
+                <input class="textodelogin" type="text" name="nombre" value="<%= locals.oldData ? oldData.nombre : null %>" placeholder="nombre"> 
+            </div>
+            <div class="bloquesdellogin-send">
+                <a href="/"><button class="botonform botonsend" type="submit">Enviar</button></a>
+            </div>
+        </form>
+    </main>
+    <%- include("../partials/footer") %>
+  </body>
+  
+  </html>

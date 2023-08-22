@@ -10,7 +10,9 @@ let rutaUser = require ("./routes/users");
 let rutaHome = require ("./routes/home");
 let rutaCarrito = require ("./routes/carrito"); 
 let rutaProductos = require ("./routes/products");
+let rutaCategorias = require ('./routes/categorias')
 const adminMiddleware = require("./middlewares/adminMiddleware");
+
 app.use(express.static(publicPath))
 app.use(session({
     secret: 'Nombre del sitio',
@@ -40,3 +42,5 @@ app.use (rutaUser);
 app.use (rutaProductos);
 
 app.use (rutaCarrito);
+
+app.use (rutaCategorias);
