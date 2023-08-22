@@ -15,7 +15,17 @@ const storage = multer.diskStorage({
       const imageName = generateRandomString(8) + Date.now() + path.extname(file.originalname)
       cb(null, imageName)
     }
-  })
+});
 
-const uploadFile = multer({ storage: storage });
+const fileFilter = (req, file, cb) => {
+    if (file.mimetype.includes('image') && file.fileSize < (1024*1024*10)){
+        cb(null, true)
+    } else {
+        req.fileError = true
+        cb(null, false)
+    }
+}
+
+
+const uploadFile = multer({ storage: storage, fileFilter: fileFilter });
 module.exports = uploadFile;
