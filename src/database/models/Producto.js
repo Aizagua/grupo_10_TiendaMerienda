@@ -13,16 +13,28 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(255),
             allowNull: false
         },
-        descripcion: {
-            type: DataTypes.STRING(255),
-            allowNull: false
-        },
         precio: {
             type: DataTypes.BIGINT,
             allowNull: false
         },
+        cantidad: {
+            type: DataTypes.BIGINT,
+            allowNull: false
+        },
+        descripcion: {
+            type: DataTypes.STRING(255),
+            allowNull: false
+        },
         id_productoCat: {
             type: DataTypes.BIGINT,
+            allowNull: false
+        },
+        desc2: {
+            type: DataTypes.STRING(3000),
+            allowNull: false
+        },
+        imagen: {
+            type: DataTypes.STRING(255),
             allowNull: false
         },
         deleted_at: {

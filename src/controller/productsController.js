@@ -36,7 +36,7 @@ let productsController = {
         descripcion: req.body.descripcion,
         id_productoCat: req.body.id_productoCat,
         desc2: req.body.desc2,
-
+        imagen: req.file.filename
        
       });      
       res.redirect('/productList');

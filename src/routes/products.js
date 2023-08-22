@@ -1,37 +1,23 @@
 let express = require ("express");
 let path = require('path')
 const products = require("../controller/productsController");
-const multer = require("multer")
 let router = express.Router();
 const logMiddleware = require("../middlewares/logMiddleware");
 const validacionesProducto = require('../middlewares/validacionesProducto')
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, path.join(__dirname, '../../public/images'))
-    },
-    filename: function (req, file, cb) {
-      let imageName = Date.now() + path.extname(file.originalname)
-      cb(null, imageName)
-    }
-  })
-let uploadFile = multer({ storage: storage });
-
+const multerMiddleware = require ('../middlewares/multer')
 
 //Detalle
 router.get('/detail/:id', products.detalle);
 router.get('/detail/:id',logMiddleware, products.detalle);
 
-
-
 //Crear Producto
 router.get('/products/create',logMiddleware, products.create)
-router.post('/products', uploadFile.single('imagen'), validacionesProducto, products.processCreate)
+router.post('/products', multerMiddleware.single('imagen'), validacionesProducto, products.processCreate)
 
 //Editar Producto
 router.get('/products/edit/:id',logMiddleware,products.edit)
 router.get('/products/edit',logMiddleware,products.mostrarProducto)
-router.put('/products/:id', uploadFile.single('imagen'),products.editProcess)
+router.put('/products/:id', multerMiddleware.single('imagen'), products.editProcess)
 
 //Borrar Producto
 router.get('/products/delete/:id',logMiddleware,products.delete)
