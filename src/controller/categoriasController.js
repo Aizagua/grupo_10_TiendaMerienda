@@ -21,10 +21,16 @@ const categoriasController = {
 
     processCreate: async (req, res) => {
         try {
-            console.log('nombre: ' + req.body.nombre); 
-            const nuevaCategoria = await db.Categorias.create({
-            nombre: req.body.nombre,                       
-        }); 
+            const categoria = await db.Categorias.findOne({
+                where: {
+                    nombre: req.body.nombre
+                }
+            })
+            if (!categoria) {
+                const nuevaCategoria = await db.Categorias.create({
+                    nombre: req.body.nombre,                       
+                }); 
+            } 
             res.redirect('/categorias');    
         } catch (error) {
             console.error('Error al crear categoria:', error);
