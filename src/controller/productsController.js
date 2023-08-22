@@ -25,7 +25,7 @@ let productsController = {
   processCreate: async (req, res) => {
     const errores = validationResult(req)
     if (!errores.isEmpty()) {
-      return res.render('productos/creacionProducto', {errores:errores.mapped()})
+      return res.render('productos/creacionProducto', {errores:errores.mapped(), oldData: {...req.body}})
     }
     try {
       const nuevoProducto = await db.Productos.create({

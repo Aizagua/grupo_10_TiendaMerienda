@@ -20,26 +20,26 @@
             <h3 class="iniciartextologin">Agregar Producto</h3>
 
             <div class="bloquesdellogin">
-                <input class="textodelogin" type="text" name="nombre" placeholder="nombre">
+                <input class="textodelogin" type="text" name="nombre" value="<%= locals.oldData ? oldData.nombre : null %>" placeholder="nombre"> 
             </div>
             <div class="bloquesdellogin">
-                <input class="textodelogin" type="number" name="precio" placeholder="precio">
+                <input class="textodelogin" type="number" name="precio" value="<%= locals.oldData ? oldData.precio : null %>" placeholder="precio">
             </div>
             <div class="bloquesdellogin">
-                <input class="textodelogin" type="text" name="cantidad" placeholder="cantidad">
+                <input class="textodelogin" type="text" name="cantidad" value="<%= locals.oldData ? oldData.cantidad : null %>" placeholder="cantidad">
             </div>
             <div class="bloquesdellogin">
-                <input class="textodelogin" type="text" name="codigo" placeholder="codigo">
+                <input class="textodelogin" type="text" name="codigo" value="<%= locals.oldData ? oldData.codigo : null %>" placeholder="codigo">
             </div>
             </div>
             <div class="bloquesdellogin">
-                <input class="textodelogin" type="text" name="descripcion" placeholder="descripcion">
+                <input class="textodelogin" type="text" name="descripcion" value="<%= locals.oldData ? oldData.descripcion : null %>" placeholder="descripcion">
             </div>
             <div class="bloquesdellogin">
                 <input class="textodelogin" type="number" name="id_productoCat" placeholder="categoria">
             </div>
             <div class="bloquesdellogin">
-                <textarea class="bloquesdellogin" name="desc2" placeholder="Mas Informacion"></textarea>
+                <textarea class="bloquesdellogin" name="desc2" value="<%= locals.oldData ? oldData.desc2 : null %>" placeholder="Mas Informacion"></textarea>
             </div>
             <div class="bloquesdellogin">
                 <input class="textodelogin" type="file" name="imagen" placeholder="img">
