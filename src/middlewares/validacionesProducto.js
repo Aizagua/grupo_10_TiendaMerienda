@@ -7,5 +7,6 @@ module.exports = [
     check('codigo').notEmpty().withMessage('Indica el codigo'),
     check('descripcion').notEmpty().withMessage('Escribi una breve descripcion del producto'),
     check('id_productoCat').isInt({gt:0}).withMessage('Indica una categoria'),
-    check('desc2').notEmpty().withMessage('Escribi toda la informacion del producto')
+    check('desc2').notEmpty().withMessage('Escribi toda la informacion del producto'),
+    check('imagen').notEmpty().withMessage('Selecciona una imagen para el producto')
 ]
