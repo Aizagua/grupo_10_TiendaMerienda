@@ -38,7 +38,8 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         deleted_at: {
-            type: DataTypes.DATE, 
+            type: DataTypes.DATE,
+            allowNull: true 
         },
 
     };
@@ -48,6 +49,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',
+        deletedAt: "deleted_at"
     };
 
     const Producto = sequelize.define(alias, cols, config);

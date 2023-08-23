@@ -54,7 +54,11 @@ let cols ={
     },
     password:{
         type: DataTypes.STRING(100),
+    },
+    celular: {
+        type: DataTypes.BIGINT(30),
         allowNull: false
+
     }
 };
 let config = {
@@ -63,7 +67,6 @@ let config = {
     createdAt: 'created_at',
     deletedAt: "deleted_at",
     updatedAt: "updated_at",
-    updatedAt: "updated_at"
 };
 const Usuario = sequelize.define (alias,cols,config);
 

@@ -13,17 +13,27 @@ let registrocontroller = {
       res.render("../views/users/formRegistro")
     },
 
-    perfilUser:(req,res)=>{
-      const buscarUsuario = userUsers.find(row=>row.id==req.session.usuarioLogeado.id)
-      if (buscarUsuario) return res.render('users/perfilUser', {user: buscarUsuario})
-              else return res.send("ERROR 404 NOT FOUND")
-    },
-    perfilUserdetalle:(req,res)=>{
-
-      const buscarUsuario = userUsers.find(row=>row.id==req.params.id)
-      if (buscarUsuario) return res.render('users/perfilUser', {user: buscarUsuario})
-              else return res.send("ERROR 404 NOT FOUND")
-    },
+    perfilUser:async (req,res)=>{
+      const buscarUsuario = await db.Usuarios.findByPk(req.session.usuarioLogeado.id)
+      try{
+        if (buscarUsuario) {
+          return res.render('users/perfilUser', {user: buscarUsuario})
+        } }
+    catch{
+      return res.send("ERROR 404 NOT FOUND")
+    }
+    },    
+             
+    perfilUserdetalle:async (req,res)=>{
+      const buscarUsuario = await db.Usuarios.findByPk(req.params.id)
+      try{
+        if (buscarUsuario) {
+          return res.render('users/perfilUser', {user: buscarUsuario})
+        } }
+    catch{
+      return res.send("ERROR 404 NOT FOUND")
+    }
+    },    
     loginUser: function (req,res) {
       res.render("../views/users/login")
     },
@@ -37,6 +47,7 @@ let registrocontroller = {
         try{
           if (usuario) {
             let ClaveOK = bcryptjs.compareSync(req.body.password, usuario.password);
+            console.log(usuario.password)
               if (ClaveOK== true){
                   delete usuario.password
                   req.session.usuarioLogeado = usuario
@@ -48,10 +59,13 @@ let registrocontroller = {
           console.log("Error :",error)
         }},
 
-    edit: (req,res)=>{
-      const buscarUsuario = userUsers.find(row=>row.id==req.params.id)
-      if (buscarUsuario) return res.render('users/edicionUser', {user: buscarUsuario})
-              else return res.send("ERROR 404 NOT FOUND")
+    edit: async (req,res)=>{
+      const buscarUsuario = await db.Usuarios.findByPk(req.params.id)
+        try {
+          if (buscarUsuario) return res.render('users/edicionUser', {user: buscarUsuario})
+        }catch{
+          return res.send("ERROR 404 NOT FOUND")
+        }
     },
     processCreate: async (req, res) => {
        const resultValidation = validationResult(req);
@@ -76,22 +90,26 @@ let registrocontroller = {
       }}
         return res.redirect("/")
       },
-    editProcess:(req,res)=>{
-      let editarUsuario = {}
-      editarUsuario = userUsers.find(row => row.id == req.params.id)
-      editarUsuario.nombre = req.body.nombre
-      editarUsuario.apellido = req.body.apellido 
-      editarUsuario.celular = req.body.celular 
-      editarUsuario.correo = req.body.correo
-      editarUsuario.password = req.body.password
-      //editarUsuario.imagen = req.file.filename  
-      if (req.file == undefined){  editarUsuario.imagen = editarUsuario.imagen} 
-      else {   editarUsuario.imagen = req.file.filename  }
-     
-      fs.writeFileSync(rutaArchivo, JSON.stringify(userUsers, null, 2), "utf-8") 
-        return res.redirect("/")
-          
-    },
+    editProcess: async (req,res)=>{
+      try{
+       await db.Usuarios.update({
+            nombre:   req.body.nombre,
+            apellido: req.body.apellido,
+            celular:  req.body.celular,
+            email:   req.body.email,
+           // editarUsuario.password: req.body.password
+            imagen: req.file.filename
+        }, { 
+            where: {
+              id: req.params.id
+            } 
+        })
+          return res.redirect("/perfil/"+req.params.id)
+      }
+      catch{ return res.send("ERROR 404 NOT FOUND")
+          res.redirect("/")
+      }
+ },
 
     list: (req, res) =>{
       db.Usuarios.findAll()
