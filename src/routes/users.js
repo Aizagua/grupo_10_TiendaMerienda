@@ -52,7 +52,7 @@ router.get ("/usersList",logMiddleware, userController.list);
 
 //Perfil USER
 router.get ("/perfil",logMiddleware, userController.perfilUser);
-router.get('/perfil/:id',logMiddleware, userController.perfilUserdetalle); //poner middleware adminMidleware cuando este listo
+router.get('/perfil/:id',adminMiddleware, userController.perfilUserdetalle); //poner middleware adminMidleware cuando este listo logMiddleware
 router.get('/logout', userController.logout);
 
 
