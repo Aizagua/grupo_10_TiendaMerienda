@@ -8,10 +8,20 @@ module.exports = [
     check('descripcion').notEmpty().withMessage('Escribi una breve descripcion del producto'),
     check('id_productoCat').isInt({gt:0}).withMessage('Indica una categoria'),
     check('desc2').notEmpty().withMessage('Escribi toda la informacion del producto'),    
-    check('img').custom((value, {req}) => {
+    check('img').custom((value, { req }) => {
         if (req.fileError) {
-            throw new Error ('Adjunte una imagen valida')
+            throw new Error('Adjunte una imagen válida');
         }
-        return true
-    })
-]
+
+        // Verifica el tamaño del archivo
+        if (!req.file) {
+            throw new Error('No se ha cargado ninguna imagen.');
+        }
+
+        if (req.file.size >= (1024 * 1024 * 10)) {
+            throw new Error('La imagen es demasiado grande. Debe ser menor a 10 megabytes.');
+        }
+
+        return true;
+    }),
+];
