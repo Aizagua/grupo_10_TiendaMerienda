@@ -5,13 +5,14 @@ let router = express.Router();
 const logMiddleware = require("../middlewares/logMiddleware");
 const validacionesProducto = require('../middlewares/validacionesProducto')
 const multerMiddleware = require ('../middlewares/multer')
+const adminMiddleware = require('../middlewares/adminMiddleware')
 
 //Detalle
 router.get('/detail/:id', products.detalle);
 router.get('/detail/:id',logMiddleware, products.detalle);
 
 //Crear Producto
-router.get('/products/create',logMiddleware, products.create)
+router.get('/products/create', adminMiddleware, products.create)
 router.post('/products', multerMiddleware.single('img'), validacionesProducto, products.processCreate)
 
 //Editar Producto
