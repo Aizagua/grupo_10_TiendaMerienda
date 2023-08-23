@@ -13,12 +13,12 @@ router.get('/detail/:id',logMiddleware, products.detalle);
 
 //Crear Producto
 router.get('/products/create', adminMiddleware, products.create)
-router.post('/products', multerMiddleware.single('img'), validacionesProducto, products.processCreate)
+router.post('/products', multerMiddleware.single('imagen'), validacionesProducto, products.processCreate)
 
 //Editar Producto
-router.get('/products/edit/:id',logMiddleware,products.edit)
-router.get('/products/edit',logMiddleware,products.mostrarProducto)
-router.put('/products/:id', multerMiddleware.single('imagen'), products.editProcess)
+router.get('/products/edit/:id', adminMiddleware,products.edit)
+router.get('/products/edit', adminMiddleware,products.mostrarProducto)
+router.put('/products/:id', multerMiddleware.single('imagen'), validacionesProducto, products.editProcess)
 
 //Borrar Producto
 router.get('/products/delete/:id',logMiddleware,products.delete)
