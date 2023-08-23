@@ -2,12 +2,12 @@ const express = require('express');
 const router = express.Router();
 const path = require('path')
 const categorias = require('../controller/categoriasController');
-const logMiddleware = require("../middlewares/logMiddleware");
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 router.get('/categorias', categorias.list);
 
 //Crear Categoria
-router.get('/categorias/create',logMiddleware, categorias.create)
+router.get('/categorias/create',adminMiddleware, categorias.create)
 router.post('/categorias', categorias.processCreate)
 
 
