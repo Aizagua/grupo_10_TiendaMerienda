@@ -8,7 +8,7 @@ module.exports = [
     check('descripcion').notEmpty().withMessage('Escribi una breve descripcion del producto'),
     check('id_productoCat').isInt({gt:0}).withMessage('Indica una categoria'),
     check('desc2').notEmpty().withMessage('Escribi toda la informacion del producto'),    
-    check('imagen').custom((value, {req}) => {
+    check('img').custom((value, {req}) => {
         if (req.fileError) {
             throw new Error ('Adjunte una imagen valida')
         }
