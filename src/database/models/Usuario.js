@@ -29,10 +29,6 @@ let cols ={
         type: DataTypes.STRING(255),
         allowNull: true
     },
-    id_perfil: {
-        type:DataTypes.BIGINT,
-        allowNull: true
-    },
 
     created_at: {
         type: DataTypes.DATE,

@@ -25,10 +25,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(255),
             allowNull: false
         },
-        id_productoCat: {
-            type: DataTypes.BIGINT,
-            allowNull: false
-        },
         desc2: {
             type: DataTypes.STRING(3000),
             allowNull: false
@@ -37,9 +33,19 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(255),
             allowNull: false
         },
+        created_at: {
+            type: DataTypes.DATE,
+            allowNull: false
+        },
+    
+        updated_at: {
+            type: DataTypes.DATE,
+            allowNull: false
+        },
+    
         deleted_at: {
             type: DataTypes.DATE,
-            allowNull: true 
+            allowNull: true
         },
 
     };
