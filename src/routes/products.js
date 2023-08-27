@@ -12,7 +12,7 @@ router.get('/detail/:id', products.detalle);
 router.get('/detail/:id',logMiddleware, products.detalle);
 
 //Crear Producto
-router.get('/products/create', adminMiddleware, products.create)
+router.get('/products/create', adminMiddleware, products.add);
 router.post('/products', multerMiddleware.single('imagen'), validacionesProducto, products.processCreate)
 
 //Editar Producto

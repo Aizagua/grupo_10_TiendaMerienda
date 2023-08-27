@@ -17,16 +17,32 @@ let productsController = {
       
   },
 
+  add: async (req, res) => {
+    try {
+        const listadoCategorias = await db.Categorias.findAll();
+        res.render('productos/creacionProducto', { listadoCategorias });
+    } catch (error) {
+        console.error("Error al cargar las categorías desde la base de datos:", error);
+        res.send(error);
+    }
+  },
 
   create: (req, res) => {
   return res.render('productos/creacionProducto')
   },
 
   processCreate: async (req, res) => {
-    const errores = validationResult(req)
+    const errores = validationResult(req);
+
     if (!errores.isEmpty()) {
-      return res.render('productos/creacionProducto', {errores:errores.mapped(), oldData: {...req.body}})
+        const listadoCategorias = await db.Categorias.findAll();
+        return res.render('productos/creacionProducto', {
+            listadoCategorias,
+            errores: errores.array(),
+            oldData: { ...req.body }
+        });
     }
+
     try {
       const nuevoProducto = await db.Productos.create({
         nombre: req.body.nombre,

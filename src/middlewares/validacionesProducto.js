@@ -1,12 +1,17 @@
 const { check } = require('express-validator');
 
 module.exports = [
-    check('nombre').notEmpty().withMessage('Escribe tu nombre').trim(),
-    check('precio').isInt({gt:0}).withMessage('Indica el precio'),
-    check('cantidad').isFloat({min: 1, max: 100}).withMessage('Indica la cantidad, no podes superar las 100 unidades'),
-    check('codigo').notEmpty().withMessage('Indica el codigo'),
-    check('descripcion').notEmpty().withMessage('Escribi una breve descripcion del producto'),
-    check('id_productoCat').isInt({gt:0}).withMessage('Indica una categoria'),
+    check('nombre').notEmpty().withMessage('Escribí el nombre').trim(),
+    check('precio').isInt({gt:0}).withMessage('Indicá el precio'),
+    check('cantidad').isFloat({min: 1, max: 100}).withMessage('Indicá la cantidad, no podes superar las 100 unidades'),
+    check('codigo').notEmpty().withMessage('Indicá el codigo'),
+    check('descripcion').notEmpty().withMessage('Escribí una breve descripcion del producto'),
+    check('id_productoCat').custom((value, { req }) => {
+        if (value === -1 || value === '') {
+            throw new Error('Selecciona una categoría válida');
+        }
+        return true;
+    }),
     check('desc2').notEmpty().withMessage('Escribi toda la informacion del producto'),    
     check('img').custom((value, { req }) => {
         if (req.fileError) {

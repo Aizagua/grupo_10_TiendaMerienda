@@ -7,13 +7,16 @@
     
 <%- include("../partials/header") %>
     
-    <% if (locals.errores) { %>
-        <div>
-        <% for (let error in errores) { %>
-            <p><%= errores[error].msg %></p>
+    <div class="errorProducto">
+        <% if (locals.errores) { %>
+            <div>
+            <% for (let error in errores) { %>
+                <p><%= errores[error].msg %></p>
+            <% } %>
+            </div>
         <% } %>
-        </div>
-    <% } %>
+    </div>
+    
 
     <main id="formulario-inicio" >
         <form class="formularios-login" method="POST" action="/products" enctype="multipart/form-data">
@@ -26,7 +29,7 @@
                 <input class="textodelogin" type="number" name="precio" value="<%= locals.oldData ? oldData.precio : null %>" placeholder="precio">
             </div>
             <div class="bloquesdellogin">
-                <input class="textodelogin" type="text" name="cantidad" value="<%= locals.oldData ? oldData.cantidad : null %>" placeholder="cantidad">
+                <input class="textodelogin" type="number" name="cantidad" value="<%= locals.oldData ? oldData.cantidad : null %>" placeholder="cantidad">
             </div>
             <div class="bloquesdellogin">
                 <input class="textodelogin" type="text" name="codigo" value="<%= locals.oldData ? oldData.codigo : null %>" placeholder="codigo">
@@ -36,7 +39,12 @@
                 <input class="textodelogin" type="text" name="descripcion" value="<%= locals.oldData ? oldData.descripcion : null %>" placeholder="descripcion">
             </div>
             <div class="bloquesdellogin">
-                <input class="textodelogin" type="number" name="id_productoCat" placeholder="categoria">
+                <select name="id_productoCat" id="" required>
+                    <option value="" disabled selected>- Seleccione la categoria - </option>
+                    <% listadoCategorias.forEach(categoria => { %>
+                        <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+                    <% }); %>
+                </select>
             </div>
             <div class="bloquesdellogin">
                 <textarea class="bloquesdellogin" name="desc2" placeholder="Mas Informacion"></textarea>
