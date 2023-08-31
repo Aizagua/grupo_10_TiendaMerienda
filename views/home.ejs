@@ -19,22 +19,22 @@
 
 <div><h2 class="titulo-home">Nuestros productos mas vendidos</h2></div>
         <div class="productos">
-            <% for (let i = 0; i < 6; i++) { %>
+            <% for (let i = 0; i < productoHome.length; i++) { %>
                 
                 <div class="productos-rec polaroidContenedor">
-                    <a href="/detail/<%= menu[i].id %>">
+                    <a href="/detail/<%= productoHome[i].id %>">
                         
-                       <img src="/images/<%= menu[i].imagen %>" class="productos-img"> 
+                       <img src="/images/<%= productoHome[i].imagen %>" class="productos-img"> 
                     </a>
                     <div class="productos-rec2 textoPolaroid">
                         <h4>
-                            <a class="titulo-productos" href="/detail/<%= menu[i].id %>">
-                                <%= menu[i].nombre %>
+                            <a class="titulo-productos" href="/detail/<%= productoHome[i].id %>">
+                                <%= productoHome[i].nombre %>
                             </a>
                         </h4>
                         <div class="flex">
                             <div>
-                                <p><%= menu[i].precio %>$</p>
+                                <p><%= productoHome[i].precio %>$</p>
                             </div>
                             <div class="taza-cafe">
                                 <img src="/images/humo.png" class="humo"> <i class="fa-solid fa-mug-saucer"></i>

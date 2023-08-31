@@ -34,7 +34,7 @@ const validations = [
           body("apellido").notEmpty().withMessage('Debe completar su apellido'),
           body("celular").notEmpty().withMessage('Debe completar su celular'),
           body("email").notEmpty().withMessage('Debe completar su email'),
-          body("password").isStrongPassword({minLength: 6}).withMessage("La clave debe contener entre 5 y 10 caracteres"),
+          body("password").isStrongPassword({minLength: 6}).withMessage("La clave debe contener mas de 5 caracteres, debe coneter un caracter especial y una mayuscula"),
 ]
 
 router.get ("/register", userController.registroUser);
