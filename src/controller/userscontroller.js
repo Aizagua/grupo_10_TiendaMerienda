@@ -52,7 +52,9 @@ let registrocontroller = {
                   delete usuario.password
                   req.session.usuarioLogeado = usuario
                   res.redirect("/perfil")
-              } else{console.log("contraseña incorrecta")}
+              } else{
+                res.redirect("/login")
+              }
         } else{
         res.redirect("/login")}
         } catch (error) {

@@ -9,7 +9,7 @@ const logMiddleware = require("../middlewares/logMiddleware");
 const { log } = require("console");
 const logoutMiddleware = require("../middlewares/logoutMiddleware");
 const adminMiddleware = require("../middlewares/adminMiddleware");
-
+const validacionesUsuario = require("../middlewares/validacionesUsuarios")
 
 
 const storage = multer.diskStorage({
@@ -29,16 +29,8 @@ router.post("/login", userController.loginProcess);
 
 //Nuevo User
 
-const validations = [
-          body("nombre").notEmpty().withMessage('Debe completar su nombre'),
-          body("apellido").notEmpty().withMessage('Debe completar su apellido'),
-          body("celular").notEmpty().withMessage('Debe completar su celular'),
-          body("email").notEmpty().withMessage('Debe completar su email'),
-          body("password").isStrongPassword({minLength: 6}).withMessage("La clave debe contener mas de 5 caracteres, debe coneter un caracter especial y una mayuscula"),
-]
-
 router.get ("/register", userController.registroUser);
-router.post('/register', uploadFile.single('imagen'),validations, userController.processCreate)
+router.post('/register', uploadFile.single('imagen'),validacionesUsuario, userController.processCreate)
 //Editar USER
 router.get('/users/edit/:id',logMiddleware, userController.edit);
 router.put('/users/:id',logMiddleware, uploadFile.single('imagen'),userController.editProcess);
