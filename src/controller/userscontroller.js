@@ -124,25 +124,25 @@ let registrocontroller = {
       });
       
   },
-    delete: (req,res)=>{
-      const buscarUsuario = userUsers.find(row=>row.id==req.params.id)
-      if (buscarUsuario) return res.render('users/borrarUser', {user: buscarUsuario})
-              else return res.send("ERROR 404 NOT FOUND")
+    delete: async (req,res)=>{
+      const buscarUsuario = await db.Usuarios.findByPk(req.params.id)
+        try {
+          if (buscarUsuario) return res.render('users/borrarUser', {user: buscarUsuario})
+        }catch{
+          return res.send("ERROR 404 NOT FOUND")
+        }
     },
-    deleteProcess: (req,res)=>{
-      function encontrarId(item) { 
-        return item.id == req.params.id;
-      }
-      const index = userUsers.findIndex(encontrarId)
-      if (index != -1) {
-        userUsers.splice(index, 1);
-        fs.writeFileSync(rutaArchivo, JSON.stringify(userUsers, null, 2), "utf-8")
-        return res.redirect("/")
-      }else{
-        return res.render("Error en el borrado")
-      }
-      
-    },
+    deleteProcess: async (req,res) => {
+      try {
+        const usuarioEliminado = await db.Usuarios.destroy({
+          where: {id:req.params.id}
+        })
+        console.log(usuarioEliminado)
+        return res.redirect ("/usersList")
+      } catch(error){
+      console.log(error);
+    }},
+    
     logout: (req,res)=>{
       req.session.destroy()
         return res.redirect('/');

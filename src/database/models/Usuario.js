@@ -60,6 +60,7 @@ let cols ={
 let config = {
     tableName: "usuarios",
     timestamps: true,
+    paranoid: true,
     createdAt: 'created_at',
     deletedAt: "deleted_at",
     updatedAt: "updated_at",
