@@ -116,24 +116,27 @@ let productsController = {
         });
   },
 
-  delete: (req,res)=>{
-    const buscarProducto = productoProducts.find(row=>row.id==req.params.id)
-    if (buscarProducto) return res.render('productos/borrarProducto', { producto: buscarProducto})
-            else return res.send("ERROR 404 NOT FOUND")
+  delete: async (req,res)=>{
+    const buscarProducto = await db.Productos.findByPk(req.params.id)
+      try {
+        if (buscarProducto) return res.render('productos/borrarProducto', { producto: buscarProducto})
+      }catch{
+        return res.send("ERROR 404 NOT FOUND")
+      }
   },
-  deleteProcess: (req,res)=>{
-    function encontrarId(item) { 
-      return item.id == req.params.id;
-    }
-    const index = productoProducts.findIndex(encontrarId)
-    if (index != -1) {
-      productoProducts.splice(index, 1);
-      fs.writeFileSync(rutaArchivo, JSON.stringify(productoProducts, null, 2), "utf-8")
-      return res.redirect("/")
-    }else{
-      return res.render("Error en el borrado")
-    }
-  },
+  deleteProcess: async (req,res) => {
+    try {
+      const productoEliminado = await db.Productos.destroy({
+        where: {id:req.params.id}
+      })
+      console.log(productoEliminado)
+      return res.redirect ("/productList")
+    } catch(error){
+    console.log(error);
+  }}
+  
+
+
 }
 
 module.exports = productsController

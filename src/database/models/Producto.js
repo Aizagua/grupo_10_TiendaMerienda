@@ -50,12 +50,13 @@ module.exports = (sequelize, DataTypes) => {
 
     };
 
-    let config ={
-        tableName: 'productos',
+    let config = {
+        tableName: "productos",
         timestamps: true,
+        paranoid: true,
         createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: "deleted_at"
+        deletedAt: "deleted_at",
+        updatedAt: "updated_at",
     };
 
     const Producto = sequelize.define(alias, cols, config);
