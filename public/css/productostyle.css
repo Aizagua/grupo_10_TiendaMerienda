@@ -34,3 +34,15 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.modificarproducto{
+    padding: 0px;
+    position: absolute;
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:center ;
+    align-content: flex-start;
+    align-items: center;
+}
