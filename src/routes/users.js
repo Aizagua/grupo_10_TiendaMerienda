@@ -1,28 +1,14 @@
 let express = require ("express");
 let userController = require ("../controller/userscontroller");
 let router = express.Router();
-
 let path = require('path');
-const multer = require("multer");
-const {body} = require('express-validator');
 const logMiddleware = require("../middlewares/logMiddleware");
 const { log } = require("console");
 const logoutMiddleware = require("../middlewares/logoutMiddleware");
 const adminMiddleware = require("../middlewares/adminMiddleware");
-const validacionesUsuario = require("../middlewares/validacionesUsuarios")
+const validacionesUsuario = require("../middlewares/validacionesUsuarios");
+const uploadFile = require ("../middlewares/multerUser")
 
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, path.join(__dirname, '../../public/images/user'))
-    },
-    filename: function (req, file, cb) {
-      let imageName = Date.now() + path.extname(file.originalname)
-      cb(null, imageName)
-    }
-  });
-
-let uploadFile = multer({ storage: storage });
 
 router.get ("/login", userController.loginUser);
 router.post("/login", userController.loginProcess);

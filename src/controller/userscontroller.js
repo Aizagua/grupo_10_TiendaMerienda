@@ -83,7 +83,7 @@ let registrocontroller = {
           "apellido": req.body.apellido,
           "celular": req.body.celular,
           "email": req.body.email,
-          "imagen": req.file ? req.file.filename : "default.png",
+          "imagen": req.file.filename,
           "password": bcryptjs.hashSync(req.body.password,10),
           "admin": false
           })

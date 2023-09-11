@@ -81,7 +81,12 @@
               </p>
             </div>
              <div class="foto"> <p  class = bloques-registro>
-                <input class = bloquestext-registro  type = "file" name = "imagen">                                
+                <input class = bloquestext-registro  type = "file" name = "imagen"> 
+                <% if (locals.errors && errors.imagen){%>
+                  <div class = avisoError>
+                    <%= errors.imagen.msg %> 
+                  </div>
+                <% } %>                               
               </p>
               <div class = boton-registro>
               <button class = "botonsend-register" type = "submit"> Enviar </button>
