@@ -19,7 +19,11 @@
     
 
     <main id="formulario-inicio" >
+
+        <ul id="listaErrores"></ul>
+
         <form class="formularios-login" method="POST" action="/products" enctype="multipart/form-data">
+
             <h3 class="iniciartextologin">Agregar Producto</h3>
 
             <div class="bloquesdellogin">
@@ -39,7 +43,7 @@
                 <input class="textodelogin" type="text" name="descripcion" value="<%= locals.oldData ? oldData.descripcion : null %>" placeholder="descripcion">
             </div>
             <div class="bloquesdellogin">
-                <select name="id_productoCat" id="" required>
+                <select name="id_productoCat" id="id_productoCat" >
                     <option value="" disabled selected>- Seleccione la categoria - </option>
                     <% listadoCategorias.forEach(categoria => { %>
                         <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
@@ -47,7 +51,7 @@
                 </select>
             </div>
             <div class="bloquesdellogin">
-                <textarea class="bloquesdellogin" name="desc2" placeholder="Mas Informacion"></textarea>
+                <textarea class="bloquesdellogin" name="desc2" id="desc2" placeholder="Mas Informacion"></textarea>
             </div>
             <div class="bloquesdellogin">
                 <input class="textodelogin" type="file" name="imagen" placeholder="img">
@@ -57,7 +61,11 @@
             </div>
         </form>
     </main>
+
     <%- include("../partials/footer") %>
+
+    <script src="/js/creacionProducto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
   
   </html>

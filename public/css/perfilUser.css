@@ -52,9 +52,11 @@
     margin: 20px;
 }
 .datosUser img {
-    width: 20vw;
-    height: 25vw;
-  }
+   height: 380px;
+   width: 280px;
+   object-fit: cover;
+ 
+}
 .datosPerfil p {
     display: flex;
     position:relative;
@@ -114,7 +116,7 @@
     text-decoration: none;
 }
 .modificaruser{
-padding: 0px;
+    padding: 0px;
     position: absolute;
     display: flex;
     flex-flow: row;

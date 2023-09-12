@@ -24,7 +24,7 @@
         <div class="sproducto" id="borde">
              <!-- Nombre del producto-->
             <div class="titulo-producto"> 
-                <h1><%=producto.titulo%></h1>
+                <h1><%=producto.nombre%></h1>
             </div>
              <!-- precio del producto, moneda-->
             <div>
@@ -34,72 +34,90 @@
             <!-- descripcion del producto-->
             <p class="text-des-producto"><%=producto.descripcion%></p>     
             
-            <div class="product_meta">
-                 <div class="product_meta_text_bold">
-                    <!-- codigo del producto-->
-                    NCP: 
-                </div>
-                <div class="product_meta_text">
-                    <%=producto.codigo%>
-                </div>
-            </div>
+            
             <div class="product_meta">
                 <div class="product_meta_text_bold">
                     <!-- categoria del producto-->
-                    Categorias: 
+                    Categoria: 
                 </div>
                 <div class="product_meta_text">
-                    <%=producto.titulo%>
+                    <%=producto.id_productoCat%>
                 </div>                
             </div>
+            
             <div class="product_meta">
-                <form class="cart" action="/carrito" method="get" >
-                <!-- pedido de producto x cantidad-->
-                    <div class="cantidad">
-                        <label class="text-ctd-pedido" for="cantidad-pc6a"><%=producto.cantidad%></label>      
-                        <div class="contador-detalle">           
-                        <input type="button" value="-" class="minus">                
-                        <input type="number" id="cantidad" class="input-text ctd text" value="1" title="Cantidad" min="1" max="" name="cantidad" step="1" placeholder="" inputmode="numeric" autocomplete="off">
-                        <input type="button" value="+" class="plus">  
-                    </div>                     
-                    </div>
-                   <div class="button-agregar-comprar">
-                    <button type="submit" name="add-carrito" value="palfajores" class="button-adicionar-carrito">
-                        <p>AÑADIR A LA CESTA</p>
-                    </button>
+                <div class="product_meta_text_bold">
+                    <!-- categoria del producto-->
+                    Cantidad disponible: 
+                </div>
+                <div class="product_meta_text">
+                    <%=producto.cantidad%>
+                </div>                
+            </div>
+
+
+
+
+
+            <div class="product_meta">
+                <div class="pedido-producto">
                     
-                    <button id="button-add-to-cart" type="submit" name="wd-add-to-cart" value="palfajores" class="button-adicionar-carrito">
-                    <p>COMPRAR AHORA</p>			
-                    </button>
-                    </div> 
-                </form>
-                <%if(locals.isLogged){%>
-
-                    <%if(locals.isAdmin == true){%>
-
-                    <div class = "botones_detail">
-                        <form class="cart" action="/products/edit/<%=producto.id%>" method="get" >
-                            <div class="button-agregar-comprar">
-                            <button id="button-adicionar-carrito" type="submit" name="btnEditProducto" value="btnEditProducto" class="button-adicionar-producto">
-                            <p>EDITAR</p>			
+                        <form class="cart" action="/carrito" method="get" >
+                        <!-- pedido de producto x cantidad-->
+                            <div class="cantidad">
+                                
+                                <div class="contador-detalle">           
+                                <input type="button" value="-" class="minus">                
+                                <input type="number" id="cantidad" class="input-text ctd text" value="1" title="Cantidad" min="1" max="" name="cantidad" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                                <input type="button" value="+" class="plus">  
+                            </div>                     
+                            </div>
+                           <div class="button-agregar-comprar">
+                            <button type="submit" name="add-carrito" value="palfajores" class="button-adicionar-carrito">
+                                <p>AÑADIR A LA CESTA</p>
+                            </button>
+                            
+                            <button id="button-add-to-cart" type="submit" name="wd-add-to-cart" value="palfajores" class="button-adicionar-carrito">
+                            <p>COMPRAR AHORA</p>			
                             </button>
                             </div> 
                         </form>
-
-                        <form class="cart" action="/products/delete/<%=producto.id%>" method="delete" >
-                            <div class="button-agregar-comprar">
-                            <button id="button-add-to-cart" type="submit" name="btnEditProducto" value="btnEditProducto" class="button-adicionar-producto">
-                            <p>ELIMINAR</p>			
-                            </button>
-                            </div> 
-                        </form>
-                    </div>
-
-                    <%}%>                         
+                        <%if(locals.isLogged){%>
+        
+                            <%if(locals.isAdmin == true){%>
+                                <div class="product_meta">
+                                    <div class="product_meta_text_bold">                       
+                                        <p class="eres-admin"> Opciones de modifcar Productos</p>
+                                    </div>
+                                </div>
+                                <div class="modificarproducto">
+                                    <!-- editar el producto-->
+                                     
+                                    <form class="cart" action="/products/edit/<%=producto.id%>" method="get" >
+                                        <div class="button-agregar-producto">
+                                            <button id="btnEditProducto" type="submit" name="btnEditProducto" value="btnEditProducto" class="button-adicionar-producto">
+                                                <p>EDITAR</p>			
+                                            </button>
+                                        </div> 
+                                    </form>
+                                    <div class="product_meta_text_bold">                        
+                                        <!-- elimnar el producto-->
+                                        <p class="spacio">  </p>
+                                    </div> 
+                                    <form class="cart" action="/products/delete/<%=producto.id%>" method="get" >
+                                        <div class="button-agregar-producto">
+                                            <button id="btnEditProducto" type="submit" name="btnEditProducto" value="btnEditProducto" class="button-adicionar-producto">
+                                                <p>ELIMINAR</p>			
+                                            </button>
+                                        </div> 
+                                    </form>
+                                </div>
+                            
+                            <%}%>                         
 
                 <%}%>
 
-            </div>
+            
                 
                     
                 
@@ -108,23 +126,23 @@
 
             </div>
            
+        </div>   
             
-            
-            <div class="iproducto">
-                <div>
-                    <h2> Más informacion</h2>
+        <div class="iproducto">
+            <div>
+                <h2> Más informacion</h2>
                     
-                    </div>
-                    <%= producto.desc2 %>
-                    <div class="prefooter">
-                        <div class="container">
-                        </div>
-                    </div>
-                <h4>
-                    Encuentre muchos más <a href="/productList"> aquí</a>.
-                </h4>
             </div>
+            <%= producto.desc2 %>
+            <div class="prefooter">
+                <div class="container">
+                </div>
+            </div>
+            <h4>
+                 Encuentre muchos más <a href="/productList"> aquí</a>.
+            </h4>
         </div>
+    </div>
 
     </main>
     <div class="prefooter">
