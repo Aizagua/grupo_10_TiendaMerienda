@@ -7,6 +7,7 @@ const { log } = require("console");
 const logoutMiddleware = require("../middlewares/logoutMiddleware");
 const adminMiddleware = require("../middlewares/adminMiddleware");
 const validacionesUsuario = require("../middlewares/validacionesUsuarios");
+const adminBlockeadeMiddleware = require("../middlewares/adminBlockeadeMiddleware");
 const uploadFile = require ("../middlewares/multerUser")
 
 
@@ -26,11 +27,11 @@ router.get('/users/delete/:id',logMiddleware, userController.delete);
 router.delete('/users/:id',logMiddleware, uploadFile.single('imagen'),userController.deleteProcess);
 
 //lista de USERS
-router.get ("/usersList",logMiddleware, userController.list);
+router.get ("/usersList",logMiddleware,adminBlockeadeMiddleware, userController.list);
 
 //Perfil USER
 router.get ("/perfil",logMiddleware, userController.perfilUser);
-router.get('/perfil/:id',adminMiddleware, userController.perfilUserdetalle); //poner middleware adminMidleware cuando este listo logMiddleware
+router.get('/perfil/:id',logMiddleware,adminBlockeadeMiddleware, userController.perfilUserdetalle); //poner middleware adminMidleware cuando este listo logMiddleware
 router.get('/logout', userController.logout);
 
 
