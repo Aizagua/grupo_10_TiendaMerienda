@@ -776,6 +776,15 @@ display: flex;
 width: 100%;
 flex-flow: column;
 }
+.botones_detail{
+    display: block;
+    text-align: center;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .product_meta_text_bold{
 font-family: Arial, Helvetica, sans-serif;
