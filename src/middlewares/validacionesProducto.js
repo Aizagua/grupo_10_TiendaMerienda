@@ -13,7 +13,7 @@ module.exports = [
         return true;
     }),
     check('desc2').notEmpty().withMessage('Escribi toda la informacion del producto'),    
-    check('img').custom((value, { req }) => {
+    check('imagen').custom((value, { req }) => {
         if (req.fileError) {
             throw new Error('Adjunte una imagen válida');
         }
