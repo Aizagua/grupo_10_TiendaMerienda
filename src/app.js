@@ -48,5 +48,5 @@ app.use (rutaCarrito);
 
 app.use (rutaCategorias);
 
-app.use('/api/productos',apiProductsRouter);
+app.use('/api/products',apiProductsRouter);
 app.use('/api/users', apiUsersRouter);
