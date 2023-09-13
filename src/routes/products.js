@@ -17,14 +17,14 @@ router.get('/products/create', adminBlockeadeMiddleware, products.add);
 router.post('/products', multerMiddleware.single('imagen'), validacionesProducto, products.processCreate)
 
 //Editar Producto
-router.get('/products/edit/:id', adminBlockeadeMiddleware, adminBlockeadeMiddleware,products.edit)
+router.get('/products/edit/:id', adminBlockeadeMiddleware, products.edit)
 router.get('/products/edit', adminBlockeadeMiddleware,products.mostrarProducto)
-router.put('/products/:id', multerMiddleware.single('imagen'), validacionesProducto, products.editProcess)
+router.put('/products/:id', adminBlockeadeMiddleware, multerMiddleware.single('imagen'), validacionesProducto, products.editProcess)
 
 //Borrar Producto
 router.get('/products/delete/:id',logMiddleware,products.delete)
 router.delete('/products/:id',adminBlockeadeMiddleware, products.deleteProcess)
 
-router.get ("/productList",adminBlockeadeMiddleware, products.list);
+router.get ("/productList", products.list);
 
 module.exports = router;
