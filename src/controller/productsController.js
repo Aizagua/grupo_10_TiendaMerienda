@@ -76,7 +76,10 @@ let productsController = {
     db.Productos.update({
       nombre: req.body.nombre,
       descripcion: req.body.descripcion,
-      precio: req.body.precio
+      precio: req.body.precio,
+      imagen: req.file.filename,
+      desc2: req.body.desc2,
+      cantidad : req.body.cantidad 
 //editarProducto.desc2 = req.body.desc2   
 //editarProducto.titulo = req.body.titulo
 //editarProducto.cantidad = req.body.cantidad 
@@ -85,7 +88,7 @@ let productsController = {
     },{
       where: {id: req.params.id}
     })
-    return res.redirect("/")
+    return res.redirect("/product/"+req.params.id)
 
     }catch{
       console.log("Error")

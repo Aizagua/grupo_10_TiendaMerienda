@@ -13,7 +13,8 @@ let rutaProductos = require ("./routes/products");
 let rutaCategorias = require ('./routes/categorias')
 const adminMiddleware = require("./middlewares/adminMiddleware");
 
-const apiProductsRouter = require('./routes/api/productsAPI')
+const apiProductsRouter = require('./routes/api/productsAPI');
+const apiUsersRouter = require('./routes/api/usersAPI');
 
 app.use(express.static(publicPath))
 app.use(session({
@@ -47,4 +48,5 @@ app.use (rutaCarrito);
 
 app.use (rutaCategorias);
 
-app.use('/api/productos',apiProductsRouter);
+app.use('/api/products',apiProductsRouter);
+app.use('/api/users', apiUsersRouter);

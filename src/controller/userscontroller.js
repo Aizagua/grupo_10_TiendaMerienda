@@ -44,7 +44,7 @@ let registrocontroller = {
             email: req.body.email
           }});
         console.log(usuario);      
-        try{
+        try {
           if (usuario) {
             let ClaveOK = bcryptjs.compareSync(req.body.password, usuario.password);
             console.log(usuario.password)
@@ -55,7 +55,7 @@ let registrocontroller = {
               } else{
                 res.redirect("/login")
               }
-        } else{
+     } else{
         res.redirect("/login")}
         } catch (error) {
           console.log("Error :",error)

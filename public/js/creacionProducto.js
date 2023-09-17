@@ -13,7 +13,7 @@ window.onload = function() {
         const descripcion = document.querySelector('input[name="descripcion"]');
         const id_productoCat = document.querySelector('#id_productoCat');
         const desc2 = document.querySelector('#desc2');
-        const imagen = document.querySelector('input[name="imagen"]');
+        const imagen = document.querySelector('#imagen');
 
         const listaErrores = document.querySelector('#listaErrores');
 
@@ -38,7 +38,6 @@ window.onload = function() {
         }
 
         if (cantidad.value <= 0  || cantidad.value > 100 || cantidad.value == '') {
-            console.log(cantidad)
             errores.push('Indicá la cantidad, no podes superar las 100 unidades')
             cantidad.classList.add('is-invalid')
             cantidad.classList.remove('is-valid')
@@ -99,37 +98,41 @@ window.onload = function() {
             }
         } else {
             listaErrores.innerHTML = ``
-            form.submit()
-        }
-        
-    })
-}        
-        /*let model = {
-            nombre: req.body.nombre,
-            precio: req.body.precio,
-            cantidad: req.body.cantidad,
-            codigo: req.body.codigo,
-            descripcion: req.body.descripcion,
-            id_productoCat: req.body.id_productoCat,
-            desc2: req.body.desc2,
-            imagen: req.file.filename
-        }
-        console.log(model)
-        let respuestaApi = await fetch('/api/productos/create', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(model)})
-        let response = await respuestaApi.json()
-        console.log(response)
-        if(response.data) {
             Swal.fire(
                 'Producto creado',
                 'success'
             ).then(() => {
-                window.location.href = '/productList'
+                form.submit()
             })
-        } else {
-            Swal.fire(
-                'Ups!, Hubo un error',
-                'error'
-            ) 
-        }
-    }*/
 
+
+            /*let model = {
+                nombre: nombre.value,
+                precio: precio.value,
+                cantidad: cantidad.value,
+                codigo: codigo.value,
+                descripcion: descripcion.value,
+                id_productoCat: id_productoCat.value,
+                desc2: desc2.value,
+                imagen: ?????
+            }
+
+            let respuestaApi = await fetch('/api/productos/create', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(model)})
+            let response = await respuestaApi.json()
+            console.log(response)
+            if(response.data) {
+                Swal.fire(
+                    'Producto creado',
+                    'success'
+                ).then(() => {
+                    window.location.href = '/productList'
+                })
+            } else {
+                Swal.fire(
+                    'Ups!, Hubo un error',
+                    'error'
+                ) 
+            }*/
+        }
+    })
+}

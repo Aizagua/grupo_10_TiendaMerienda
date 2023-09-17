@@ -4,44 +4,62 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
 const Productos = db.Productos;
-
+const Categorias = db.Categorias;
 
 
 const productsAPIController = {
-    'list': (req, res) => {
-        db.Productos.findAll({
-            include: ['categoria']
-        })
-        .then(productos => {
-            let respuesta = {
-                meta: {
-                    status : 200,
-                    total: productos.length,
-                    url: 'api/productos'
-                },
-                data: productos
-            }
-                res.json(respuesta);
+
+    list: async (req, res) => {
+        let response = {};
+        try {
+            const [productos, categorias ] = await Promise.all([Productos.findAll({include: [{association: 'categoria'}]}), Categorias.findAll({include: [{association: 'productos'}]})])
+            response.count = productos.length;
+            response.countByCategory = {}
+
+            categorias.forEach((categoria) => {
+                response.countByCategory[categoria.nombre] = categoria.productos.length
             })
-    },
-    
-    'detail': (req, res) => {
-        db.Productos.findByPk(req.params.id,
-            {
-                include : ['categoria']
-            })
-            .then(productos => {
-                let respuesta = {
-                    meta: {
-                        status: 200,
-                        total: productos.length,
-                        url: '/api/productos/:id'
-                    },
-                    data: productos
+
+            response.products = productos.map((producto) => {
+                return {
+                    id: producto.id,
+                    name: producto.nombre,
+                    description: producto.descripcion,
+                    category: producto.categoria,
+                    detail: `/api/products/${producto.id}`,
                 }
-                res.json(respuesta);
-            });
+            })
+            return res.json(response)
+
+        } catch (error) {
+            response.msg = 'Hubo un error'
+            return res.json(response)
+        }
     },
+
+    detail: async (req, res) => {
+        let response = {};
+        try {
+            const findProduct = await Productos.findByPk(req.params.id, {include: [{association: 'categoria'}]});
+            response.meta = {
+                status: 200,
+                url: `/api/products/${req.params.id}`
+            };
+            response.data = findProduct;
+            response.data.imagen = `/public/images/${findProduct.imagen}`
+
+            return res.json(response);
+        } catch (error) {
+            console.error('Error buscando el producto:', error);
+            response.meta = {
+                status: 500,
+                url: `/api/products/${req.params.id}`
+            };
+            response.msg = `Ops! Algo salio mal buscando el producto con id: ${req.params.id}`
+            return res.status(500).json(response);
+        }
+    },
+    /*
     create: (req,res) => {
         console.log(req.body)
         Productos
@@ -64,7 +82,7 @@ const productsAPIController = {
                     meta: {
                         status: 200,
                         total: confirm.length,
-                        url: 'api/productos/create'
+                        url: 'api/products/create'
                     },
                     data:confirm
                 }
@@ -73,7 +91,7 @@ const productsAPIController = {
                     meta: {
                         status: 200,
                         total: confirm.length,
-                        url: 'api/productos/create'
+                        url: 'api/products/create'
                     },
                     data:confirm
                 }
@@ -105,7 +123,7 @@ const productsAPIController = {
                     meta: {
                         status: 200,
                         total: confirm.length,
-                        url: 'api/productos/update/:id'
+                        url: 'api/products/update/:id'
                     },
                     data:confirm
                 }
@@ -114,7 +132,7 @@ const productsAPIController = {
                     meta: {
                         status: 204,
                         total: confirm.length,
-                        url: 'api/productos/update/:id'
+                        url: 'api/products/update/:id'
                     },
                     data:confirm
                 }
@@ -134,7 +152,7 @@ const productsAPIController = {
                     meta: {
                         status: 200,
                         total: confirm.length,
-                        url: 'api/productos/destroy/:id'
+                        url: 'api/products/destroy/:id'
                     },
                     data:confirm
                 }
@@ -143,7 +161,7 @@ const productsAPIController = {
                     meta: {
                         status: 204,
                         total: confirm.length,
-                        url: 'api/productos/destroy/:id'
+                        url: 'api/products/destroy/:id'
                     },
                     data:confirm
                 }
@@ -151,7 +169,7 @@ const productsAPIController = {
             res.json(respuesta);
         })    
         .catch(error => res.send(error))
-    }
+    }*/
     
 }
 
