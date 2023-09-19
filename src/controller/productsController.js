@@ -70,38 +70,33 @@ let productsController = {
         return res.send("ERROR 404 NOT FOUND")
       }
   },
-
-  editProcess: async (req,res)=>{
-    try{
-    db.Productos.update({
+    editProcess: async (req,res)=>{
+      if (req.file == undefined){  imagenf = req.body.imagen} 
+      else {  imagenf = req.file.filename  }
+      try{  
+    await db.Productos.update({
       nombre: req.body.nombre,
       descripcion: req.body.descripcion,
       precio: req.body.precio,
-      imagen: req.file.filename,
       desc2: req.body.desc2,
-      cantidad : req.body.cantidad 
-//editarProducto.desc2 = req.body.desc2   
-//editarProducto.titulo = req.body.titulo
-//editarProducto.cantidad = req.body.cantidad 
-//if (req.file == undefined){  editarProducto.imagen = editarProducto.imagen} 
-//else {   editarProducto.imagen = req.file.filename  }
+      cantidad : req.body.cantidad,
+      imagen: imagenf 
     },{
       where: {id: req.params.id}
     })
-    return res.redirect("/product/"+req.params.id)
-
+    return res.redirect("/detail/"+req.params.id)
     }catch{
       console.log("Error")
       res.redirect("/")
     }      
     },
   mostrarProducto:function (producto) {
-    let nose=productoProducts.find(row => row.id == req.params.id)
-    if (nose) {
+    let mostratProduct=productoProducts.find(row => row.id == req.params.id)
+    if (mostratProduct) {
       // Si se encontró el producto, mostramos la información en los campos de edición del formulario
-      document.getElementById("nombre").value =nose.id;
-      document.getElementById("precio").value = nose.nombre;
-      document.getElementById("descripcion").value =nose.precio ;
+      document.getElementById("nombre").value =mostratProduct.id;
+      document.getElementById("precio").value = mostratProduct.nombre;
+      document.getElementById("descripcion").value =mostratProduct.precio ;
     } else {
       // Si el producto no se encuentra, mostramos un mensaje de error
       alert("Producto no encontrado.");

@@ -5,7 +5,6 @@ let router = express.Router();
 const logMiddleware = require("../middlewares/logMiddleware");
 const validacionesProducto = require('../middlewares/validacionesProducto')
 const multerMiddleware = require ('../middlewares/multer')
-const adminMiddleware = require('../middlewares/adminMiddleware');
 const adminBlockeadeMiddleware = require("../middlewares/adminBlockeadeMiddleware");
 
 //Detalle
