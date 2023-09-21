@@ -71,21 +71,25 @@ let productsController = {
       }
   },
     editProcess: async (req,res)=>{
+      
       if (req.file == undefined){  imagenf = req.body.imagen} 
       else {  imagenf = req.file.filename  }
+
       try{  
-    await db.Productos.update({
-      nombre: req.body.nombre,
-      descripcion: req.body.descripcion,
-      precio: req.body.precio,
-      desc2: req.body.desc2,
-      cantidad : req.body.cantidad,
-      imagen: imagenf 
-    },{
-      where: {id: req.params.id}
+
+        await db.Productos.update({
+          nombre: req.body.nombre,
+          descripcion: req.body.descripcion,
+          precio: req.body.precio,
+          desc2: req.body.desc2,
+          cantidad : req.body.cantidad,
+          imagen: imagenf 
+        },
+        {
+          where: {id: req.params.id}
     })
-    return res.redirect("/detail/"+req.params.id)
-    }catch{
+      return res.redirect("/detail/"+req.params.id)
+    } catch {
       console.log("Error")
       res.redirect("/")
     }      

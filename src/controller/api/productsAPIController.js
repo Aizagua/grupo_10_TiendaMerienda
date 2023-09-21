@@ -10,22 +10,22 @@ const Categorias = db.Categorias;
 const productsAPIController = {
 
     list: async (req, res) => {
-        let response = {};
+        let response = {data: {}};
         try {
             const [productos, categorias ] = await Promise.all([Productos.findAll({include: [{association: 'categoria'}]}), Categorias.findAll({include: [{association: 'productos'}]})])
-            response.count = productos.length;
-            response.countByCategory = {}
+            response.data.count = productos.length;
+            response.data.countByCategory = {}
 
             categorias.forEach((categoria) => {
-                response.countByCategory[categoria.nombre] = categoria.productos.length
+                response.data.countByCategory[categoria.nombre] = categoria.productos.length
             })
 
-            response.products = productos.map((producto) => {
+            response.data.products = productos.map((producto) => {
                 return {
                     id: producto.id,
                     name: producto.nombre,
                     description: producto.descripcion,
-                    category: producto.categoria,
+                    category: producto.categoria.nombre,
                     detail: `/api/products/${producto.id}`,
                 }
             })
@@ -46,7 +46,7 @@ const productsAPIController = {
                 url: `/api/products/${req.params.id}`
             };
             response.data = findProduct;
-            response.data.imagen = `/public/images/${findProduct.imagen}`
+            response.data.imagen = `/images/${findProduct.imagen}`
 
             return res.json(response);
         } catch (error) {

@@ -8,16 +8,16 @@ const Usuarios = db.Usuarios;
 const usersAPIController = {
 
     list: async (req, res) => {
-        let response = {};
+        let response = {data: {}};
         try {
             const usuarios = await Usuarios.findAll()
-            response.count = usuarios.length
-            response.users = usuarios.map((user) => {
+            response.data.count = usuarios.length
+            response.data.users = usuarios.map((user) => {
                 return {
                     id: user.id,
-                    nombre: user.nombre,
+                    name: user.nombre,
                     email: user.email,
-                    detail: `api/users/${user.id}`
+                    detail: `/api/users/${user.id}`
                 }
             })
             return res.json(response)
@@ -37,7 +37,7 @@ const usersAPIController = {
                 url: `/api/users/${req.params.id}`
             };
             response.data = findUser;
-            response.data.imagen = `/public/images/user/${findUser.imagen}`
+            response.data.imagen = `/images/user/${findUser.imagen}`
             return res.json(response);
         } catch (error) {
             console.error('Error al buscar usuario', error);

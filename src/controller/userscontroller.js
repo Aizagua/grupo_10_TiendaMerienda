@@ -93,6 +93,10 @@ let registrocontroller = {
         return res.redirect("/")
       },
     editProcess: async (req,res)=>{
+      
+      if (req.file == undefined){  imagenf = req.body.imagen} 
+      else {  imagenf = req.file.filename  }
+      
       try{
        await db.Usuarios.update({
             nombre:   req.body.nombre,
@@ -100,7 +104,7 @@ let registrocontroller = {
             celular:  req.body.celular,
             email:   req.body.email,
            // editarUsuario.password: req.body.password
-            imagen: req.file.filename
+            imagen: imagenf
         }, { 
             where: {
               id: req.params.id
