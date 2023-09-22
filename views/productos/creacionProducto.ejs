@@ -7,61 +7,104 @@
     
 <%- include("../partials/header") %>
     
-    <div class="errorProducto">
-        <% if (locals.errores) { %>
-            <div>
-            <% for (let error in errores) { %>
-                <p><%= errores[error].msg %></p>
-            <% } %>
-            </div>
-        <% } %>
+    <div class="inicioTM">  
+        <main class="main-register" >
+
+            <ul id="listaErrores"></ul>
+
+            <form class = "formregistro"  method="POST" action="/products" enctype="multipart/form-data">
+
+                <h3 class="iniciartextologin">Agregar Producto</h3>
+
+                <div class="inputs"> 
+                    <p class = "bloques-registro">
+                    <input class = "bloquestext-registro" type="text" name="nombre" placeholder="nombre" value="<%= locals.oldData ? oldData.nombre : null %>" > 
+                        <% if (locals.errors && errors.nombre){%>
+                            <div class = avisoError>
+                            <%= errors.nombre.msg %> 
+                            </div>
+                        <% } %>    
+                    </p>
+                </div>
+                <div class="inputs">
+                    <p class = "bloques-registro">
+                        <input class = "bloquestext-registro" type="number" name="precio"  placeholder="precio"  
+                        value ="<%= locals.oldData ? oldData.precio : null %>">
+                        <% if (locals.errors && errors.precio){%>
+                          <div class = avisoError>
+                            <%= errors.precio.msg %> 
+                          </div>
+                        <% } %>
+                    </p>
+                </div>
+                <div class="inputs">
+                    <p class = "bloques-registro">
+                        <input class = "bloquestext-registro" type="number" name="cantidad" value="<%= locals.oldData ? oldData.cantidad : null %>" placeholder="cantidad"value="<%= locals.oldData ? oldData.nombre : null %>" > 
+                        <% if (locals.errors && errors.cantidad){%>
+                            <div class = avisoError>
+                            <%= errors.cantidad.msg %> 
+                            </div>
+                        <% } %>    
+                    </p>
+                </div>
+                <div class="inputs">
+                    <p class = "bloques-registro">
+                        <input class = "bloquestext-registro" type="text" name="codigo" value="<%= locals.oldData ? oldData.codigo : null %>" placeholder="codigo"value="<%= locals.oldData ? oldData.nombre : null %>" > 
+                        <% if (locals.errors && errors.codigo){%>
+                            <div class = avisoError>
+                            <%= errors.codigo.msg %> 
+                            </div>
+                        <% } %>    
+                    </p>
+                </div>
+                <div class="inputs">
+                    <p class = "bloques-registro">
+                        <input class = "bloquestext-registro" type="text" name="descripcion" value="<%= locals.oldData ? oldData.descripcion : null %>" placeholder="descripcion"value="<%= locals.oldData ? oldData.nombre : null %>" > 
+                        <% if (locals.errors && errors.descripcion){%>
+                            <div class = avisoError>
+                            <%= errors.descripcion.msg %> 
+                            </div>
+                        <% } %>    </p>    
+                </div>
+                <div class="inputs">
+                    <p class = "bloques-registro">
+                        <select name="id_productoCat" id="id_productoCat" >
+                            <option value="<%= locals.oldData ? oldData.categoria : null %>" disabled selected>- Seleccione la categoria - </option>
+                            <% listadoCategorias.forEach(categoria => { %>
+                                <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+                            <% }); %>
+                        </select>
+                        <% if (locals.errors && errors.categoria){%>
+                            <div class = avisoError>
+                            <%= errors.categoria.msg %> 
+                            </div>
+                        <% } %>   
+                    </p>
+                </div>
+                <div class="inputs">
+                    <p class = "bloques-registro">
+                    <textarea  value="<%= locals.oldData ? oldData.desc2 : null %>" class = "bloquestext-registro" name="desc2" id="desc2" placeholder="Mas Informacion"></textarea>
+                        <% if (locals.errors && errors.desc2){%>
+                            <div class = avisoError>
+                            <%= errors.desc2.msg %> 
+                            </div>
+                        <% } %>     
+                    </p>
+                </div>
+                <div class="inputs">
+                    <input class="textodelogin" type="file" name="imagen" id="imagen" placeholder="img"
+                    value="<%= locals.oldData ? oldData.imagen : null %>">
+                    <% if (locals.errors && errors.imagen){%>
+                        <div class = avisoError>
+                        <%= errors.imagen.msg %> 
+                        <% } %>
+                </div>
+                <div class = "boton-registro">
+                <a href="/"><button class="botonsend-register" type="submit">Enviar</button></a>
+                </div>
+            </form>
+        </main>
     </div>
-    
-
-    <main id="formulario-inicio" >
-
-        <ul id="listaErrores"></ul>
-
-        <form class="formularios-login" method="POST" action="/products" enctype="multipart/form-data">
-
-            <h3 class="iniciartextologin">Agregar Producto</h3>
-
-            <div class="bloquesdellogin">
-                <input class="textodelogin" type="text" name="nombre" value="<%= locals.oldData ? oldData.nombre : null %>" placeholder="nombre"> 
-            </div>
-            <div class="bloquesdellogin">
-                <input class="textodelogin" type="number" name="precio" value="<%= locals.oldData ? oldData.precio : null %>" placeholder="precio">
-            </div>
-            <div class="bloquesdellogin">
-                <input class="textodelogin" type="number" name="cantidad" value="<%= locals.oldData ? oldData.cantidad : null %>" placeholder="cantidad">
-            </div>
-            <div class="bloquesdellogin">
-                <input class="textodelogin" type="text" name="codigo" value="<%= locals.oldData ? oldData.codigo : null %>" placeholder="codigo">
-            </div>
-            </div>
-            <div class="bloquesdellogin">
-                <input class="textodelogin" type="text" name="descripcion" value="<%= locals.oldData ? oldData.descripcion : null %>" placeholder="descripcion">
-            </div>
-            <div class="bloquesdellogin">
-                <select name="id_productoCat" id="id_productoCat" >
-                    <option value="" disabled selected>- Seleccione la categoria - </option>
-                    <% listadoCategorias.forEach(categoria => { %>
-                        <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
-                    <% }); %>
-                </select>
-            </div>
-            <div class="bloquesdellogin">
-                <textarea class="bloquesdellogin" name="desc2" id="desc2" placeholder="Mas Informacion"></textarea>
-            </div>
-            <div class="bloquesdellogin">
-                <input class="textodelogin" type="file" name="imagen" id="imagen" placeholder="img">
-            </div>
-            <div class="bloquesdellogin-send">
-                <a href="/"><button class="botonform botonsend" type="submit">Enviar</button></a>
-            </div>
-        </form>
-    </main>
-
     <%- include("../partials/footer") %>
 
     <script src="/js/creacionProducto.js"></script>

@@ -7,27 +7,38 @@
     
 <%- include("../partials/header") %>
     
-    <main id="formulario-inicio" >
+    <main class="main-register">
         <form class="formularios-login" method="POST" action="/products/<%= producto.id %>?_method=PUT" enctype="multipart/form-data">
             <h3 class="iniciartextologin">Editar Producto</h3>
           
-            <div class="bloquesdellogin">
+            <div class="bloques-registro">
                 <input class="textodelogin" type="text" name="nombre" placeholder="nombre" value="<%= producto.nombre%>">
+                <% if (locals.errors && errors.nombre){%>
+                    <div class = avisoError>
+                      <%= errors.nombre.msg %> 
+                    </div>
+                  <% } %>
             </div>
-            <div class="bloquesdellogin">
+            <div class="bloques-registro">
                 <input class="textodelogin" type="number" name="precio" placeholder="precio" value="<%= producto.precio%>">
             </div>
-            <div class="bloquesdellogin">
+            <div class="bloques-registro">
                 <input class="textodelogin" type="text" name="cantidad" placeholder="cantidad" value="<%= producto.cantidad%>">
             </div>
             </div>
-            <div class="bloquesdellogin">
+            <div class="bloques-registro">
                 <input class="textodelogin" type="text" name="descripcion" placeholder="descripcion" value="<%= producto.descripcion%>">
+                <% if (locals.errors && errors.descripcion){%>
+                    <div class = avisoError>
+                      <%= errors.descripcion.msg %> 
+                    </div>
+                  <% } %>
+                    </div>
             </div>
-            <div class="bloquesdellogin">
-                <textarea class="bloquesdellogin" name="desc2"><%= producto.desc2%></textarea>
+            <div class="bloques-registro">
+                <textarea class="bloques-registro" name="desc2"><%= producto.desc2%></textarea>
             </div>
-            <div class="bloquesdellogin">
+            <div class="bloques-registro">
                 <img src="/images/<%= producto.imagen%>" width="50%">
                 <input class="textodelogin" type="file" name="imagen" placeholder="img" value="<%= producto.imagen%>">
             </div>

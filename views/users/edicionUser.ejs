@@ -9,26 +9,28 @@
 
     <main>
         
-        <form class = "formregistro" method="POST" action="/users/<%= user.id %>?_method=PUT" enctype="multipart/form-data">
+        <form class = "bloquestext-registro" method="POST" action="/users/<%= user.id %>?_method=PUT" enctype="multipart/form-data">
           <h3> Edición de Datos del Usuario: </h3>
+            <div class = bloques-registro>
+              
+                <input class = bloquestext-registro type = "text" name = "nombre" placeholder ="Nombre" value="<%= user.nombre %>"> 
+              
+            </div>
             <p class = bloques-registro>
-              <input class = bloquestext-registro type = "text" name = "nombre" placeholder ="Nombre" value="<%= user.nombre %>"> 
-            </p>
-            <p class = bloques-registro>
-              <input class = bloquestext-registro type = "text" name = "apellido" placeholder ="Apellido" value="<%= user.apellido %>">
+              <input class = "bloquestext-registro"type = "text" name = "apellido" placeholder ="Apellido" value="<%= user.apellido %>">
             </p class = bloques-registro>
             <p class = bloques-registro>
-              <input class = bloquestext-registro type = "tel" name = "celular" placeholder="Celular" value="<%= user.celular %>">
+              <input class = "bloquestext-registro" type = "tel" name = "celular" placeholder="Celular" value="<%= user.celular %>">
             </p>
             <p class = bloques-registro>
-            <input class = bloquestext-registro type = "email" name = "email" placeholder="Correo" value="<%= user.email %>">
+            <input class = "bloquestext-registro" type = "email" name = "email" placeholder="Correo" value="<%= user.email %>">
             </p>                  
             <div class="bloquesdellogin">
                 <img src="/images/user/<%= user.imagen %>" width="50%">
                 <input class="textodelogin" type="file" name="imagen" placeholder="img" value="<%= user.imagen %>">
             </div>
             <p  class = bloques-registro>
-            <input class = bloquestext-registro class = bloquestext-registro type = "password" name = "password"  hidden>
+            <input class = "bloquestext-registro" class = bloquestext-registro type = "password" name = "password"  hidden>
             </p>
             <p class = boton-registro>
             <button class = botontexto-registro type = "submit"> Editar </button>

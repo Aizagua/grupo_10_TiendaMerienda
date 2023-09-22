@@ -32,14 +32,14 @@ let productsController = {
   },
 
   processCreate: async (req, res) => {
-    const errores = validationResult(req);
-
-    if (!errores.isEmpty()) {
+    const resultValidation = validationResult(req);
+    
+    if (resultValidation.errors) {
         const listadoCategorias = await db.Categorias.findAll();
         return res.render('productos/creacionProducto', {
             listadoCategorias,
-            errores: errores.array(),
-            oldData: { ...req.body }
+            errors: resultValidation.mapped(),
+            oldData: req.body
         });
     }
 
