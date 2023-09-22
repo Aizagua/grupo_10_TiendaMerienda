@@ -6,31 +6,37 @@
 <body>
     
 <%- include("../partials/header") %>
-
-
-        <main id="formulario-inicio">
-            <form class="formularios-login" id="formlogin" action="/login" method="POST">
-                <h3 class="iniciartextologin">Iniciar Sesión</h3>
-            <div class="contenedor-iniciar-sesion">
-                <div class="bloquesdellogin">
-                    <ul id="listaErrores"></ul>
-                    <input class="textodelogin1" type="email" name="email" placeholder="Email">
-                    <input class="textodelogin2" type="Password" name="password" placeholder="Contraseña">
-                </div>
-                <div class="textrecordar">
-                    <label class="textorecordar"for="remember">Recordar contraseña:</label>
-                    <input type="checkbox" id="remember" name="remember">
-                </div>
-                <div class="bloquesdellogin-send">
-                    <button class="botonform botonsend" type="submit">Iniciar</button>
-                </div>
-                <div class="abajo">
-                    <div class="a"><a>¿Olvidaste tu cuenta?</a></div><div class="a"><a href="/register">Registrarse</a></div>
-                </div>
+<div  class="inicioTM">
+    <!-- <main id="formulario-inicio">-->
+    <form class="formularios-login" id="formlogin" action="/login" method="POST">
+        <h3 class="iniciartextologin">Iniciar Sesión</h3>
+        <div class="contenedor-iniciar-sesion">
+            <div class="inputs">  
+            <div class="bloquesdellogin">
+                <ul id="listaErrores" class = avisoError></ul>
+                <input class="textodelogin1" type="email" name="email" placeholder="Email">
+                <input class="textodelogin2" type="Password" name="password" placeholder="Contraseña">
             </div>
-            </form>
-        </main>
-    
+            <div class="textrecordar">
+                <label class="textorecordar"for="remember">Recordar contraseña:</label>
+                <input type="checkbox" id="remember" name="remember">
+            </div>
+            <div class="bloquesdellogin-send">
+                <button class="botonform botonsend" type="submit">Iniciar</button>
+            </div>
+            <div class="abajo">
+                <div class="a">
+                    <a>¿Olvidaste tu cuenta?</a>
+                </div>
+                <div class="a">
+                    <a href="/register">Registrarse</a>
+                </div>            
+            </div> 
+          </div>        
+        </div>    
+    </form>
+       <!-- </main>-->
+</div>
 
 <%- include("../partials/footer") %>
 <script src="/js/login.js"></script>

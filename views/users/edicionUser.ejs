@@ -6,16 +6,16 @@
 <body>
     
 <%- include("../partials/header") %>
-
-    <main>
+<div  class="inicioTM">    
+  
+   <!-- <main>--> 
         
-        <form class = "bloquestext-registro" method="POST" action="/users/<%= user.id %>?_method=PUT" enctype="multipart/form-data">
-          <h3> Edición de Datos del Usuario: </h3>
-            <div class = bloques-registro>
-              
-                <input class = bloquestext-registro type = "text" name = "nombre" placeholder ="Nombre" value="<%= user.nombre %>"> 
-              
-            </div>
+        <form class = "formregistro" method="POST" action="/users/<%= user.id %>?_method=PUT" enctype="multipart/form-data">
+          <h3> Actualizando Perfil </h3>
+          <div class="inputs">
+            <p class = bloques-registro>
+              <input class = bloquestext-registro type = "text" name = "nombre" placeholder ="Nombre" value="<%= user.nombre %>"> 
+            </p>
             <p class = bloques-registro>
               <input class = "bloquestext-registro"type = "text" name = "apellido" placeholder ="Apellido" value="<%= user.apellido %>">
             </p class = bloques-registro>
@@ -26,17 +26,21 @@
             <input class = "bloquestext-registro" type = "email" name = "email" placeholder="Correo" value="<%= user.email %>">
             </p>                  
             <div class="bloquesdellogin">
-                <img src="/images/user/<%= user.imagen %>" width="50%">
+             
+                <img src="/images/user/<%= user.imagen %>" width="70%">
+                <p>Actuliza la foto de perfil aquí:</p>
                 <input class="textodelogin" type="file" name="imagen" placeholder="img" value="<%= user.imagen %>">
             </div>
             <p  class = bloques-registro>
             <input class = "bloquestext-registro" class = bloquestext-registro type = "password" name = "password"  hidden>
             </p>
             <p class = boton-registro>
-            <button class = botontexto-registro type = "submit"> Editar </button>
+            <button class="botonform botonsend" type = "submit"> Editar </button>
             </p>
+          </div>
         </form> 
-    </main>
+   <!-- </main>-->
+   </div>
     <%- include("../partials/footer") %>
 </body>
 
