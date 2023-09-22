@@ -1,14 +1,6 @@
 
 .datosUser {   
-    /*margin: 20px;
-    font-size: 16px;
-    text-align: center;
-    border: 1px solid #f4f3bf;
-    padding: 25px;
-    position: relative;
-    display: flex;
-    flex-flow: column;    
-    width: 40vw; */ 
+    
     margin: 20px;
     font-size: 16px;
     text-align: center;
@@ -23,7 +15,7 @@
     flex-wrap: wrap;
     justify-content:center ;
     align-items: center;
-  
+    background-color:#ffffff;
 }
 
 .usuario-blockmeta{

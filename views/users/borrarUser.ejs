@@ -7,10 +7,13 @@
     
 <%- include("../partials/header") %>
 
-    <main>
+<div  class="inicioTM">    
+  
+  <!-- <main>--> 
         
         <form class = "formregistro" method="POST" action="/users/<%= user.id %>?_method=DELETE" enctype="multipart/form-data">
-          <h3> Borrar Usuario: </h3>
+          <h3>Eliminar el Usuario </h3>
+          <div class="inputs">
             <p class = bloques-registro>
               <input disabled class = bloquestext-registro type = "text" name = "nombre" placeholder ="Nombre" value="<%= user.nombre %>"> 
             </p>
@@ -27,10 +30,12 @@
             <input disabled class = bloquestext-registro class = bloquestext-registro type = "password" name = "clave"  disabled>
             </p>
             <p class = boton-registro>
-            <button class = botontexto-registro type = "submit"> Borrar </button>
+            <button class = "botonform botonsend" type = "submit"> Borrar </button>
             </p>
+          </div>
         </form> 
-    </main>
+    <!-- </main>-->
+   </div>
     <%- include("../partials/footer") %>
 </body>
 

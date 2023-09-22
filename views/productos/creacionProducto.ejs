@@ -3,31 +3,25 @@
     
 <%- include("../partials/head") %>
 
-<body>
-    
-<%- include("../partials/header") %>
-    
+<body>    
+    <%- include("../partials/header") %>
     <div class="errorProducto">
         <% if (locals.errores) { %>
             <div>
-            <% for (let error in errores) { %>
+                <% for (let error in errores) { %>
                 <p><%= errores[error].msg %></p>
-            <% } %>
+                <% } %>
             </div>
         <% } %>
-    </div>
-    
+    </div>    
 
     <main id="formulario-inicio" >
-
         <ul id="listaErrores"></ul>
-
         <form class="formularios-login" method="POST" action="/products" enctype="multipart/form-data">
-
+        <div class="inputs">    
             <h3 class="iniciartextologin">Agregar Producto</h3>
-
             <div class="bloquesdellogin">
-                <input class="textodelogin" type="text" name="nombre" value="<%= locals.oldData ? oldData.nombre : null %>" placeholder="nombre"> 
+                <input class="bloquestext-registro" type="text" name="nombre" value="<%= locals.oldData ? oldData.nombre : null %>" placeholder="nombre"> 
             </div>
             <div class="bloquesdellogin">
                 <input class="textodelogin" type="number" name="precio" value="<%= locals.oldData ? oldData.precio : null %>" placeholder="precio">
@@ -51,14 +45,15 @@
                 </select>
             </div>
             <div class="bloquesdellogin">
-                <textarea class="bloquesdellogin" name="desc2" id="desc2" placeholder="Mas Informacion"></textarea>
+                <textarea class="bloquesdellogin" name="desc2" id="desc2" placeholder="Más información"></textarea>
             </div>
             <div class="bloquesdellogin">
                 <input class="textodelogin" type="file" name="imagen" id="imagen" placeholder="img">
             </div>
             <div class="bloquesdellogin-send">
-                <a href="/"><button class="botonform botonsend" type="submit">Enviar</button></a>
+                <button class="botonform botonsend" type="submit">Enviar</button>
             </div>
+        </div>
         </form>
     </main>
 
