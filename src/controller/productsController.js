@@ -71,7 +71,19 @@ let productsController = {
       }
   },
     editProcess: async (req,res)=>{
-      
+      const buscarProducto = await db.Productos.findByPk(req.params.id)
+      const resultValidation = validationResult(req);
+    
+      if (resultValidation.errors) {
+          const listadoCategorias = await db.Categorias.findAll();
+          return res.render('productos/edicionProducto', {
+              producto: buscarProducto,
+              listadoCategorias,
+              errors: resultValidation.mapped(),
+              
+          });
+      }
+
       if (req.file == undefined){  imagenf = req.body.imagen} 
       else {  imagenf = req.file.filename  }
 

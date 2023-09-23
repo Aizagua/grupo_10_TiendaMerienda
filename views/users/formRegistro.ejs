@@ -41,31 +41,31 @@
             <% } %>
         </p>
         <p class = bloques-registro>
-            <% if (locals.errors && errors.celular){%>
-                  <div class = avisoError>
-                    <%= errors.celular.msg %> 
-                  </div>
-            <% } %>
-            <input class = bloquestext-registro  type = "tel" name = "celular"                 placeholder="Celular" 
+            <input class = bloquestext-registro  type = "tel" name = "celular" placeholder="Celular" 
                   value ="<%= locals.oldData ? oldData.celular : null %>" >
+                  <% if (locals.errors && errors.celular){%>
+                    <div class = avisoError>
+                      <%= errors.celular.msg %> 
+                    </div>
+                  <% } %>
         </p>
         <p class = bloques-registro>
-            <% if (locals.errors && errors.email){%>
+            <input class = bloquestext-registro type = "email"  name = "email"
+                placeholder="E-mail" value ="<%= locals.oldData ? oldData.email : null %>" >
+                <% if (locals.errors && errors.email){%>
                   <div class = avisoError>
                     <%= errors.email.msg %> 
                   </div>
             <% } %>
-            <input class = bloquestext-registro type = "email"  name = "email"
-                placeholder="E-mail" value ="<%= locals.oldData ? oldData.email : null %>" >
         </p>         
         <p  class = bloques-registro>
-            <% if (locals.errors && errors.password){%>
-                  div class = avisoError>
+            <input class = bloquestext-registro  type="password"   name="password" 
+                placeholder="Contraseña"  >
+                <% if (locals.errors && errors.password){%>
+                  <div class = avisoError>
                     <%= errors.password.msg %> 
                   </div>
             <% } %>
-            <input class = bloquestext-registro  type="password"   name="password" 
-                placeholder="Contraseña"  >
         </p>
         <div class="foto"> <p  class = bloques-registro>
             <input class = bloquestext-registro  type = "file" name = "imagen"> 

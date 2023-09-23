@@ -11,36 +11,68 @@
         <form class="formularios-login" method="POST" action="/products/<%= producto.id %>?_method=PUT" enctype="multipart/form-data">
             <h3 class="iniciartextologin">Editar Producto</h3>
           
-            <div class="bloques-registro">
-                <input class="textodelogin" type="text" name="nombre" placeholder="nombre" value="<%= producto.nombre%>">
-                <% if (locals.errors && errors.nombre){%>
-                    <div class = avisoError>
-                      <%= errors.nombre.msg %> 
-                    </div>
-                  <% } %>
+            <div class="inputs">
+                <p class = "bloques-registro">
+                    <input class="bloquestext-registro" type="text" name="nombre" placeholder="nombre" value="<%= producto.nombre%>">
+                    <% if (locals.errors && errors.nombre){%>
+                        <div class = avisoError>
+                        <%= errors.nombre.msg %> 
+                        </div>
+                    <% } %>
+                </p>
             </div>
-            <div class="bloques-registro">
-                <input class="textodelogin" type="number" name="precio" placeholder="precio" value="<%= producto.precio%>">
+            <div class="inputs">
+                <p class = "bloques-registro">
+                    <input class="textodelogin" type="number" name="precio" placeholder="precio" value="<%= producto.precio%>">
+                    <% if (locals.errors && errors.precio){%>
+                        <div class = avisoError>
+                        <%= errors.precio.msg %> 
+                        </div>
+                    <% } %>
+                </p>
             </div>
-            <div class="bloques-registro">
+            <div class="inputs">
                 <input class="textodelogin" type="text" name="cantidad" placeholder="cantidad" value="<%= producto.cantidad%>">
-            </div>
-            </div>
-            <div class="bloques-registro">
-                <input class="textodelogin" type="text" name="descripcion" placeholder="descripcion" value="<%= producto.descripcion%>">
-                <% if (locals.errors && errors.descripcion){%>
+                <% if (locals.errors && errors.cantidad){%>
                     <div class = avisoError>
-                      <%= errors.descripcion.msg %> 
+                    <%= errors.cantidad.msg %> 
                     </div>
-                  <% } %>
+                <% } %>
+            </div>
+            </div>
+            <div class="inputs">
+                <p class = "bloques-registro">
+                    <input class="textodelogin" type="text" name="descripcion" placeholder="descripcion" value="<%= producto.descripcion%>">
+                    <% if (locals.errors && errors.descripcion){%>
+                        <div class = avisoError>
+                        <%= errors.descripcion.msg %> 
+                        </div>
+                            <% } %>
+                        </div>
+                </p>
+            </div>
+            <div class="inputs">
+                <p class = "bloques-registro">
+                    <textarea class="bloques-registro" name="desc2"><%= producto.desc2%></textarea>
+                    <% if (locals.errors && errors.desc2){%>
+                        <div class = avisoError>
+                        <%= errors.desc2.msg %> 
+                        </div>
+                            <% } %>
+                </p>
+            </div>
+            <div class="inputs">
+                <p class = "bloques-registro">
+                    <div>
+                        <img src="/images/<%= producto.imagen%>" width="50%">
                     </div>
-            </div>
-            <div class="bloques-registro">
-                <textarea class="bloques-registro" name="desc2"><%= producto.desc2%></textarea>
-            </div>
-            <div class="bloques-registro">
-                <img src="/images/<%= producto.imagen%>" width="50%">
-                <input class="textodelogin" type="file" name="imagen" placeholder="img" value="<%= producto.imagen%>">
+                    <input class="textodelogin" type="file" name="imagen" placeholder="img" value="<%= producto.imagen%>">
+                    <% if (locals.errors && errors.imagen){%>
+                        <div class = avisoError>
+                        <%= errors.imagen.msg %> 
+                        </div>
+                            <% } %>
+                </p>
             </div>
             <div class="bloquesdellogin-send">
                 <a href="/"><button class="botonform botonsend" type="submit">Editar</button></a>
