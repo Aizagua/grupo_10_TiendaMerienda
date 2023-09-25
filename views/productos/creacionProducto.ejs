@@ -9,8 +9,18 @@
     
     <div class="inicioTM">  
         <main class="main-register" >
+            <div class="errorProducto">
+                <% if (locals.errores) { %>
+                    <div>
+                    <% for (let error in errores) { %>
+                        <p><%= errores[error].msg %></p>
+                    <% } %>
+                    </div>
+                <% } %>
+            </div>
+                        <ul id="listaErrores"></ul>
 
-            <form class = "formregistro"  method="POST" action="/products" enctype="multipart/form-data">
+            <form class = "formularios-login"  method="POST" action="/products" enctype="multipart/form-data">
                 <div>
                     <h3 class="iniciartextologin">Agregar Producto</h3>
                 </div>
@@ -58,7 +68,7 @@
                 </div>
                 <div class="inputs">
                     <p class = "bloques-registro">
-                        <input class = "bloquestext-registro" type="text" name="descripcion" value="<%= locals.oldData ? oldData.descripcion : null %>" placeholder="descripcion"value="<%= locals.oldData ? oldData.nombre : null %>" > 
+                        <input class = "bloquestext-registro" type="text" name="descripcion" id="descripcion" value="<%= locals.oldData ? oldData.descripcion : null %>" placeholder="descripcion"value="<%= locals.oldData ? oldData.nombre : null %>" > 
                         <% if (locals.errors && errors.descripcion){%>
                             <div class = avisoError>
                             <%= errors.descripcion.msg %> 
@@ -105,58 +115,6 @@
         </main>
     </div>
 <body>    
-    <%- include("../partials/header") %>
-    <div class="errorProducto">
-        <% if (locals.errores) { %>
-            <div>
-                <% for (let error in errores) { %>
-                <p><%= errores[error].msg %></p>
-                <% } %>
-            </div>
-        <% } %>
-    </div>    
-
-    <main id="formulario-inicio" >
-        <ul id="listaErrores"></ul>
-        <form class="formularios-login" method="POST" action="/products" enctype="multipart/form-data">
-        <div class="inputs">    
-            <h3 class="iniciartextologin">Agregar Producto</h3>
-            <div class="bloquesdellogin">
-                <input class="bloquestext-registro" type="text" name="nombre" value="<%= locals.oldData ? oldData.nombre : null %>" placeholder="nombre"> 
-            </div>
-            <div class="bloquesdellogin">
-                <input class="textodelogin" type="number" name="precio" value="<%= locals.oldData ? oldData.precio : null %>" placeholder="precio">
-            </div>
-            <div class="bloquesdellogin">
-                <input class="textodelogin" type="number" name="cantidad" value="<%= locals.oldData ? oldData.cantidad : null %>" placeholder="cantidad">
-            </div>
-            <div class="bloquesdellogin">
-                <input class="textodelogin" type="text" name="codigo" value="<%= locals.oldData ? oldData.codigo : null %>" placeholder="codigo">
-            </div>
-            </div>
-            <div class="bloquesdellogin">
-                <input class="textodelogin" type="text" name="descripcion" value="<%= locals.oldData ? oldData.descripcion : null %>" placeholder="descripcion">
-            </div>
-            <div class="bloquesdellogin">
-                <select name="id_productoCat" id="id_productoCat" >
-                    <option value="" disabled selected>- Seleccione la categoria - </option>
-                    <% listadoCategorias.forEach(categoria => { %>
-                        <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
-                    <% }); %>
-                </select>
-            </div>
-            <div class="bloquesdellogin">
-                <textarea class="bloquesdellogin" name="desc2" id="desc2" placeholder="Más información"></textarea>
-            </div>
-            <div class="bloquesdellogin">
-                <input class="textodelogin" type="file" name="imagen" id="imagen" placeholder="img">
-            </div>
-            <div class="bloquesdellogin-send">
-                <button class="botonform botonsend" type="submit">Enviar</button>
-            </div>
-        </div>
-        </form>
-    </main>
 
     <%- include("../partials/footer") %>
 

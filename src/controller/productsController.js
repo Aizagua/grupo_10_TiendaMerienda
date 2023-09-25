@@ -34,14 +34,15 @@ let productsController = {
   processCreate: async (req, res) => {
     const resultValidation = validationResult(req);
     
-    if (resultValidation.errors) {
+    if (resultValidation.errors.length>0) {
         const listadoCategorias = await db.Categorias.findAll();
         return res.render('productos/creacionProducto', {
             listadoCategorias,
             errors: resultValidation.mapped(),
-            oldData: req.body
+            oldData: { ...req.body }
         });
     }
+    console.log(resultValidation.errors)
 
     try {
       const nuevoProducto = await db.Productos.create({
