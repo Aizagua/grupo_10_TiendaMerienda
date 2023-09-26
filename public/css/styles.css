@@ -900,6 +900,7 @@ text-align: center;
     padding: 7px 20px;
     color: #e6e3e3;
     margin: 20px;
+    cursor: pointer;
 }
 .textodelogin1{
     margin-bottom: 4%;
@@ -1080,6 +1081,7 @@ input:focus {
     border: none;
     padding: 7px 20px;
     color: #e6e3e3;
+    cursor: pointer;
 }
 
 .boton-registro{
