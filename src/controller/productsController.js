@@ -75,7 +75,7 @@ let productsController = {
       const buscarProducto = await db.Productos.findByPk(req.params.id)
       const resultValidation = validationResult(req);
     
-      if (resultValidation.errors) {
+      if (resultValidation.errors.length > 0) {
           const listadoCategorias = await db.Categorias.findAll();
           return res.render('productos/edicionProducto', {
               producto: buscarProducto,
