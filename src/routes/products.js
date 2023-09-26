@@ -6,6 +6,7 @@ const logMiddleware = require("../middlewares/logMiddleware");
 const validacionesProducto = require('../middlewares/validacionesProducto')
 const multerMiddleware = require ('../middlewares/multer')
 const adminBlockeadeMiddleware = require("../middlewares/adminBlockeadeMiddleware");
+const validacionesEditProducto = require('../middlewares/validacionesEditProducto')
 
 //Detalle
 router.get('/detail/:id', products.detalle);
@@ -18,7 +19,7 @@ router.post('/products', multerMiddleware.single('imagen'), validacionesProducto
 //Editar Producto
 router.get('/products/edit/:id', adminBlockeadeMiddleware, products.edit)
 router.get('/products/edit', adminBlockeadeMiddleware,products.mostrarProducto)
-router.put('/products/:id', adminBlockeadeMiddleware, multerMiddleware.single('imagen'), validacionesProducto, products.editProcess)
+router.put('/products/:id', adminBlockeadeMiddleware, multerMiddleware.single('imagen'), validacionesEditProducto, products.editProcess)
 
 //Borrar Producto
 router.get('/products/delete/:id',logMiddleware,products.delete)
