@@ -9,6 +9,8 @@ const userLogMiddleware=require('./middlewares/userLogMiddleware')
 let rutaUser = require ("./routes/users");
 let rutaHome = require ("./routes/home");
 let rutaCarrito = require ("./routes/carrito"); 
+let rutaHistoria = require ("./routes/historia"); 
+let rutaContacto = require ("./routes/contacto"); 
 let rutaProductos = require ("./routes/products");
 let rutaCategorias = require ('./routes/categorias')
 const adminMiddleware = require("./middlewares/adminMiddleware");
@@ -45,6 +47,10 @@ app.use (rutaUser);
 app.use (rutaProductos);
 
 app.use (rutaCarrito);
+
+app.use (rutaHistoria);
+
+app.use (rutaContacto);
 
 app.use (rutaCategorias);
 
