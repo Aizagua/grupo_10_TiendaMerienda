@@ -73,11 +73,11 @@ window.onload = function() {
             codigo.classList.add('is-valid');
         }
 
-        if (descripcion.value.length < 10 || descripcion.value.length > 50) {
+        if (descripcion.value.length < 5 || descripcion.value.length > 100) {
             hayErrores = true;
             descripcion.classList.add('is-invalid');
             descripcion.classList.remove('is-valid');
-            errorDescripcion.textContent = 'Debe contener de 10 a 50 caracteres';
+            errorDescripcion.textContent = 'Debe contener de 5 a 100 caracteres';
         } else {
             descripcion.classList.remove('is-invalid');
             descripcion.classList.add('is-valid');
@@ -93,11 +93,11 @@ window.onload = function() {
             id_productoCat.classList.add('is-valid');
         }
 
-        if (desc2.value.length < 20 || desc2.value.length > 80) {
+        if (desc2.value.length < 20 || desc2.value.length > 1500) {
             hayErrores = true;
             desc2.classList.add('is-invalid');
             desc2.classList.remove('is-valid');
-            errorDesc2.textContent = 'Debe contener de 20 a 80 caracteres';
+            errorDesc2.textContent = 'Debe contener de  a 1500 caracteres';
         } else {
             desc2.classList.remove('is-invalid');
             desc2.classList.add('is-valid');
