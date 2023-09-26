@@ -1095,7 +1095,7 @@ input:focus {
     
 }
 
-/*form h3:before {
+form h3:before {
     display: inline-block;
     content: " ";
     margin-right: 15px;
@@ -1112,13 +1112,14 @@ form h3:after {
     width: 5%;
     height: 6px;
     border-top: 1px solid #333;
-}*/
+}
 
 form h3{   
     font-size: 18px;
     text-transform: uppercase;
     margin-bottom: 20px;
     margin-top: 20px;
+    width: 100%;
 }
 
 @media (min-width:1200px){
