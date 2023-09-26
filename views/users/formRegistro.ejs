@@ -6,56 +6,66 @@
 <body>
     
 <%- include("../partials/header") %>
-  <div  class="inicioTM">    
-    <!-- <main class="main-register">--> 
-
-    <form class = formregistro action="/register" method ="POST" enctype="multipart/form-data">
-      <h3> Registrarte </h3>
-      <div class="inputs">
-        <p>
-          <% if (locals.errors && errors.nombre){%>
-                <div class = avisoError>
-                  <%= errors.nombre.msg %> 
-                </div>
-          <% } %>
-          <input type = "text" name = "nombre" placeholder ="Nombre" class = "bloquestext-registro"
-                    value ="<%= locals.oldData ? oldData.nombre : null %>"  >
-        </p>
-        <p class = bloques-registro>
-            <% if (locals.errors && errors.apellido){%>
+      <main class="main-register">
+        
+          <form class = formregistro action="/register" method ="POST" enctype="multipart/form-data">
+            <div>
+              <h3 class="iniciartextologin">Registrarte</h3>
+            </div>
+              <div class="inputs"><p class = bloques-registro>
+                <input 
+                type = "text" 
+                name = "nombre" 
+                placeholder ="Nombre"
+                class = "bloquestext-registro"
+                value ="<%= locals.oldData ? oldData.nombre : null %>"
+                >
+                <% if (locals.errors && errors.nombre){%>
+                  <div class = avisoError>
+                    <%= errors.nombre.msg %> 
+                  </div>
+                <% } %>
+              </p>
+              <p class = bloques-registro>
+                <input 
+                class = bloquestext-registro 
+                type = "text" 
+                name = "apellido" 
+                placeholder ="Apellido"
+                value ="<%= locals.oldData ? oldData.apellido : null %>"
+                >
+                <% if (locals.errors && errors.apellido){%>
                   <div class = avisoError>
                     <%= errors.apellido.msg %> 
                 </div>
             <% } %>
-            <input class = bloquestext-registro type = "text"  name = "apellido"                 placeholder ="Apellido"
-                  value ="<%= locals.oldData ? oldData.apellido : null %>" >
         </p>
         <p class = bloques-registro>
-            <% if (locals.errors && errors.celular){%>
-                  <div class = avisoError>
-                    <%= errors.celular.msg %> 
-                  </div>
-            <% } %>
-            <input class = bloquestext-registro  type = "tel" name = "celular"                 placeholder="Celular" 
+            <input class = bloquestext-registro  type = "tel" name = "celular" placeholder="Celular" 
                   value ="<%= locals.oldData ? oldData.celular : null %>" >
+                  <% if (locals.errors && errors.celular){%>
+                    <div class = avisoError>
+                      <%= errors.celular.msg %> 
+                    </div>
+                  <% } %>
         </p>
         <p class = bloques-registro>
-            <% if (locals.errors && errors.email){%>
+            <input class = bloquestext-registro type = "email"  name = "email"
+                placeholder="E-mail" value ="<%= locals.oldData ? oldData.email : null %>" >
+                <% if (locals.errors && errors.email){%>
                   <div class = avisoError>
                     <%= errors.email.msg %> 
                   </div>
             <% } %>
-            <input class = bloquestext-registro type = "email"  name = "email"
-                placeholder="E-mail" value ="<%= locals.oldData ? oldData.email : null %>" >
         </p>         
         <p  class = bloques-registro>
-            <% if (locals.errors && errors.password){%>
-                  div class = avisoError>
+            <input class = bloquestext-registro  type="password"   name="password" 
+                placeholder="Contraseña"  >
+                <% if (locals.errors && errors.password){%>
+                  <div class = avisoError>
                     <%= errors.password.msg %> 
                   </div>
             <% } %>
-            <input class = bloquestext-registro  type="password"   name="password" 
-                placeholder="Contraseña"  >
         </p>
         <div class="foto"> <p  class = bloques-registro>
             <input class = bloquestext-registro  type = "file" name = "imagen"> 

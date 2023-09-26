@@ -14,25 +14,50 @@
           <h3> Actualizando Perfil </h3>
           <div class="inputs">
             <p class = bloques-registro>
-              <input class = bloquestext-registro type = "text" name = "nombre" placeholder ="Nombre" value="<%= user.nombre %>"> 
+              <input class = bloquestext-registro type = "text" name = "nombre" placeholder ="Nombre" value="<%= user.nombre %>">
+              <% if (locals.errors && errors.nombre){%>
+                <div class = avisoError>
+                <%= errors.nombre.msg %> 
+                </div>
+            <% } %> 
             </p>
             <p class = bloques-registro>
-              <input class = bloquestext-registro type = "text" name = "apellido" placeholder ="Apellido" value="<%= user.apellido %>">
-            </p class = bloques-registro>
-            <p class = bloques-registro>
-              <input class = bloquestext-registro type = "tel" name = "celular" placeholder="Celular" value="<%= user.celular %>">
+              <input class = "bloquestext-registro"type = "text" name = "apellido" placeholder ="Apellido" value="<%= user.apellido %>">
+              <% if (locals.errors && errors.apellido){%>
+                <div class = avisoError>
+                <%= errors.apellido.msg %> 
+                </div>
+            <% } %>
             </p>
             <p class = bloques-registro>
-            <input class = bloquestext-registro type = "email" name = "email" placeholder="Correo" value="<%= user.email %>">
+              <input class = "bloquestext-registro" type = "tel" name = "celular" placeholder="Celular" value="<%= user.celular %>">
+              <% if (locals.errors && errors.celular){%>
+                <div class = avisoError>
+                <%= errors.celular.msg %> 
+                </div>
+            <% } %>
+            </p>
+            <p class = bloques-registro>
+            <input class = "bloquestext-registro" type = "email" name = "email" placeholder="Correo" value="<%= user.email %>">
+            <% if (locals.errors && errors.email){%>
+              <div class = avisoError>
+              <%= errors.email.msg %> 
+              </div>
+          <% } %>
             </p>                  
             <div class="bloquesdellogin">
              
                 <img src="/images/user/<%= user.imagen %>" width="70%">
                 <p>Actuliza la foto de perfil aquí:</p>
                 <input class="textodelogin" type="file" name="imagen" placeholder="img" value="<%= user.imagen %>">
+                <% if (locals.errors && errors.imagen){%>
+                  <div class = avisoError>
+                  <%= errors.imagen.msg %> 
+                  </div>
+              <% } %>
             </div>
             <p  class = bloques-registro>
-            <input class = bloquestext-registro class = bloquestext-registro type = "password" name = "password"  hidden>
+            <input class = "bloquestext-registro" class = bloquestext-registro type = "password" name = "password"  hidden>
             </p>
             <p class = boton-registro>
             <button class="botonform botonsend" type = "submit"> Editar </button>

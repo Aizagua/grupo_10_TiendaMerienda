@@ -93,7 +93,13 @@ let registrocontroller = {
         return res.redirect("/")
       },
     editProcess: async (req,res)=>{
-      
+      const buscarUsuario = await db.Usuarios.findByPk(req.params.id)
+      const resultValidation = validationResult(req);
+      if (resultValidation.errors.length>0){
+        return res.render('users/edicionUser',{
+          errors: resultValidation.mapped(),
+          user: buscarUsuario,
+        })};
       if (req.file == undefined){  imagenf = req.body.imagen} 
       else {  imagenf = req.file.filename  }
       

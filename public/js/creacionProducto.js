@@ -1,5 +1,5 @@
 window.onload = function() {
-    const form = document.querySelector('.formularios-login');
+    const form = document.querySelector(".formularios-login");
 
 
 
@@ -10,7 +10,7 @@ window.onload = function() {
         const precio = document.querySelector('input[name="precio"]');
         const cantidad = document.querySelector('input[name="cantidad"]');
         const codigo = document.querySelector('input[name="codigo"]');
-        const descripcion = document.querySelector('input[name="descripcion"]');
+        const descripcion = document.querySelector('#descripcion');
         const id_productoCat = document.querySelector('#id_productoCat');
         const desc2 = document.querySelector('#desc2');
         const imagen = document.querySelector('#imagen');
@@ -55,8 +55,8 @@ window.onload = function() {
             codigo.classList.add('is-valid')
         }
 
-        if (descripcion.value == '') {
-            errores.push('Escribí una breve descripcion del producto')
+        if (descripcion.value > 10 || descripcion.value < 50) {
+            errores.push("Debe contener de 10 a 50 caracteres")
             descripcion.classList.add('is-invalid')
             descripcion.classList.remove('is-valid')
         } else {
@@ -73,7 +73,7 @@ window.onload = function() {
             id_productoCat.classList.add('is-valid')
         }
 
-        if (desc2.value == '') {
+        if (desc2.value > 20 || desc2.value < 80) {
             errores.push('Escribi toda la informacion del producto')
             desc2.classList.add('is-invalid')
             desc2.classList.remove('is-valid')

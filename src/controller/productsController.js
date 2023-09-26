@@ -32,16 +32,17 @@ let productsController = {
   },
 
   processCreate: async (req, res) => {
-    const errores = validationResult(req);
-
-    if (!errores.isEmpty()) {
+    const resultValidation = validationResult(req);
+    
+    if (resultValidation.errors.length>0) {
         const listadoCategorias = await db.Categorias.findAll();
         return res.render('productos/creacionProducto', {
             listadoCategorias,
-            errores: errores.array(),
+            errors: resultValidation.mapped(),
             oldData: { ...req.body }
         });
     }
+    console.log(resultValidation.errors)
 
     try {
       const nuevoProducto = await db.Productos.create({
@@ -71,7 +72,19 @@ let productsController = {
       }
   },
     editProcess: async (req,res)=>{
-      
+      const buscarProducto = await db.Productos.findByPk(req.params.id)
+      const resultValidation = validationResult(req);
+    
+      if (resultValidation.errors) {
+          const listadoCategorias = await db.Categorias.findAll();
+          return res.render('productos/edicionProducto', {
+              producto: buscarProducto,
+              listadoCategorias,
+              errors: resultValidation.mapped(),
+              
+          });
+      }
+
       if (req.file == undefined){  imagenf = req.body.imagen} 
       else {  imagenf = req.file.filename  }
 

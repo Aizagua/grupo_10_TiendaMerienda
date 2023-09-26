@@ -7,7 +7,6 @@ module.exports = [
     check("apellido").notEmpty().withMessage('Debe completar su apellido'),
     check("celular").notEmpty().withMessage('Debe completar su celular').isNumeric().withMessage('Debe ingresar solamente numeros'),
     check("email").notEmpty().withMessage('Debe completar su email').isEmail().withMessage("Debe ingresar un email valido"),
-    check("password").isStrongPassword({minLength: 6, maxLength: 10, minUppercase: 0, minSymbols: 0, minNumbers: 2}).withMessage("La clave debe contener de 6 a 10 caracteres y al menos dos numeros"),
     check('imagen').custom((value, { req }) => {
        
             if (req.fileError) {
