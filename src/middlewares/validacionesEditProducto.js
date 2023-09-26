@@ -5,14 +5,14 @@ module.exports = [
     check('precio').optional().isInt({gt:0}).withMessage('Indicá el precio'),
     check('cantidad').optional().isFloat({min: 1, max: 100}).withMessage('Indica una cantidad menor a 100'),
     check('codigo').optional().notEmpty().withMessage('Indicá el codigo'),
-    check('descripcion').optional().isLength({min: 10, max: 50}).withMessage("Debe contener de 10 a 50 caracteres"),
+    check('descripcion').optional().isLength({min: 10, max: 100}).withMessage("Debe contener de 10 a 50 caracteres"),
     check('id_productoCat').optional().custom((value, { req }) => {
         if (value === -1 || value === '') {
             throw new Error('Selecciona una categoría válida');
         }
         return true;
     }),
-    check('desc2').optional().isLength({min: 20, max: 80}).withMessage("Debe contener de 20 a 80 caracteres"),    
+    check('desc2').optional().isLength({min: 20, max: 1500}).withMessage("Debe contener de 20 a 80 caracteres"),    
     check('imagen').optional().custom((value, { req }) => {
         if (req.fileError) {
             throw new Error('Adjunte una imagen válida');

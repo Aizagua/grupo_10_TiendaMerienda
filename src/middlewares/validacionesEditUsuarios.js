@@ -3,11 +3,11 @@ const { check } = require('express-validator');
 const multer = require("multer");
 
 module.exports = [
-    check("nombre").notEmpty().withMessage('Debe completar su nombre'),
-    check("apellido").notEmpty().withMessage('Debe completar su apellido'),
-    check("celular").notEmpty().withMessage('Debe completar su celular').isNumeric().withMessage('Debe ingresar solamente numeros'),
-    check("email").notEmpty().withMessage('Debe completar su email').isEmail().withMessage("Debe ingresar un email valido"),
-    check('imagen').custom((value, { req }) => {
+    check("nombre").optional().notEmpty().withMessage('Debe completar su nombre'),
+    check("apellido").optional().notEmpty().withMessage('Debe completar su apellido'),
+    check("celular").optional().notEmpty().withMessage('Debe completar su celular').isNumeric().withMessage('Debe ingresar solamente numeros'),
+    check("email").optional().notEmpty().withMessage('Debe completar su email').isEmail().withMessage("Debe ingresar un email valido"),
+    check('imagen').optional().custom((value, { req }) => {
        
             if (req.fileError) {
             throw new Error('Adjunte una imagen válida');

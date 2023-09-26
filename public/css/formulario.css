@@ -21,7 +21,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 #login:before, #login:after {
   content: " ";
-  display: block;
+  display: inline-block;
   background: rgba(0,0,0,0.1);
   position: absolute;
   width: 100px;

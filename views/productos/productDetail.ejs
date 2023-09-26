@@ -41,7 +41,13 @@
                     Categoria: 
                 </div>
                 <div class="product_meta_text">
-                    <%=producto.id_productoCat%>
+                    <% if (producto.id_productoCat == 1) { %>
+                        <p>Cafe/Té</p>
+                    <% } else if (producto.id_productoCat == 2) { %>
+                        <p>Comida</p>
+                    <% } else { %>
+                        <p>Torta</p>
+                    <% } %>
                 </div>                
             </div>
             

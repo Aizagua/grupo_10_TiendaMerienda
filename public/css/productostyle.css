@@ -47,10 +47,17 @@
     align-items: center;
 }
 
-.is-invalid {
+/*.is-invalid {
     border: 3px solid red;
 }
 
 .is-valid {
     border: 3px solid green;
+}*/
+
+.avisError {
+    display: block;
+    color: rgb(177, 48, 48);
+    font-size: 10px;
+    margin-bottom: 10px;
 }

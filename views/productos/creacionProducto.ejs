@@ -18,12 +18,11 @@
                     </div>
                 <% } %>
             </div>
-                        <ul id="listaErrores"></ul>
 
             <form class = "formularios-login"  method="POST" action="/products" enctype="multipart/form-data">
-                <div>
+                
                     <h3 class="iniciartextologin">Agregar Producto</h3>
-                </div>
+                
 
                 <div class="inputs"> 
                     <p class = "bloques-registro">
@@ -32,8 +31,10 @@
                             <div class = avisoError>
                             <%= errors.nombre.msg %> 
                             </div>
-                        <% } %>    
+                        <% } %>  
+                        
                     </p>
+                    <span id="errorNombre" class="avisError"></span>
                 </div>
                 <div class="inputs">
                     <p class = "bloques-registro">
@@ -44,7 +45,9 @@
                             <%= errors.precio.msg %> 
                           </div>
                         <% } %>
+                        
                     </p>
+                    <span id="errorPrecio" class="avisError"></span>
                 </div>
                 <div class="inputs">
                     <p class = "bloques-registro">
@@ -54,7 +57,9 @@
                             <%= errors.cantidad.msg %> 
                             </div>
                         <% } %>    
+                        
                     </p>
+                    <span id="errorCantidad" class="avisError"></span>
                 </div>
                 <div class="inputs">
                     <p class = "bloques-registro">
@@ -64,7 +69,9 @@
                             <%= errors.codigo.msg %> 
                             </div>
                         <% } %>    
+                       
                     </p>
+                    <span id="errorCodigo" class="avisError"></span>
                 </div>
                 <div class="inputs">
                     <p class = "bloques-registro">
@@ -73,7 +80,10 @@
                             <div class = avisoError>
                             <%= errors.descripcion.msg %> 
                             </div>
-                        <% } %>    </p>    
+                        <% } %>   
+                       
+                     </p>  
+                     <span id="errorDescripcion" class="avisError"></span>  
                 </div>
                 <div class="inputs">
                     <p class = "bloques-registro">
@@ -88,7 +98,9 @@
                             <%= errors.categoria.msg %> 
                             </div>
                         <% } %>   
+                        
                     </p>
+                    <span id="errorCategoria" class="avisError"></span>
                 </div>
                 <div class="inputs">
                     <p class = "bloques-registro">
@@ -98,7 +110,8 @@
                             <%= errors.desc2.msg %> 
                             </div>
                         <% } %>     
-                    </p>
+                        </p>
+                        <span id="errorDesc2" class="avisError"></span>
                 </div>
                 <div class="inputs">
                     <input class="textodelogin" type="file" name="imagen" id="imagen" placeholder="img"
@@ -107,6 +120,7 @@
                         <div class = avisoError>
                         <%= errors.imagen.msg %> 
                         <% } %>
+                        <span id="errorImagen" class="avisError"></span>
                 </div>
                 <div class = "boton-registro">
                 <a href="/"><button class="botonsend-register" type="submit">Enviar</button></a>
