@@ -1,8 +1,6 @@
 window.onload = function() {
     const form = document.querySelector(".formularios-login");
 
-
-
     form.addEventListener('submit', async (e) => {
         e.preventDefault()
 
@@ -15,124 +13,113 @@ window.onload = function() {
         const desc2 = document.querySelector('#desc2');
         const imagen = document.querySelector('#imagen');
 
-        const listaErrores = document.querySelector('#listaErrores');
+        const errorNombre = document.querySelector('#errorNombre');
+        const errorPrecio = document.querySelector('#errorPrecio');
+        const errorCantidad = document.querySelector('#errorCantidad');
+        const errorCodigo = document.querySelector('#errorCodigo');
+        const errorDescripcion = document.querySelector('#errorDescripcion');
+        const errorCategoria = document.querySelector('#errorCategoria');
+        const errorDesc2 = document.querySelector('#errorDesc2');
+        const errorImagen = document.querySelector('#errorImagen');
 
-        let errores = [];
+        errorNombre.textContent = '';
+        errorPrecio.textContent = '';
+        errorCantidad.textContent = '';
+        errorCodigo.textContent = '';
+        errorDescripcion.textContent = '';
+        errorCategoria.textContent = '';
+        errorDesc2.textContent = '';
+        errorImagen.textContent = '';
+
+        let hayErrores = false;
 
         if (nombre.value == '') {
-            errores.push('Escribí el nombre')
-            nombre.classList.add('is-invalid')
-            nombre.classList.remove('is-valid')
+            hayErrores = true;
+            nombre.classList.add('is-invalid');
+            nombre.classList.remove('is-valid');
+            errorNombre.textContent = 'Escribí el nombre';
         } else {
-            nombre.classList.remove('is-invalid')
-            nombre.classList.add('is-valid')
+            nombre.classList.remove('is-invalid');
+            nombre.classList.add('is-valid');
         }
 
         if (precio.value <= 0) {
-            errores.push('Indicá el precio')
-            precio.classList.add('is-invalid')
-            precio.classList.remove('is-valid')
+            hayErrores = true;
+            precio.classList.add('is-invalid');
+            precio.classList.remove('is-valid');
+            errorPrecio.textContent = 'Indicá el precio';
         } else {
-            precio.classList.remove('is-invalid')
-            precio.classList.add('is-valid')
+            precio.classList.remove('is-invalid');
+            precio.classList.add('is-valid');
         }
 
         if (cantidad.value <= 0  || cantidad.value > 100 || cantidad.value == '') {
-            errores.push('Indicá la cantidad, no podes superar las 100 unidades')
-            cantidad.classList.add('is-invalid')
-            cantidad.classList.remove('is-valid')
+            hayErrores = true;
+            cantidad.classList.add('is-invalid');
+            cantidad.classList.remove('is-valid');
+            errorCantidad.textContent = 'Indicá la cantidad, no podes superar las 100 unidades';
         } else {
-            cantidad.classList.remove('is-invalid')
-            cantidad.classList.add('is-valid')
+            cantidad.classList.remove('is-invalid');
+            cantidad.classList.add('is-valid');
         }
 
         if (codigo.value == '') {
-            errores.push('Indicá el codigo')
-            codigo.classList.add('is-invalid')
-            codigo.classList.remove('is-valid')
+            hayErrores = true;
+            codigo.classList.add('is-invalid');
+            codigo.classList.remove('is-valid');
+            errorCodigo.textContent = 'Indicá el codigo';
         } else {
-            codigo.classList.remove('is-invalid')
-            codigo.classList.add('is-valid')
+            codigo.classList.remove('is-invalid');
+            codigo.classList.add('is-valid');
         }
 
-        if (descripcion.value > 10 || descripcion.value < 50) {
-            errores.push("Debe contener de 10 a 50 caracteres")
-            descripcion.classList.add('is-invalid')
-            descripcion.classList.remove('is-valid')
+        if (descripcion.value.length < 10 || descripcion.value.length > 50) {
+            hayErrores = true;
+            descripcion.classList.add('is-invalid');
+            descripcion.classList.remove('is-valid');
+            errorDescripcion.textContent = 'Debe contener de 10 a 50 caracteres';
         } else {
-            descripcion.classList.remove('is-invalid')
-            descripcion.classList.add('is-valid')
+            descripcion.classList.remove('is-invalid');
+            descripcion.classList.add('is-valid');
         }
 
         if (id_productoCat.value == '') {
-            errores.push('Selecciona una categoría válida')
-            id_productoCat.classList.add('is-invalid')
-            id_productoCat.classList.remove('is-valid')
+            hayErrores = true;
+            id_productoCat.classList.add('is-invalid');
+            id_productoCat.classList.remove('is-valid');
+            errorCategoria.textContent = 'Selecciona una categoría válida';
         } else {
-            id_productoCat.classList.remove('is-invalid')
-            id_productoCat.classList.add('is-valid')
+            id_productoCat.classList.remove('is-invalid');
+            id_productoCat.classList.add('is-valid');
         }
 
-        if (desc2.value > 20 || desc2.value < 80) {
-            errores.push('Escribi toda la informacion del producto')
-            desc2.classList.add('is-invalid')
-            desc2.classList.remove('is-valid')
+        if (desc2.value.length < 20 || desc2.value.length > 80) {
+            hayErrores = true;
+            desc2.classList.add('is-invalid');
+            desc2.classList.remove('is-valid');
+            errorDesc2.textContent = 'Debe contener de 20 a 80 caracteres';
         } else {
-            desc2.classList.remove('is-invalid')
-            desc2.classList.add('is-valid')
+            desc2.classList.remove('is-invalid');
+            desc2.classList.add('is-valid');
         }
 
         if (imagen.value == '') {
-            errores.push('No se ha cargado ninguna imagen.')
-            imagen.classList.add('is-invalid')
-            imagen.classList.remove('is-valid')
+            hayErrores = true;
+            imagen.classList.add('is-invalid');
+            imagen.classList.remove('is-valid');
+            errorImagen.textContent = 'No se ha cargado ninguna imagen';
         } else {
-            imagen.classList.remove('is-invalid')
-            imagen.classList.add('is-valid')
+            imagen.classList.remove('is-invalid');
+            imagen.classList.add('is-valid');
         }
 
-        if (errores.length > 0) {
-            listaErrores.innerHTML = ``
-            for (let error of errores) {
-                listaErrores.innerHTML += `<li>${error}</li>`
-            }
-        } else {
-            listaErrores.innerHTML = ``
+        if (!hayErrores) {
             Swal.fire(
                 'Producto creado',
                 'success'
             ).then(() => {
                 form.submit()
-            })
-
-
-            /*let model = {
-                nombre: nombre.value,
-                precio: precio.value,
-                cantidad: cantidad.value,
-                codigo: codigo.value,
-                descripcion: descripcion.value,
-                id_productoCat: id_productoCat.value,
-                desc2: desc2.value,
-                imagen: ?????
-            }
-
-            let respuestaApi = await fetch('/api/productos/create', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(model)})
-            let response = await respuestaApi.json()
-            console.log(response)
-            if(response.data) {
-                Swal.fire(
-                    'Producto creado',
-                    'success'
-                ).then(() => {
-                    window.location.href = '/productList'
-                })
-            } else {
-                Swal.fire(
-                    'Ups!, Hubo un error',
-                    'error'
-                ) 
-            }*/
+            });
         }
-    })
+    });
 }

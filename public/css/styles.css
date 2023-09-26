@@ -172,10 +172,7 @@ button[type="submit"]:hover .fa-search {
     text-decoration: none;
     color: beige;
 }
-.menu nav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
+
   
   .menu nav a.active {
     background-color: #04AA6D;
@@ -185,7 +182,7 @@ button[type="submit"]:hover .fa-search {
 
 
 .menu nav ul li a:hover {
-   /** color: #de7627;**/
+   color: #de7627;
 }  
 .admin-iconos{
 position:absolute;
@@ -880,6 +877,7 @@ text-align: center;
 .iniciartextologin{
     margin-top: 7%;
     margin-bottom: 5%;
+    padding-bottom: 20px;
     
 }
 .bloquesdellogin{
@@ -1095,7 +1093,7 @@ input:focus {
     
 }
 
-form h3:before {
+/*form h3:before {
     display: inline-block;
     content: " ";
     margin-right: 15px;
@@ -1112,7 +1110,7 @@ form h3:after {
     width: 5%;
     height: 6px;
     border-top: 1px solid #333;
-}
+}*/
 
 form h3{   
     font-size: 18px;
