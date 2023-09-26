@@ -2,7 +2,7 @@
   {
     "id": 1,
     "nombre": "Cappuccino ",
-    "precio": "800",
+    "precio": "500",
     "imagen": "1687991571496.webp",
     "descripcion": "Nescafé Dolce Gusto Cappuccino",
     "codigo": "capuchino_1_ua",
@@ -125,12 +125,12 @@
   },
   {
     "id": 12,
-    "nombre": "Alfajores de Maicena Mardel",
+    "nombre": "Alfajores de Maicena",
     "precio": "7",
     "imagen": "alfajores-de-maicena-mardel-mais.jpg",
     "descripcion": "Existen varias recetas de alfajores. También se pueden hacer con harina de maíz. Este es el caso de estos deliciosos alfajores de maicena, que consisten en 2 pasteles, crema de caramelo de leche con un poco de copos de coco en los bordes.",
     "codigo": "af_mm_1_ua",
-    "titulo": "Alfajores de Maicena Mardel ",
+    "titulo": "Alfajores de Maicena",
     "cantidad": "1 unid.",
     "desc2": "Composición: Crema de caramelo de leche (min. 45%) (jarabe de glucosa y fructosa, LECHE entera en polvo, agua, azúcar, LECHE en polvo, conservador (E202), aroma (vainilla)), harina de TRIGO, almidón de maíz, LEVADURA, grasa vegetal (palma), azúcar, copos de coco, gasificantes (E450i, E500ii), conservador (E200)."
   },
