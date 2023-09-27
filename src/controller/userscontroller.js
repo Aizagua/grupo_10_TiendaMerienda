@@ -51,14 +51,18 @@ let registrocontroller = {
               if (ClaveOK== true){
                   delete usuario.password
                   req.session.usuarioLogeado = usuario
-                  res.redirect("/perfil")
+                  return res.redirect("/perfil")
               } else{
-                res.redirect("/login")
+                  // error contrasenia
+                return res.redirect("/login?error=pass")
               }
-     } else{
-        res.redirect("/login")}
+              } else {
+                // error usuario
+                return res.redirect("/login?error=user");
+            }
         } catch (error) {
           console.log("Error :",error)
+          return res.redirect("/login?error=server");
         }},
 
     edit: async (req,res)=>{
