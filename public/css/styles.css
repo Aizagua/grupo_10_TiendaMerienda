@@ -892,6 +892,8 @@ text-align: center;
 .textrecordar{
     color: #adadad;
     font-size: 80%;
+    display: inline-flex;
+    align-items: center;
 }
 .botonsend{
     background-color: #895d39;
@@ -1774,7 +1776,7 @@ padding: 10px 0px;
 }
 
 #resgitrar{
-    margin-left: 50%;
+    margin-left: 22%;
 }
 #remember{
     width: 15px;
